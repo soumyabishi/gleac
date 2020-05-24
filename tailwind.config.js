@@ -28,6 +28,7 @@ module.exports = {
       '25px': '25px',
       '26px': '26px',
       '32px': '32px',
+      '34px': '34px',
       '38px': '38px',
     },
     spacing:{
@@ -59,6 +60,7 @@ module.exports = {
       '28px': '28px',
       '30px': '30px',
       '32px': '32px',
+      '34px': '34px',
     },
 
     fontSize: {
@@ -95,11 +97,17 @@ module.exports = {
     },
 
     textColor: {
-      'primary':'#50505D',
-      'header': '#373744',
-      'secondary':'#A6B2BF',
-      'description':'#66737B',
+      'primary':'#0065ad',
+      'text-color': '#3b3b3b',
+      'description': '#212961',
+      'white': '#ffffff',
+      'secondary': '#757aa0'
     },
+    backgroundColor: theme => ({
+        'primary':'#0065ad',
+         'white': '#FFFFFF',
+         'secondary':'rgba(117, 122, 160, 0.05)'
+    }),
     extend: {},
   },
   variants: {},
