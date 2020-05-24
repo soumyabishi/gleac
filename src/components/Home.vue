@@ -32,7 +32,7 @@
         <div class="ui container">
           <div class="ui two column middle aligned stackable grid">
             <div class="column">
-              <h1 class="tw-text-30px tw-text-text-color tw-leading-38px tw-mb-6px">Human Skills Matter</h1>
+              <h1 class="tw-text-30px tw-text-text-color tw-leading-38px tw-mb-6px tw-font-bold">Human Skills Matter</h1>
               <p class="tw-text-16px tw-text-text-color tw-font-medium tw-leading-26px tw-mb-34px">Gleac measures and
                 develops human skills for any job in 10 minutes a day using A.I.</p>
               <div class="ui action large fluid input">
@@ -112,16 +112,58 @@
                  <h2 class="tw-text-20px tw-mb-12px tw-text-primary tw-font-semibold">Explore our Micro-Practices</h2>
                  <p class="tw-text-14px tw-text-description tw-font-medium tw-opacity-50">Journey Map of  a sales person’s daily challenges</p>
               </div>
-
-             <div class="eight wide column">
-                  <div class="ui text menu">
-                     <div class="item tw-text-secondary tw-font-semibold">Learn by doing </div>
-                    <div class="item tw-text-secondary tw-font-semibold">Job role focus content</div>
-                    <div class="item tw-text-secondary tw-font-semibold">Practise at your level</div>
-
-                  </div>
+              <div class="eight wide right aligned column">
+                    <div class="item tw-text-secondary tw-inline-block tw-font-semibold tw-mr-22px">
+                      <img src="/src/assets/images/check.svg" class="check tw-mr-8px">Learn by doing
+                    </div>
+                    <div class="item tw-text-secondary tw-inline-block tw-font-semibold tw-mr-22px">
+                      <img src="/src/assets/images/check.svg" class="check tw-mr-8px">Job role focus content
+                    </div>
+                    <div class="item tw-text-secondary tw-inline-block tw-font-semibold">
+                      <img src="/src/assets/images/check.svg" class="check tw-mr-8px">Practise at your level
+                    </div>
              </div>
            </div>
+          <div class="steps">
+              <div class="tw-flex">
+                 <div class="card tw-w-1/4 tw-flex tw-relative tw-rounded">
+                     <img src="/src/assets/images/number_badge.svg" width="50" class="tw-absolute tw-left-10px tw--top-5px">
+                     <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-26px tw-text-description">01</h4>
+                     <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-64px tw-text-description">Try Step</h4>
+                      <div class="card_content tw-px-14px">
+                        <p class="tw-font-rubik tw-text-12px tw-text-secondary">Arrives at work with personal stuff on their mind.</p>
+                      </div>
+                      <div class="tw-font-rubik tw-text-primary tw-absolute tw-left-14px tw-bottom-18px tw-text-12px tw-font-medium tw-cursor-pointer">Take a look</div>
+                 </div>
+                <div class="card tw-w-1/4 tw-flex tw-relative tw-rounded">
+                  <img src="/src/assets/images/number_badge.svg" width="50" class="tw-absolute tw-left-10px tw--top-5px">
+                  <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-26px tw-text-description">15</h4>
+                  <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-64px tw-text-description">Try Step</h4>
+                  <div class="card_content tw-px-14px">
+                    <p class="tw-font-rubik tw-text-12px tw-text-secondary">Salesperson wants to ensure high levels of consumer satisfaction by providing top-notch sales service.</p>
+                  </div>
+                  <div class="tw-font-rubik tw-text-primary tw-absolute tw-left-14px tw-bottom-18px tw-text-12px tw-font-medium tw-cursor-pointer">Take a look</div>
+                </div>
+                <div class="card tw-w-1/4 tw-flex tw-relative tw-rounded">
+                  <img src="/src/assets/images/number_badge.svg" width="50" class="tw-absolute tw-left-10px tw--top-5px">
+                  <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-26px tw-text-description">25</h4>
+                  <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-64px tw-text-description">Try Step</h4>
+                  <div class="card_content tw-px-14px">
+                    <p class="tw-font-rubik tw-text-12px tw-text-secondary">Arrives at work with personal stuff on their mind.</p>
+                  </div>
+                  <div class="tw-font-rubik tw-text-primary tw-absolute tw-left-14px tw-bottom-18px tw-text-12px tw-font-medium tw-cursor-pointer">Take a look</div>
+                </div>
+                <div class="card tw-w-1/4 tw-flex tw-relative tw-rounded">
+                  <img src="/src/assets/images/number_badge.svg" width="50" class="tw-absolute tw-left-10px tw--top-5px">
+                  <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-26px tw-text-description">05</h4>
+                  <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-64px tw-text-description">Try Step</h4>
+                  <div class="card_content tw-px-14px">
+                    <p class="tw-font-rubik tw-text-12px tw-text-secondary">Arrives at work with personal stuff on their mind.</p>
+                  </div>
+                  <div class="tw-font-rubik tw-text-primary tw-absolute tw-left-14px tw-bottom-18px tw-text-12px tw-font-medium tw-cursor-pointer">Take a look</div>
+                </div>
+              </div>
+          </div>
         </div>
       </section>
 
@@ -142,6 +184,7 @@
 
 <style lang="scss">
   @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800&display=swap');
 
   .home {
     header {
@@ -198,6 +241,32 @@
     section.explore{
       padding-top: 50px;
       padding-bottom: 50px;
+      img.check{
+        width: 12px;
+      }
+      .steps{
+        margin-top: 50px;
+      }
+      .card{
+        box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.15);
+        height: 220px;
+        margin-left: 50px;
+        margin-right: 50px;
+        &.card:first-child{
+          margin-left: 0;
+        }
+        &.card:last-child{
+          margin-right: 0;
+        }
+        h4{
+          margin: 0;
+          font-size: 14px;
+        }
+        .card_content{
+          padding-top: 66px;
+        }
+      }
+
     }
   }
 
