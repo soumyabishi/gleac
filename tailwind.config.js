@@ -2,6 +2,7 @@ module.exports = {
   prefix: 'tw-',
   theme: {
     margin:{
+      '0px': '0px',
       '1px': '1px',
       '2px': '2px',
       '3px': '3px',
@@ -30,8 +31,10 @@ module.exports = {
       '32px': '32px',
       '34px': '34px',
       '38px': '38px',
+      '50px': '50px',
     },
     spacing:{
+      '0px': '0px',
       '1px': '1px',
       '2px': '2px',
       '3px': '3px',
@@ -61,6 +64,7 @@ module.exports = {
       '30px': '30px',
       '32px': '32px',
       '34px': '34px',
+      'auto': 'auto'
     },
 
     inset:{
@@ -167,7 +171,8 @@ module.exports = {
       'secondary': '#757aa0'
     },
     fontFamily:{
-      'rubik': ['Rubik', 'sans-serif']
+      'rubik': ['Rubik', 'sans-serif'],
+      'plex': ['IBM Plex Sans', 'sans-serif']
     },
     backgroundColor: theme => ({
         'primary':'#0065ad',
