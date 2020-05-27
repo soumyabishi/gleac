@@ -27,8 +27,6 @@
 
     <div class="content">
 
-
-
       <!-- intro section start -->
       <section class="intro">
         <div class="ui container">
@@ -58,7 +56,7 @@
 
           <div class="tw-flex">
             <div class="tw-w-1/9 tw-flex">
-              <div class="image_wrapper">
+              <div class="image_wrapper" @click="open_case_study_modal()">
                 <img src="/src/assets/images/clients/forbes.png">
               </div>
             </div>
@@ -320,6 +318,65 @@
       </section>
     </div>
 
+
+    <!-- Case study modal -->
+
+    <div class="ui modal case_study">
+      <i class="close icon"></i>
+
+      <div class="tw-flex tw-justify-center tw-items-stretch">
+          <div class="tw-w-1/2 tw-bg-primary tw-justify-center tw-items-center tw-flex tw-flex-col">
+            <div class="tw-font-medium tw-font-rubik tw-text-28px tw-mb-4px tw-text-white">Case Study<br>
+              accenture</div>
+          </div>
+
+        <div class="tw-w-1/2 tw-justify-center tw-items-center tw-flex tw-flex-col tw-p-20px">
+          <img src="/src/assets/images/case_study_header.png" style="width: 78%">
+        </div>
+
+      </div>
+      <div class="modal_content tw-p-30px">
+
+        <div class="ui stackable grid">
+            <div class="ten wide column">
+               <div class="tw-font-rubik tw-text-16px tw-leading-20px">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+               </div>
+            </div>
+
+          <div class="six wide center aligned column">
+            <img src="/src/assets/images/clients/accenture.png" style="width: 180px;">
+          </div>
+
+        </div>
+
+        <div class="tw-font-rubik tw-font-medium tw-text-primary tw-text-20px tw-mt-38px tw-mb-20px">
+          The Objectives
+        </div>
+
+          <div class="tw-font-rubik tw-text-16px tw-leading-20px">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </div>
+
+        <div class="tw-font-rubik tw-font-medium tw-text-primary tw-text-20px tw-mt-38px tw-mb-20px">
+          The Solution
+        </div>
+
+        <div class="tw-font-rubik tw-text-16px tw-leading-20px">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </div>
+
+        <div class="tw-font-rubik tw-font-medium tw-text-primary tw-text-20px tw-mt-38px tw-mb-20px">
+          The Result
+        </div>
+
+        <div class="tw-font-rubik tw-text-16px tw-leading-20px">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </div>
+
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -332,6 +389,13 @@ export default {
     name: 'Home',
     data() {
       return {}
+    },
+    methods:{
+      open_case_study_modal(){
+        $('.ui.modal.case_study')
+          .modal('show')
+        ;
+      }
     },
     components:{
       VueSlickCarousel
@@ -503,5 +567,13 @@ export default {
       border-top: 1px solid #ffffff2b;
     }
   }
+
+
+
+  .case_study.modal{
+  }
+
+
+
 
 </style>

@@ -33,4 +33,9 @@
   a{
     color: #0065ad;
   }
+
+  // Overrides
+  .ui.dimmer{
+    background-color: rgba(0, 0, 0, 0.46) !important;
+  }
 </style>

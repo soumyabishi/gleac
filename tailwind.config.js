@@ -145,6 +145,7 @@ module.exports = {
       '30px':'30px',
       '32px':'32px',
       '34px':'34px',
+      '36px':'36px',
     },
     lineHeight: {
       '13px': '13px',
