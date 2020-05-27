@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <header class="desktop tw-px-30px tw-py-18px tw-bg-white tw-fixed tw-w-full tw-z-50">
-      <div class="ui container">
+      <div class="tw-container tw-m-auto">
         <div class="ui middle aligned grid">
           <div class="eight wide column">
             <a href="/" class="logo tw-inline-block"><img class="tw-w-full" src="/src/assets/images/gleac-logo.png"></a>
@@ -29,7 +29,7 @@
 
       <!-- intro section start -->
       <section class="intro">
-        <div class="ui container">
+        <div class="tw-container tw-m-auto">
           <div class="ui two column middle aligned stackable grid">
             <div class="column">
 
@@ -52,7 +52,7 @@
 
       <!-- clients section start -->
       <section class="clients tw-bg-secondary">
-        <div class="ui container">
+        <div class="tw-container tw-m-auto">
 
           <div class="tw-flex">
             <div class="tw-w-1/9 tw-flex">
@@ -108,13 +108,13 @@
 
       <!-- explore section start -->
       <section class="explore">
-        <div class="ui container">
+        <div class="tw-container tw-m-auto">
            <div class="tw-flex tw-flex-col sm:tw-flex-row">
               <div class="tw-w-full sm:tw-w-1/2">
                  <h2 class="tw-text-20px tw-mb-12px tw-text-primary tw-font-semibold">Explore our Micro-Practices</h2>
                  <p class="tw-text-14px tw-text-description tw-font-medium tw-opacity-50">Journey Map of  a sales person’s daily challenges</p>
               </div>
-              <div class="tw-w-full sm:tw-w-1/2 tw-mt-20px sm:tw-m-0px">
+              <div class="tw-w-full sm:tw-w-1/2 tw-mt-20px sm:tw-m-0px tw-text-right">
                     <div class="item tw-text-secondary tw-font-semibold tw-mb-10px md:tw-mb-auto md:tw-mr-22px tw-block md:tw-inline-block">
                       <img src="/src/assets/images/check.svg" class="check tw-mr-8px">Learn by doing
                     </div>
@@ -185,7 +185,7 @@
 
       <!-- about section start-->
       <section class="about">
-        <div class="ui container">
+        <div class="tw-container tw-m-auto">
           <div class="tw-text-primary tw-text-24px tw-font-semibold">GLEAC Leadership Mafia</div>
           <VueSlickCarousel :arrows="true" :dots="true" class="team_slider">
             <div>
@@ -262,48 +262,52 @@
 
       <!-- footer section start-->
       <section class="footer tw-bg-primary tw-text-white">
-         <div class="ui stackable grid container">
-           <div class="seven wide column">
-                <img src="/src/assets/images/footer_logo.png" style="width:106px">
-                <div class="tw-font-rubik tw-text-12px tw-mt-20px tw-mb-4px">admin@gleac.com</div>
-                <div class="tw-font-rubik tw-text-12px">5th Floor, Tower-C , DLF Cyber <br>Greens, Gurgaon Gurgaon HR<br> 122002 IN</div>
-           </div>
-           <div class="two wide column">
-             <img src="/src/assets/images/badges.png" style="width:67px">
-           </div>
-           <div class="three wide column">
-             <div class="tw-font-rubik tw-font-medium">Company</div>
+        <div class="tw-container tw-m-auto">
+          <div class="ui stackable grid">
+            <div class="seven wide column">
+              <img src="/src/assets/images/footer_logo.png" style="width:106px">
+              <div class="tw-font-rubik tw-text-12px tw-mt-20px tw-mb-4px">admin@gleac.com</div>
+              <div class="tw-font-rubik tw-text-12px">5th Floor, Tower-C , DLF Cyber <br>Greens, Gurgaon Gurgaon HR<br> 122002 IN</div>
+            </div>
+            <div class="two wide column">
+              <img src="/src/assets/images/badges.png" style="width:67px">
+            </div>
+            <div class="three wide column">
+              <div class="tw-font-rubik tw-font-medium">Company</div>
               <a href="" class="tw-font-rubik tw-text-white tw-block hover:tw-text-white hover:tw-underline tw-mt-14px">Our whitepaper</a>
               <a href="" class="tw-font-rubik tw-text-white tw-block hover:tw-text-white hover:tw-underline tw-mt-14px">Benchmark</a>
-             <a href="" class="tw-font-rubik tw-text-white tw-block hover:tw-text-white hover:tw-underline tw-mt-14px">About Us</a>
-           </div>
-           <div class="four wide column">
-             <div class="tw-font-rubik tw-font-medium tw-mb-14px">Subscribe To Newsletter</div>
-             <div class="ui inverted action fluid input">
-               <input type="text" placeholder="Enter your Email ID">
-               <button class="ui primary button">Subscribe</button>
-             </div>
-             <div class="ui two column grid">
-               <div class="column">
-                 <div class="tw-font-rubik tw-font-medium tw-mt-14px tw-mb-14px">Follow us</div>
-                 <i class="icon large facebook tw-cursor-pointer"></i>
-                 <i class="icon large twitter tw-cursor-pointer"></i>
-                 <i class="icon large linkedin tw-cursor-pointer"></i>
-               </div>
+              <a href="" class="tw-font-rubik tw-text-white tw-block hover:tw-text-white hover:tw-underline tw-mt-14px">About Us</a>
+            </div>
+            <div class="four wide column">
+              <div class="tw-font-rubik tw-font-medium tw-mb-14px">Subscribe To Newsletter</div>
+              <div class="ui inverted action fluid input">
+                <input type="text" placeholder="Enter your Email ID">
+                <button class="ui primary button">Subscribe</button>
+              </div>
+              <div class="ui two column grid">
+                <div class="column">
+                  <div class="tw-font-rubik tw-font-medium tw-mt-14px tw-mb-14px">Follow us</div>
+                  <i class="icon large facebook tw-cursor-pointer"></i>
+                  <i class="icon large twitter tw-cursor-pointer"></i>
+                  <i class="icon large linkedin tw-cursor-pointer"></i>
+                </div>
 
-               <div class="column">
-                 <div class="tw-font-rubik tw-font-medium tw-mt-14px tw-mb-14px">Download</div>
-                 <i class="icon large google play tw-cursor-pointer"></i>
-                 <i class="icon large apple tw-cursor-pointer"></i>
-               </div>
-             </div>
-           </div>
-         </div>
+                <div class="column">
+                  <div class="tw-font-rubik tw-font-medium tw-mt-14px tw-mb-14px">Download</div>
+                  <i class="icon large google play tw-cursor-pointer"></i>
+                  <i class="icon large apple tw-cursor-pointer"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </section>
       <!-- footer section end-->
 
       <section class="sub-footer tw-bg-primary tw-text-white">
-          <div class="ui two column grid container">
+        <div class="tw-container tw-m-auto">
+          <div class="ui two column stackable grid">
             <div class="column">
               <div class="tw-font-rubik">©GLEAC 2019. All Rights Reserved</div>
             </div>
@@ -311,10 +315,11 @@
             <div class="right aligned column">
               <a href="" class="tw-font-rubik tw-text-white hover:tw-text-white hover:tw-underline tw-mr-14px">Terms and Condition</a>
               <a href="" class="tw-font-rubik tw-text-white hover:tw-text-white hover:tw-underline tw-mr-14px">Privacy Policy</a>
-              <a href="" class="tw-font-rubik tw-text-white hover:tw-text-white hover:tw-underline tw-mr-14px">Data Policy</a>
+              <a href="" class="tw-font-rubik tw-text-white hover:tw-text-white hover:tw-underline">Data Policy</a>
             </div>
 
           </div>
+        </div>
       </section>
     </div>
 
@@ -569,11 +574,10 @@ export default {
   }
 
 
-
-  .case_study.modal{
-  }
-
-
+  // Custom styles for twilwind
+   .tw-m-auto{
+     margin: 0 auto;
+   }
 
 
 </style>
