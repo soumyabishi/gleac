@@ -22,9 +22,8 @@
 
 
       <div class="banner tw-fixed tw-bg-primary tw-w-full">
-        <div class="tw-container tw-m-auto">
-          <div class="tw-font-rubik  tw-text-white  tw-text-16px">
-            Check your job fitment for the No. I growing job ( over 100k job available in the US alone) as a CONTACT TRACER <a
+        <div class="tw-container tw-m-auto tw-px-14px sm:tw-px-0px">
+          <div class="tw-font-rubik  tw-text-white  tw-text-16px">Check your job fitment for the No. I growing job ( over 100k job available in the US alone) as a CONTACT TRACER <a
             href="/" class="tw-underline tw-text-white hover:tw-text-white hover:tw-underline">here</a>
           </div>
         </div>
@@ -49,7 +48,7 @@
             </div>
 
             <div class="center aligned column">
-              <img src="/src/assets/images/intro_image.png" style="width: 410px;">
+              <img src="/src/assets/images/intro_image.png" style="width: 410px;" class="tw-mt-20px sm:mt-0"/>
             </div>
           </div>
         </div>
@@ -58,57 +57,8 @@
 
       <!-- press section start -->
       <section class="press tw-bg-secondary">
-        <div class="tw-container tw-m-auto">
+        <div class="tw-container tw-m-auto tw-px-14px sm:tw-px-0px">
 
-          <!--
-          <div class="tw-flex">
-            <div class="tw-w-1/9 tw-flex">
-              <div class="image_wrapper" @click="open_case_study_modal()">
-                <img src="/src/assets/images/press/forbes.png">
-              </div>
-            </div>
-            <div class="tw-w-1/9 tw-flex">
-              <div class="image_wrapper">
-                <img src="/src/assets/images/press/forbes.png">
-              </div>
-            </div>
-            <div class="tw-w-1/9 tw-flex">
-              <div class="image_wrapper">
-                <img src="/src/assets/images/press/forbes.png">
-              </div>
-            </div>
-            <div class="tw-w-1/9 tw-flex">
-              <div class="image_wrapper">
-                <img src="/src/assets/images/press/forbes.png">
-              </div>
-            </div>
-            <div class="tw-w-1/9 tw-flex">
-              <div class="image_wrapper">
-                <img src="/src/assets/images/press/forbes.png">
-              </div>
-            </div>
-            <div class="tw-w-1/9 tw-flex">
-              <div class="image_wrapper">
-                <img src="/src/assets/images/press/forbes.png">
-              </div>
-            </div>
-            <div class="tw-w-1/9 tw-flex">
-              <div class="image_wrapper">
-                <img src="/src/assets/images/press/forbes.png">
-              </div>
-            </div>
-            <div class="tw-w-1/9 tw-flex">
-              <div class="image_wrapper">
-                <img src="/src/assets/images/press/forbes.png">
-              </div>
-            </div>
-            <div class="tw-w-1/9 tw-flex">
-              <div class="image_wrapper">
-                <img src="/src/assets/images/press/forbes.png">
-              </div>
-            </div>
-          </div>
-          -->
 
           <VueSlickCarousel v-bind="slider_settings" class="">
             <div>
@@ -165,13 +115,13 @@
 
       <!-- explore section start -->
       <section class="explore">
-        <div class="tw-container tw-m-auto">
+        <div class="tw-container tw-m-auto tw-px-14px sm:tw-px-0px">
            <div class="tw-flex tw-flex-col sm:tw-flex-row">
               <div class="tw-w-full sm:tw-w-1/2">
                  <h2 class="tw-text-20px tw-mb-12px tw-text-primary tw-font-semibold">Explore our Micro-Practices</h2>
                  <p class="tw-text-14px tw-text-description tw-font-medium tw-opacity-50">Journey Map of  a sales person’s daily challenges</p>
               </div>
-              <div class="tw-w-full sm:tw-w-1/2 tw-mt-20px sm:tw-m-0px tw-text-right">
+              <div class="tw-w-full sm:tw-w-1/2 tw-mt-20px sm:tw-m-0px tw-text-left sm:tw-text-right">
                     <div class="item tw-text-secondary tw-font-semibold tw-mb-10px md:tw-mb-auto md:tw-mr-22px tw-block md:tw-inline-block">
                       <img src="/src/assets/images/check.svg" class="check tw-mr-8px">Learn by doing
                     </div>
@@ -229,20 +179,22 @@
 
       <!-- quote section start-->
       <section class="quote tw-bg-primary">
-        <div class="tw-font-rubik tw-text-white tw-w-full tw-text-center quote_wrapper">
-          <div class="tw-text-20px tw-mb-6px tw-font-medium tw-relative tw-inline-block">
-            <img class="tw-absolute tw--left-34px tw--top-12px" src="/src/assets/images/quote.svg"/>
-            With the new day comes new strength and new thoughts.
-            <img class="tw-absolute tw--right-34px tw--bottom-22px" src="/src/assets/images/quote_inverted.svg"/>
+        <div class="tw-container tw-m-auto tw-px-14px sm:tw-px-0px">
+          <div class="tw-font-rubik tw-text-white tw-w-full tw-text-center quote_wrapper">
+            <div class="tw-text-20px tw-mb-6px tw-font-medium tw-relative tw-inline-block tw-mx-50px sm:tw-mx-0px">
+              <img class="tw-absolute tw--left-34px tw--top-12px" src="/src/assets/images/quote.svg"/>
+              With the new day comes new strength and new thoughts.
+              <img class="tw-absolute tw--right-34px tw--bottom-22px" src="/src/assets/images/quote_inverted.svg"/>
+            </div>
+            <div class="tw-text-13px tw-text-center sm:tw-text-right tw-mr-10px">- Eleanor Roosevelt</div>
           </div>
-          <div class="tw-text-13px tw-text-right tw-mr-10px">- Eleanor Roosevelt</div>
         </div>
       </section>
       <!-- quote section end -->
 
       <!-- about section start-->
       <section class="about">
-        <div class="tw-container tw-m-auto">
+        <div class="tw-container tw-m-auto tw-px-14px sm:tw-px-0px">
           <div class="tw-text-primary tw-text-24px tw-font-semibold">GLEAC Leadership Mafia</div>
           <VueSlickCarousel :arrows="true" :dots="true" class="team_slider">
             <div>
@@ -319,7 +271,7 @@
 
       <!-- footer section start-->
       <section class="footer tw-bg-primary tw-text-white">
-        <div class="tw-container tw-m-auto">
+        <div class="tw-container tw-m-auto tw-px-14px sm:tw-px-0px">
           <div class="ui stackable grid">
             <div class="seven wide column">
               <img src="/src/assets/images/footer_logo.png" style="width:106px">
@@ -363,13 +315,13 @@
       <!-- footer section end-->
 
       <section class="sub-footer tw-bg-primary tw-text-white">
-        <div class="tw-container tw-m-auto">
+        <div class="tw-container tw-m-auto tw-px-14px sm:tw-px-0px">
           <div class="ui two column stackable grid">
             <div class="column">
               <div class="tw-font-rubik">©GLEAC 2019. All Rights Reserved</div>
             </div>
 
-            <div class="right aligned column">
+            <div class="column tw-text-left sm:tw-text-right">
               <a href="" class="tw-font-rubik tw-text-white hover:tw-text-white hover:tw-underline tw-mr-14px">Terms and Condition</a>
               <a href="" class="tw-font-rubik tw-text-white hover:tw-text-white hover:tw-underline tw-mr-14px">Privacy Policy</a>
               <a href="" class="tw-font-rubik tw-text-white hover:tw-text-white hover:tw-underline">Data Policy</a>
@@ -512,7 +464,7 @@ export default {
     // Banner styles
     .banner {
       margin-top: 72px;
-      padding: 22px 42px;
+      padding: 22px 0;
       z-index: 50;
     }
 
