@@ -8,9 +8,12 @@
           </div>
           <div class="eight wide right aligned computer only column">
             <div class="menu">
-              <a class="item tw-text-12px tw-font-semibold tw-text-primary tw-mr-12px">Our Whitepaper</a>
-              <a class="item tw-text-12px tw-font-semibold tw-text-primary tw-mr-12px">About Us</a>
-              <a class="item tw-text-12px tw-font-semibold tw-text-primary tw-mr-12px">Take Benchmark</a>
+              <a class="item tw-text-12px tw-font-semibold tw-text-primary tw-mr-12px tw-cursor-pointer" @click="open_white_paper_modal()">Our Whitepaper</a>
+              <a class="item tw-text-12px tw-font-semibold tw-text-primary tw-mr-12px" href="#" v-scroll-to="{el:'#about', offset: -150}">About Us</a>
+
+              <router-link :to="{ name: 'Login'}" class="item tw-text-12px tw-font-semibold tw-text-primary tw-mr-12px">
+                Take Benchmark
+              </router-link>
               <router-link :to="{ name: 'Login'}" class="ui basic primary button">
                 Login
               </router-link>
@@ -24,6 +27,16 @@
         <div class="tw-container tw-m-auto tw-px-14px sm:tw-px-0px">
           <div class="tw-font-rubik  tw-text-white  tw-text-13px sm:tw-text-16px">Check your job fitment for the No. I growing job ( over 100k job available in the US alone) as a CONTACT TRACER <a
             href="/" class="tw-underline tw-text-white hover:tw-text-white hover:tw-underline">here</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="cookie_banner tw-fixed tw-w-full">
+        <div class="tw-container tw-m-auto tw-px-14px sm:tw-px-0px">
+          <div class="tw-text-white tw-text-16px tw-font-semibold tw-mb-4px"><img src="/src/assets/images/cookie.svg"/>Oh, our Sweet Cookies..
+          </div>
+          <div class="tw-text-white tw-text-12px">We use cookies to provide the services and  features offeres on our website and improve our user experience  Learn More
           </div>
         </div>
       </div>
@@ -241,7 +254,7 @@
       <!-- quote section end -->
 
       <!-- about section start-->
-      <section class="about">
+      <section class="about" id="about">
         <div class="tw-container tw-m-auto tw-px-14px sm:tw-px-0px">
           <div class="tw-text-primary tw-text-24px tw-font-semibold">GLEAC Leadership Mafia</div>
           <VueSlickCarousel class="team_slider" v-bind="team_slider_settings">
@@ -331,9 +344,11 @@
             </div>
             <div class="three wide column">
               <div class="tw-font-rubik tw-font-medium">Company</div>
-              <a href="" class="tw-font-rubik tw-text-white tw-block hover:tw-text-white hover:tw-underline tw-mt-14px">Our whitepaper</a>
-              <a href="" class="tw-font-rubik tw-text-white tw-block hover:tw-text-white hover:tw-underline tw-mt-14px">Benchmark</a>
-              <a href="" class="tw-font-rubik tw-text-white tw-block hover:tw-text-white hover:tw-underline tw-mt-14px">About Us</a>
+              <a @click="open_white_paper_modal()" class="tw-font-rubik tw-text-white tw-block hover:tw-text-white hover:tw-underline tw-mt-14px tw-cursor-pointer">Our whitepaper</a>
+              <router-link :to="{ name: 'Login'}" class="tw-font-rubik tw-text-white tw-block hover:tw-text-white hover:tw-underline tw-mt-14px">
+                Benchmark
+              </router-link>
+              <a href="#" v-scroll-to="{el:'#about', offset: -150}" class="tw-font-rubik tw-text-white tw-block hover:tw-text-white hover:tw-underline tw-mt-14px">About Us</a>
             </div>
             <div class="four wide column">
               <div class="tw-font-rubik tw-font-medium tw-mb-14px">Subscribe To Newsletter</div>
@@ -443,8 +458,38 @@
 
 
       <!-- white paper modal start-->
-      <div class="ui modal whitepaper">
+      <div class="ui small modal whitepaper">
+          <div class="tw-font-rubik tw-font-medium tw-text-24px">Gleac Whitepaper</div>
+          <div class="tw-font-rubik tw-text-16px tw-text-secondary tw-mt-10px tw-mb-24px">Please share your details to download the whitepaper</div>
+          <form class="ui big form">
+            <div class="field">
+              <label>Name</label>
+              <input type="text" name="namee" placeholder="Enter your name">
+            </div>
+            <div class="field">
+              <label>Company name</label>
+              <input type="text" name="namee" placeholder="Enter your company name">
+            </div>
+            <div class="field">
+              <label>Email ID</label>
+              <input type="email" name="email" placeholder="Email ID">
+            </div>
+            <button class="ui primary large button">Submit</button>
+          </form>
 
+        <div class="ui hidden divider"></div>
+        <div class="ui hidden divider"></div>
+        <div class="ui hidden divider"></div>
+
+         <div class="ui stackable grid">
+            <div class="ten wide column">
+              <div class="tw-font-rubik tw-font-medium tw-text-24px">Thank you lovely human</div>
+              <div class="tw-font-rubik tw-text-16px tw-text-secondary tw-mt-10px">Please click to start.</div>
+            </div>
+           <div class="six wide column">
+             <button class="ui primary large fluid button"><span class="tw-relative tw-pr-34px">Download <img src="/src/assets/images/donwload_icon.svg" class="tw-absolute tw--top-1px tw-right-10px"/></span></button>
+           </div>
+         </div>
       </div>
       <!-- white paper modal end-->
 
@@ -511,6 +556,11 @@ export default {
         $('.ui.modal.case_study')
           .modal('show')
         ;
+      },
+      open_white_paper_modal(){
+        $('.ui.modal.whitepaper')
+          .modal('show')
+        ;
       }
     },
     components:{
@@ -537,6 +587,14 @@ export default {
     // Banner styles
     .banner {
       margin-top: 72px;
+      padding: 22px 0;
+      z-index: 50;
+    }
+
+    // Banner styles
+    .cookie_banner {
+      background-color: #333333;
+      bottom: 0;
       padding: 22px 0;
       z-index: 50;
     }
@@ -725,6 +783,15 @@ export default {
    .tw-m-auto{
      margin: 0 auto;
    }
+
+
+  .ui.modal.whitepaper{
+    padding: 50px;
+    .ui.form label{
+      font-weight: 500 !important;
+      margin-bottom: 10px !important;
+    }
+  }
 
 
 </style>
