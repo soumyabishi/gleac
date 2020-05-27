@@ -98,6 +98,7 @@ export default {
     }
     .right-content{
       width: 60%;
+      overflow-y: auto;
       padding: 90px 210px;
     }
 

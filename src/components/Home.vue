@@ -11,9 +11,9 @@
               <a class="item tw-text-12px tw-font-semibold tw-text-primary tw-mr-12px">Our Whitepaper</a>
               <a class="item tw-text-12px tw-font-semibold tw-text-primary tw-mr-12px">About Us</a>
               <a class="item tw-text-12px tw-font-semibold tw-text-primary tw-mr-12px">Take Benchmark</a>
-              <button class="ui basic primary button">
+              <router-link :to="{ name: 'Login'}" class="ui basic primary button">
                 Login
-              </button>
+              </router-link>
             </div>
           </div>
         </div>
@@ -383,8 +383,7 @@
     </div>
 
 
-      <!-- Case study modal -->
-
+      <!-- case study modal start-->
       <div class="ui modal case_study">
         <i class="close icon"></i>
 
@@ -440,6 +439,15 @@
 
         </div>
       </div>
+      <!-- case study modal end-->
+
+
+      <!-- white paper modal start-->
+      <div class="ui modal whitepaper">
+
+      </div>
+      <!-- white paper modal end-->
+
 
   </div>
 </template>

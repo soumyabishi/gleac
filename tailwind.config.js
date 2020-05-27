@@ -70,7 +70,6 @@ module.exports = {
       '34px': '34px',
       'auto': 'auto'
     },
-
     inset:{
       '1px': '1px',
       '2px': '2px',
@@ -134,7 +133,6 @@ module.exports = {
       '-38px': '-38px',
       '-60px': '-60px',
     },
-
     fontSize: {
       '10px': '10px',
       '11px': '11px',
@@ -168,7 +166,6 @@ module.exports = {
       '36px':'36px',
       '38px':'38px',
     },
-
     textColor: {
       'primary':'#0065ad',
       'text-color': '#3b3b3b',
@@ -188,7 +185,9 @@ module.exports = {
     extend: {},
   },
   variants: {},
-  plugins: [
-
-  ],
+  plugins: [],
+  purge: {
+    enabled: true,
+    content: ['./src/**/*.html'],
+  },
 }
