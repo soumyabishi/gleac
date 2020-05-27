@@ -20,10 +20,16 @@
       </div>
     </header>
 
-    <div class="banner tw-font-rubik tw-fixed tw-bg-primary tw-text-white tw-w-full tw-text-center tw-text-16px">
-      Check your job fitment for the No. I growing job ( over 100k job available in the US alone) as a CONTACT TRACER <a
-      href="/" class="tw-underline tw-text-white hover:tw-text-white hover:tw-underline">here</a>
-    </div>
+
+      <div class="banner tw-fixed tw-bg-primary tw-w-full">
+        <div class="tw-container tw-m-auto">
+          <div class="tw-font-rubik  tw-text-white  tw-text-16px">
+            Check your job fitment for the No. I growing job ( over 100k job available in the US alone) as a CONTACT TRACER <a
+            href="/" class="tw-underline tw-text-white hover:tw-text-white hover:tw-underline">here</a>
+          </div>
+        </div>
+      </div>
+
 
     <div class="content">
 
@@ -33,7 +39,7 @@
           <div class="ui two column middle aligned stackable grid">
             <div class="column">
 
-              <h1 class="tw-text-30px tw-text-text-color tw-leading-38px tw-mb-6px tw-font-bold">Human Skills Matter</h1>
+              <h1 class="tw-text-34px tw-text-text-color tw-leading-38px tw-mb-6px tw-font-bold">Human Skills Matter</h1>
               <p class="tw-text-16px tw-text-text-color tw-font-medium tw-leading-26px tw-mb-34px">Gleac measures and
                 develops human skills for any job in 10 minutes a day using A.I.</p>
               <div class="ui action large fluid input">
@@ -50,61 +56,61 @@
       </section>
       <!-- intro section send -->
 
-      <!-- clients section start -->
-      <section class="clients tw-bg-secondary">
+      <!-- press section start -->
+      <section class="press tw-bg-secondary">
         <div class="tw-container tw-m-auto">
 
           <div class="tw-flex">
             <div class="tw-w-1/9 tw-flex">
               <div class="image_wrapper" @click="open_case_study_modal()">
-                <img src="/src/assets/images/clients/forbes.png">
+                <img src="/src/assets/images/press/forbes.png">
               </div>
             </div>
             <div class="tw-w-1/9 tw-flex">
               <div class="image_wrapper">
-                <img src="/src/assets/images/clients/forbes.png">
+                <img src="/src/assets/images/press/forbes.png">
               </div>
             </div>
             <div class="tw-w-1/9 tw-flex">
               <div class="image_wrapper">
-                <img src="/src/assets/images/clients/forbes.png">
+                <img src="/src/assets/images/press/forbes.png">
               </div>
             </div>
             <div class="tw-w-1/9 tw-flex">
               <div class="image_wrapper">
-                <img src="/src/assets/images/clients/forbes.png">
+                <img src="/src/assets/images/press/forbes.png">
               </div>
             </div>
             <div class="tw-w-1/9 tw-flex">
               <div class="image_wrapper">
-                <img src="/src/assets/images/clients/forbes.png">
+                <img src="/src/assets/images/press/forbes.png">
               </div>
             </div>
             <div class="tw-w-1/9 tw-flex">
               <div class="image_wrapper">
-                <img src="/src/assets/images/clients/forbes.png">
+                <img src="/src/assets/images/press/forbes.png">
               </div>
             </div>
             <div class="tw-w-1/9 tw-flex">
               <div class="image_wrapper">
-                <img src="/src/assets/images/clients/forbes.png">
+                <img src="/src/assets/images/press/forbes.png">
               </div>
             </div>
             <div class="tw-w-1/9 tw-flex">
               <div class="image_wrapper">
-                <img src="/src/assets/images/clients/forbes.png">
+                <img src="/src/assets/images/press/forbes.png">
               </div>
             </div>
             <div class="tw-w-1/9 tw-flex">
               <div class="image_wrapper">
-                <img src="/src/assets/images/clients/forbes.png">
+                <img src="/src/assets/images/press/forbes.png">
               </div>
             </div>
           </div>
 
         </div>
       </section>
-      <!-- clients section start -->
+      <!-- press section start -->
 
       <!-- explore section start -->
       <section class="explore">
@@ -350,7 +356,7 @@
             </div>
 
           <div class="six wide center aligned column">
-            <img src="/src/assets/images/clients/accenture.png" style="width: 180px;">
+            <img src="/src/assets/images/press/accenture.png" style="width: 180px;">
           </div>
 
         </div>
@@ -434,7 +440,7 @@ export default {
       padding: 60px 0;
     }
 
-    section.clients {
+    section.press {
       padding: 28px 0;
       border-top: 1px solid rgba(117, 122, 160, 0.14139);
       border-bottom: 1px solid rgba(117, 122, 160, 0.14139);

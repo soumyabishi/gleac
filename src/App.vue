@@ -38,4 +38,12 @@
   .ui.dimmer{
     background-color: rgba(0, 0, 0, 0.46) !important;
   }
+
+  .ui.button{
+    font-weight: 600 !important;
+  }
+
+  .ui.form input:not([type]), .ui.form input[type="date"], .ui.form input[type="datetime-local"], .ui.form input[type="email"], .ui.form input[type="number"], .ui.form input[type="password"], .ui.form input[type="search"], .ui.form input[type="tel"], .ui.form input[type="time"], .ui.form input[type="text"], .ui.form input[type="file"], .ui.form input[type="url"]{
+    font-family: Rubik, 'sans-serif' !important;
+  }
 </style>
