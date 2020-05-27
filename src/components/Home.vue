@@ -20,7 +20,6 @@
       </div>
     </header>
 
-
       <div class="banner tw-fixed tw-bg-primary tw-w-full">
         <div class="tw-container tw-m-auto tw-px-14px sm:tw-px-0px">
           <div class="tw-font-rubik  tw-text-white  tw-text-16px">Check your job fitment for the No. I growing job ( over 100k job available in the US alone) as a CONTACT TRACER <a
@@ -29,8 +28,7 @@
         </div>
       </div>
 
-
-    <div class="content">
+      <div class="content">
 
       <!-- intro section start -->
       <section class="intro">
@@ -52,6 +50,11 @@
             </div>
           </div>
         </div>
+
+        <div class="appstore_icons tw-absolute tw-right-30px tw-my-20px sm:tw-my-0px">
+          <a><i class="icon large google play tw-cursor-pointer"></i></a>
+          <a><i class="icon large apple tw-cursor-pointer"></i></a>
+        </div>
       </section>
       <!-- intro section send -->
 
@@ -62,48 +65,48 @@
 
           <VueSlickCarousel v-bind="slider_settings" class="">
             <div>
-              <div class="image_wrapper">
+              <div class="image_wrapper" @click="open_case_study_modal()">
                 <img src="/src/assets/images/press/strada.png">
               </div>
             </div>
             <div>
-              <div class="image_wrapper">
+              <div class="image_wrapper" @click="open_case_study_modal()">
                 <img src="/src/assets/images/press/prada.png">
               </div>
             </div>
             <div>
-              <div class="image_wrapper">
+              <div class="image_wrapper" @click="open_case_study_modal()">
                 <img src="/src/assets/images/press/spottabl.png">
               </div>
             </div>
             <div>
-              <div class="image_wrapper">
+              <div class="image_wrapper" @click="open_case_study_modal()">
                 <img src="/src/assets/images/press/pwc.png">
               </div>
             </div>
             <div>
-              <div class="image_wrapper">
+              <div class="image_wrapper" @click="open_case_study_modal()">
                 <img src="/src/assets/images/press/gulf.png">
               </div>
             </div>
 
             <div>
-              <div class="image_wrapper">
+              <div class="image_wrapper" @click="open_case_study_modal()">
                 <img src="/src/assets/images/press/expo.png">
               </div>
             </div>
             <div>
-              <div class="image_wrapper">
+              <div class="image_wrapper" @click="open_case_study_modal()">
                 <img src="/src/assets/images/press/korn.png">
               </div>
             </div>
             <div>
-              <div class="image_wrapper">
+              <div class="image_wrapper" @click="open_case_study_modal()">
                 <img src="/src/assets/images/press/accenture.png">
               </div>
             </div>
             <div>
-              <div class="image_wrapper">
+              <div class="image_wrapper" @click="open_case_study_modal()">
                 <img src="/src/assets/images/press/forbes.png">
               </div>
             </div>
@@ -162,14 +165,56 @@
                   </div>
                   <div class="tw-font-rubik tw-text-primary tw-absolute tw-left-14px tw-bottom-18px tw-text-12px tw-font-medium tw-cursor-pointer">Take a look</div>
                 </div>
-                <div class="card sm:tw-w-1/4 tw-flex tw-relative tw-rounded tw-mt-20px sm:tw-mt-0px sm:tw-ml-50px">
-                  <img src="/src/assets/images/number_badge.svg" width="50" class="tw-absolute tw-left-10px tw--top-5px">
-                  <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-26px tw-text-description">05</h4>
-                  <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-64px tw-text-description">Try Step</h4>
-                  <div class="card_content tw-px-14px">
-                    <p class="tw-font-rubik tw-text-12px tw-text-secondary">Arrives at work with personal stuff on their mind.</p>
+                <div class="sm:tw-w-1/4 tw-flex tw-flex-col tw-relative tw-mt-20px sm:tw-mt-0px sm:tw-ml-50px">
+                      <div class="tw-text-16px tw-text-secondary tw-font-semibold tw-mb-18px">Our Library</div>
+
+
+                  <div class="ui two column grid">
+                    <div class="column">
+                      <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative tw-mb-12px">
+                        <img src="/src/assets/images/library/creativity.png" width="26" class="tw-absolute tw--left-8px tw--top-2px">Creativity
+                      </div>
+                      <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
+                        <img src="/src/assets/images/library/managing_people.png" width="26" class="tw-absolute tw--left-8px tw--top-4px">Managing People
+                      </div>
+
+                      <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
+                        <img src="/src/assets/images/library/interview_skills.png" width="26" class="tw-absolute tw--left-8px tw--top-3px">Interviewing Skills
+                      </div>
+
+                      <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
+                        <img src="/src/assets/images/library/critical_thinking.png" width="26" class="tw-absolute tw--left-8px tw--top-5px">Critical Thinking
+                      </div>
+
+                      <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
+                        <img src="/src/assets/images/library/mindfullness.png" width="26" class="tw-absolute tw--left-8px tw--top-5px">Mindfulness
+                      </div>
+
+                    </div>
+                    <div class="column">
+                      <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
+                        <img src="/src/assets/images/library/decision_making.png" width="26" class="tw-absolute tw--left-8px tw--top-4px">Decision making
+                      </div>
+
+                      <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
+                        <img src="/src/assets/images/library/self_direction.png" width="26" class="tw-absolute tw--left-8px tw--top-4px">Self Direction
+                      </div>
+
+                      <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
+                        <img src="/src/assets/images/library/collaboration.png" width="26" class="tw-absolute tw--left-8px tw--top-4px">Collaboration
+                      </div>
+
+                      <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
+                        <img src="/src/assets/images/library/communication.png" width="26" class="tw-absolute tw--left-8px tw--top-4px">Communication
+                      </div>
+
+                      <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
+                        <img src="/src/assets/images/library/emotional_iq.png" width="26" class="tw-absolute tw--left-8px tw--top-4px">Emotional IQ
+                      </div>
+                      <a href="/" class="tw-font-rubik"> Show less<i class="icon angle up"></i></a>
+                    </div>
                   </div>
-                  <div class="tw-font-rubik tw-text-primary tw-absolute tw-left-14px tw-bottom-18px tw-text-12px tw-font-medium tw-cursor-pointer">Take a look</div>
+
                 </div>
               </div>
           </div>
@@ -245,7 +290,7 @@
              <img src="/src/assets/images/contact.png" class="tw-w-full">
            </div>
           <div class="eight wide column">
-            <div class="tw-pl-20px">
+            <div class="tw-pl-0px sm:tw-pl-20px">
               <div class="tw-font-rubik tw-text-primary tw-font-medium tw-text-20px tw-mb-20px">Contact Us</div>
               <form class="ui form">
                 <div class="field">
@@ -330,66 +375,68 @@
           </div>
         </div>
       </section>
+
+
     </div>
 
 
-    <!-- Case study modal -->
+      <!-- Case study modal -->
 
-    <div class="ui modal case_study">
-      <i class="close icon"></i>
+      <div class="ui modal case_study">
+        <i class="close icon"></i>
 
-      <div class="tw-flex tw-justify-center tw-items-stretch">
-          <div class="tw-w-1/2 tw-bg-primary tw-justify-center tw-items-center tw-flex tw-flex-col">
-            <div class="tw-font-medium tw-font-rubik tw-text-28px tw-mb-4px tw-text-white">Case Study<br>
-              accenture</div>
-          </div>
-
-        <div class="tw-w-1/2 tw-justify-center tw-items-center tw-flex tw-flex-col tw-p-20px">
-          <img src="/src/assets/images/case_study_header.png" style="width: 78%">
-        </div>
-
-      </div>
-      <div class="modal_content tw-p-30px">
-
-        <div class="ui stackable grid">
-            <div class="ten wide column">
-               <div class="tw-font-rubik tw-text-16px tw-leading-20px">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
-                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
-               </div>
+        <div class="tw-flex tw-justify-center tw-items-stretch">
+            <div class="tw-w-1/2 tw-bg-primary tw-justify-center tw-items-center tw-flex tw-flex-col">
+              <div class="tw-font-medium tw-font-rubik tw-text-28px tw-mb-4px tw-text-white">Case Study<br>
+                accenture</div>
             </div>
 
-          <div class="six wide center aligned column">
-            <img src="/src/assets/images/press/accenture.png" style="width: 180px;">
+          <div class="tw-w-1/2 tw-justify-center tw-items-center tw-flex tw-flex-col tw-p-20px">
+            <img src="/src/assets/images/case_study_header.png" style="width: 78%">
           </div>
 
         </div>
+        <div class="modal_content tw-p-30px">
 
-        <div class="tw-font-rubik tw-font-medium tw-text-primary tw-text-20px tw-mt-38px tw-mb-20px">
-          The Objectives
-        </div>
+          <div class="ui stackable grid">
+              <div class="ten wide column">
+                 <div class="tw-font-rubik tw-text-16px tw-leading-20px">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+                 </div>
+              </div>
+
+            <div class="six wide center aligned column">
+              <img src="/src/assets/images/press/accenture.png" style="width: 180px;">
+            </div>
+
+          </div>
+
+          <div class="tw-font-rubik tw-font-medium tw-text-primary tw-text-20px tw-mt-38px tw-mb-20px">
+            The Objectives
+          </div>
+
+            <div class="tw-font-rubik tw-text-16px tw-leading-20px">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </div>
+
+          <div class="tw-font-rubik tw-font-medium tw-text-primary tw-text-20px tw-mt-38px tw-mb-20px">
+            The Solution
+          </div>
 
           <div class="tw-font-rubik tw-text-16px tw-leading-20px">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           </div>
 
-        <div class="tw-font-rubik tw-font-medium tw-text-primary tw-text-20px tw-mt-38px tw-mb-20px">
-          The Solution
-        </div>
+          <div class="tw-font-rubik tw-font-medium tw-text-primary tw-text-20px tw-mt-38px tw-mb-20px">
+            The Result
+          </div>
 
-        <div class="tw-font-rubik tw-text-16px tw-leading-20px">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        </div>
+          <div class="tw-font-rubik tw-text-16px tw-leading-20px">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </div>
 
-        <div class="tw-font-rubik tw-font-medium tw-text-primary tw-text-20px tw-mt-38px tw-mb-20px">
-          The Result
         </div>
-
-        <div class="tw-font-rubik tw-text-16px tw-leading-20px">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        </div>
-
       </div>
-    </div>
 
   </div>
 </template>
@@ -470,6 +517,11 @@ export default {
 
     section.intro {
       padding: 60px 0;
+      .appstore_icons{
+        i {
+          font-size: 30px;
+        }
+      }
     }
 
     section.press {
@@ -532,6 +584,12 @@ export default {
       section.explore{
         .card{
           min-height: 180px;
+        }
+      }
+
+      section.contact{
+        .ui.form{
+          margin-right: 0 !important;
         }
       }
     }
