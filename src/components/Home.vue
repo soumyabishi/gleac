@@ -22,7 +22,7 @@
 
       <div class="banner tw-fixed tw-bg-primary tw-w-full">
         <div class="tw-container tw-m-auto tw-px-14px sm:tw-px-0px">
-          <div class="tw-font-rubik  tw-text-white  tw-text-16px">Check your job fitment for the No. I growing job ( over 100k job available in the US alone) as a CONTACT TRACER <a
+          <div class="tw-font-rubik  tw-text-white  tw-text-13px sm:tw-text-16px">Check your job fitment for the No. I growing job ( over 100k job available in the US alone) as a CONTACT TRACER <a
             href="/" class="tw-underline tw-text-white hover:tw-text-white hover:tw-underline">here</a>
           </div>
         </div>
@@ -46,7 +46,7 @@
             </div>
 
             <div class="center aligned column">
-              <img src="/src/assets/images/intro_image.png" style="width: 410px;" class="tw-mt-20px sm:mt-0"/>
+              <img src="/src/assets/images/intro_image.png" class="intro_image tw-mt-20px sm:mt-0"/>
             </div>
           </div>
         </div>
@@ -139,15 +139,16 @@
           <div class="steps">
               <div class="tw-flex tw-flex-col sm:tw-flex-row">
                  <div class="card sm:tw-w-1/4 tw-flex tw-relative tw-rounded">
-                     <img src="/src/assets/images/number_badge.svg" width="50" class="tw-absolute tw-left-10px tw--top-5px">
+                   <img src="/src/assets/images/number_badge.svg" width="50" class="tw-absolute tw-left-10px tw--top-5px">
                      <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-26px tw-text-description">01</h4>
                      <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-64px tw-text-description">Try Step</h4>
                       <div class="card_content tw-px-14px">
                         <p class="tw-font-rubik tw-text-12px tw-text-secondary">Arrives at work with personal stuff on their mind.</p>
                       </div>
                       <div class="tw-font-rubik tw-text-primary tw-absolute tw-left-14px tw-bottom-18px tw-text-12px tw-font-medium tw-cursor-pointer">Take a look</div>
+                      <img src="/src/assets/images/right_arrow.svg" width="50" class="tw-absolute right_arrow tw-hidden sm:tw-block">
                  </div>
-                <div class="card sm:tw-w-1/4 tw-flex tw-relative tw-rounded tw-mt-20px sm:tw-mt-0px sm:tw-ml-50px">
+                <div class="card sm:tw-w-1/4 tw-flex tw-relative tw-rounded tw-mt-20px sm:tw-mt-0px sm:tw-ml-110px">
                   <img src="/src/assets/images/number_badge.svg" width="50" class="tw-absolute tw-left-10px tw--top-5px">
                   <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-26px tw-text-description">15</h4>
                   <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-64px tw-text-description">Try Step</h4>
@@ -155,8 +156,10 @@
                     <p class="tw-font-rubik tw-text-12px tw-text-secondary">Salesperson wants to ensure high levels of consumer satisfaction by providing top-notch sales service.</p>
                   </div>
                   <div class="tw-font-rubik tw-text-primary tw-absolute tw-left-14px tw-bottom-18px tw-text-12px tw-font-medium tw-cursor-pointer">Take a look</div>
+                  <img src="/src/assets/images/right_arrow.svg" width="50" class="tw-absolute right_arrow tw-hidden sm:tw-block">
+
                 </div>
-                <div class="card sm:tw-w-1/4 tw-flex tw-relative tw-rounded tw-mt-20px sm:tw-mt-0px sm:tw-ml-50px">
+                <div class="card sm:tw-w-1/4 tw-flex tw-relative tw-rounded tw-mt-20px sm:tw-mt-0px sm:tw-ml-110px">
                   <img src="/src/assets/images/number_badge.svg" width="50" class="tw-absolute tw-left-10px tw--top-5px">
                   <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-26px tw-text-description">25</h4>
                   <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-64px tw-text-description">Try Step</h4>
@@ -165,7 +168,7 @@
                   </div>
                   <div class="tw-font-rubik tw-text-primary tw-absolute tw-left-14px tw-bottom-18px tw-text-12px tw-font-medium tw-cursor-pointer">Take a look</div>
                 </div>
-                <div class="sm:tw-w-1/4 tw-flex tw-flex-col tw-relative tw-mt-20px sm:tw-mt-0px sm:tw-ml-50px">
+                <div class="sm:tw-w-1/4 tw-flex tw-flex-col tw-relative tw-mt-20px sm:tw-mt-0px sm:tw-ml-70px">
                       <div class="tw-text-16px tw-text-secondary tw-font-semibold tw-mb-18px">Our Library</div>
 
 
@@ -241,7 +244,7 @@
       <section class="about">
         <div class="tw-container tw-m-auto tw-px-14px sm:tw-px-0px">
           <div class="tw-text-primary tw-text-24px tw-font-semibold">GLEAC Leadership Mafia</div>
-          <VueSlickCarousel :arrows="true" :dots="true" class="team_slider">
+          <VueSlickCarousel class="team_slider" v-bind="team_slider_settings">
             <div>
                  <div class="ui stackable grid">
                    <div class="three wide column">
@@ -316,7 +319,7 @@
 
       <!-- footer section start-->
       <section class="footer tw-bg-primary tw-text-white">
-        <div class="tw-container tw-m-auto tw-px-14px sm:tw-px-0px">
+        <div class="tw-container tw-m-auto">
           <div class="ui stackable grid">
             <div class="seven wide column">
               <img src="/src/assets/images/footer_logo.png" style="width:106px">
@@ -360,7 +363,7 @@
       <!-- footer section end-->
 
       <section class="sub-footer tw-bg-primary tw-text-white">
-        <div class="tw-container tw-m-auto tw-px-14px sm:tw-px-0px">
+        <div class="tw-container tw-m-auto">
           <div class="ui two column stackable grid">
             <div class="column">
               <div class="tw-font-rubik">©GLEAC 2019. All Rights Reserved</div>
@@ -471,9 +474,24 @@ export default {
             {
               "breakpoint": 640,
               "settings": {
+                "arrows":false,
                 "slidesToShow": 3,
                 "slidesToScroll": 3,
                 "infinite": true,
+              }
+            },
+          ]
+        },
+
+        team_slider_settings:{
+          "arrow": true,
+          "dots": true,
+          "responsive": [
+            {
+              "breakpoint": 640,
+              "settings": {
+                "dots": true,
+                "arrows":false
               }
             },
           ]
@@ -521,6 +539,10 @@ export default {
         i {
           font-size: 30px;
         }
+      }
+
+      .intro_image{
+        width: 410px;
       }
     }
 
@@ -576,6 +598,12 @@ export default {
         .card_content{
           padding-top: 66px;
         }
+        .right_arrow{
+          right: -70px;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 25px;
+        }
       }
 
     }
@@ -590,6 +618,18 @@ export default {
       section.contact{
         .ui.form{
           margin-right: 0 !important;
+        }
+      }
+
+      section.intro{
+        .intro_image{
+          width: 100%;
+        }
+      }
+
+      section.press{
+        .image_wrapper{
+          padding:0 !important;
         }
       }
     }

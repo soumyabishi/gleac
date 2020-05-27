@@ -1,18 +1,18 @@
 <template>
   <div class="Login">
-    <div class="tw-flex tw-justify-center tw-items-stretch tw-h-screen">
+    <div class="tw-flex tw-justify-center tw-items-stretch sm:tw-h-screen">
       <div class="left-content tw-justify-center tw-items-center tw-flex tw-flex-col">
         <VueSlickCarousel :arrows="true" :dots="true" :autoplay="true" class="login_slider">
           <div class="slider slider_1">
-              <div class="text">Our Benchmarks are British Psychology Approved and highly accurate showing a knee-jerk of your unique strengths and gap areas.</div>
+              <div class="text tw-text-center">Our Benchmarks are British Psychology Approved and highly accurate showing a knee-jerk of your unique strengths and gap areas.</div>
           </div>
 
           <div class="slider slider_2">
-            <div class="text">Our benchmarks can be taken right off you phones are are just 10-15 minutes.</div>
+            <div class="text tw-text-center">Our benchmarks can be taken right off you phones are are just 10-15 minutes.</div>
           </div>
 
           <div class="slider slider_3">
-            <div class="text">Our benchmarks pinpoints behavioral job fitment and the skills needed to be developed for the role.
+            <div class="text tw-text-center">Our benchmarks pinpoints behavioral job fitment and the skills needed to be developed for the role.
             </div>
           </div>
 
@@ -21,8 +21,10 @@
 
       <div class="right-content tw-flex tw-flex-col tw-relative">
 
-        <a><img src="/src/assets/images/gleac-logo-colored.png" class="logo tw-absolute tw-top-30px tw-left-30px"></a>
-        <div class="tw-font-rubik tw-text-16px tw-absolute tw-top-30px tw-right-30px">Don’t have an account? <a href="/" class="tw-text-primary tw-underline hover:tw-underline">Sign Up</a></div>
+        <a><img src="/src/assets/images/gleac-logo-colored.png" class="logo tw-absolute tw-top-30px tw-left-14px sm:tw-left-30px"></a>
+        <div class="tw-font-rubik tw-text-16px tw-absolute tw-top-30px tw-right-30px tw-hidden sm:tw-block">Don’t have an account? <a href="/" class="tw-text-primary tw-underline hover:tw-underline">Sign Up</a></div>
+        <div class="tw-font-rubik tw-text-16px tw-mt-30px tw-block sm:tw-hidden">Don’t have an account? <a href="/" class="tw-text-primary tw-underline hover:tw-underline">Sign Up</a></div>
+
         <h1 class="tw-text-32px tw-text-text-color tw-leading-38px tw-mb-12px tw-font-bold">Human Skills Matter</h1>
         <p class="tw-text-16px tw-text-secondary tw-font-medium tw-leading-26px tw-mb-34px">Gleac measures and
           develops human skills for any job in 10 minutes a day using A.I.</p>
@@ -75,6 +77,19 @@ export default {
   @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+
+  @media (max-width: 640px){
+    .Login {
+      .left-content {
+        display: none;
+      }
+      .right-content {
+        width: 100% !important;
+        padding: 100px 14px !important;
+      }
+    }
+  }
+
 
   .Login{
     .left-content{
