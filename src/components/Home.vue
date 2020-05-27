@@ -42,9 +42,9 @@
               <h1 class="tw-text-34px tw-text-text-color tw-leading-38px tw-mb-6px tw-font-bold">Human Skills Matter</h1>
               <p class="tw-text-16px tw-text-text-color tw-font-medium tw-leading-26px tw-mb-34px">Gleac measures and
                 develops human skills for any job in 10 minutes a day using A.I.</p>
-              <div class="ui action large fluid input">
+              <div class="ui action big fluid input">
                 <input type="text" placeholder="Type in a job title and see the skills needed">
-                <button class="ui primary button">Search</button>
+                <button class="ui primary large button">Search</button>
               </div>
             </div>
 
@@ -60,6 +60,7 @@
       <section class="press tw-bg-secondary">
         <div class="tw-container tw-m-auto">
 
+          <!--
           <div class="tw-flex">
             <div class="tw-w-1/9 tw-flex">
               <div class="image_wrapper" @click="open_case_study_modal()">
@@ -107,6 +108,56 @@
               </div>
             </div>
           </div>
+          -->
+
+          <VueSlickCarousel v-bind="slider_settings" class="">
+            <div>
+              <div class="image_wrapper">
+                <img src="/src/assets/images/press/strada.png">
+              </div>
+            </div>
+            <div>
+              <div class="image_wrapper">
+                <img src="/src/assets/images/press/prada.png">
+              </div>
+            </div>
+            <div>
+              <div class="image_wrapper">
+                <img src="/src/assets/images/press/spottabl.png">
+              </div>
+            </div>
+            <div>
+              <div class="image_wrapper">
+                <img src="/src/assets/images/press/pwc.png">
+              </div>
+            </div>
+            <div>
+              <div class="image_wrapper">
+                <img src="/src/assets/images/press/gulf.png">
+              </div>
+            </div>
+
+            <div>
+              <div class="image_wrapper">
+                <img src="/src/assets/images/press/expo.png">
+              </div>
+            </div>
+            <div>
+              <div class="image_wrapper">
+                <img src="/src/assets/images/press/korn.png">
+              </div>
+            </div>
+            <div>
+              <div class="image_wrapper">
+                <img src="/src/assets/images/press/accenture.png">
+              </div>
+            </div>
+            <div>
+              <div class="image_wrapper">
+                <img src="/src/assets/images/press/forbes.png">
+              </div>
+            </div>
+          </VueSlickCarousel>
 
         </div>
       </section>
@@ -399,7 +450,36 @@
 export default {
     name: 'Home',
     data() {
-      return {}
+      return {
+        slider_settings:{
+          "autoplay": true,
+          "dots": false,
+          "focusOnSelect": true,
+          "infinite": true,
+          "speed": 500,
+          "slidesToShow": 6,
+          "slidesToScroll": 3,
+          "touchThreshold": 5,
+          "responsive": [
+            {
+              "breakpoint": 1024,
+              "settings": {
+                "slidesToShow": 6,
+                "slidesToScroll": 6,
+                "infinite": true,
+              }
+            },
+            {
+              "breakpoint": 640,
+              "settings": {
+                "slidesToShow": 3,
+                "slidesToScroll": 3,
+                "infinite": true,
+              }
+            },
+          ]
+        }
+      }
     },
     methods:{
       open_case_study_modal(){
@@ -441,7 +521,10 @@ export default {
     }
 
     section.press {
-      padding: 28px 0;
+      div:focus{
+        outline: none;
+      }
+      padding: 10px 0;
       border-top: 1px solid rgba(117, 122, 160, 0.14139);
       border-bottom: 1px solid rgba(117, 122, 160, 0.14139);
       img {
