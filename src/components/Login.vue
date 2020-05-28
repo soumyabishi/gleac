@@ -99,7 +99,7 @@ export default {
     }
   }
 
-  @media (max-width: 1024px){
+  @media (max-width: 1300px){
     .Login {
       .right-content {
         width: 100% !important;
