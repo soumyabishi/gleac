@@ -188,6 +188,11 @@ module.exports = {
   plugins: [],
   purge: {
     enabled: true,
-    content: ['./src/**/*.html'],
+    content: [
+      './src/*.vue',
+      './src/components/common/*.vue',
+      './src/components/*.vue',
+      './src/components/**/*.vue'
+    ],
   },
 }
