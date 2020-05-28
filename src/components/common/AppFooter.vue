@@ -29,15 +29,15 @@
             <div class="ui two column grid">
               <div class="column">
                 <div class="tw-font-rubik tw-font-medium tw-mt-14px tw-mb-14px">Follow us</div>
-                <i class="icon large facebook tw-cursor-pointer"></i>
-                <i class="icon large twitter tw-cursor-pointer"></i>
-                <i class="icon large linkedin tw-cursor-pointer"></i>
+                <a href="https://www.facebook.com/gleac21centuryskills/" class="tw-text-white hover:tw-text-white"><i class="icon large facebook tw-cursor-pointer"></i></a>
+                <a href="https://twitter.com/GLEACskills" class="tw-text-white hover:tw-text-white"><i class="icon large twitter tw-cursor-pointer"></i></a>
+                <a href="https://www.linkedin.com/company/gleac21centuryskills/" class="tw-text-white hover:tw-text-white"><i class="icon large linkedin tw-cursor-pointer"></i></a>
               </div>
 
               <div class="column">
                 <div class="tw-font-rubik tw-font-medium tw-mt-14px tw-mb-14px">Download</div>
-                <i class="icon large google play tw-cursor-pointer"></i>
-                <i class="icon large apple tw-cursor-pointer"></i>
+                <a href="https://play.google.com/store/apps/details?id=com.gleac" class="tw-text-white hover:tw-text-white"><i class="icon large google play tw-cursor-pointer"></i></a>
+                <a href="https://apps.apple.com/in/app/gleac-your-21st-century-skills/id1281993636" class="tw-text-white hover:tw-text-white"><i class="icon large apple tw-cursor-pointer"></i></a>
               </div>
             </div>
           </div>

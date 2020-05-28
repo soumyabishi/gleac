@@ -25,8 +25,8 @@
         </div>
 
         <div class="appstore_icons tw-absolute tw-right-30px tw-my-20px sm:tw-my-0px">
-          <a><i class="icon large google play tw-cursor-pointer"></i></a>
-          <a><i class="icon large apple tw-cursor-pointer"></i></a>
+          <a href="https://play.google.com/store/apps/details?id=com.gleac"><i class="icon large google play tw-cursor-pointer"></i></a>
+          <a href="https://apps.apple.com/in/app/gleac-your-21st-century-skills/id1281993636"><i class="icon large apple tw-cursor-pointer"></i></a>
         </div>
       </section>
       <!-- intro section send -->
@@ -121,17 +121,43 @@
                       <div class="tw-font-rubik tw-text-primary tw-absolute tw-left-14px tw-bottom-18px tw-text-12px tw-font-medium tw-cursor-pointer">Take a look</div>
                       <img src="/src/assets/images/right_arrow.svg" width="50" class="tw-absolute right_arrow tw-hidden sm:tw-block">
                  </div>
-                <div class="card sm:tw-w-1/4 tw-flex tw-relative tw-rounded tw-mt-20px sm:tw-mt-0px sm:tw-ml-110px">
-                  <img src="/src/assets/images/number_badge.svg" width="50" class="tw-absolute tw-left-10px tw--top-5px">
-                  <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-26px tw-text-description">15</h4>
-                  <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-64px tw-text-description">Try Step</h4>
-                  <div class="card_content tw-px-14px">
-                    <p class="tw-font-rubik tw-text-12px tw-text-secondary">Salesperson wants to ensure high levels of consumer satisfaction by providing top-notch sales service.</p>
-                  </div>
-                  <div class="tw-font-rubik tw-text-primary tw-absolute tw-left-14px tw-bottom-18px tw-text-12px tw-font-medium tw-cursor-pointer">Take a look</div>
-                  <img src="/src/assets/images/right_arrow.svg" width="50" class="tw-absolute right_arrow tw-hidden sm:tw-block">
 
+               <div class="card item-list sm:tw-w-1/4 tw-flex tw-flex-col tw-items-stretch tw-relative tw-rounded tw-mt-20px sm:tw-mt-0px sm:tw-ml-110px" v-if="take_a_look_15_show">
+
+                   <div class="tw-font-rubik tw-text-16px tw-py-14px tw-px-18px tw-block tw-w-full">Gleac Indicators
+                     <img src="/src/assets/images/close_icon.svg" @click="take_a_look_15_show = !take_a_look_15_show" class="tw-absolute">
+                   </div>
+                   <a href="#" class="tw-font-rubik tw-text-16px tw-py-14px tw-px-18px tw-block tw-w-full tw-relative">
+                     Self-regulation
+                     <img src="/src/assets/images/arrow-right.svg" class="tw-absolute">
+                   </a>
+                   <a href="#" class="tw-font-rubik tw-text-16px tw-py-14px tw-px-18px tw-block tw-w-full tw-relative">
+                     Self-management
+                     <img src="/src/assets/images/arrow-right.svg" class="tw-absolute">
+                   </a>
+                   <a href="#" class="tw-font-rubik tw-text-16px tw-py-14px tw-px-18px tw-block tw-w-full tw-relative">
+                     Self-awareness
+                     <img src="/src/assets/images/arrow-right.svg" class="tw-absolute">
+                   </a>
+
+
+                 <img src="/src/assets/images/right_arrow.svg" width="50" class="tw-absolute right_arrow tw-hidden sm:tw-block">
+
+               </div>
+
+
+                <div class="card sm:tw-w-1/4 tw-flex tw-relative tw-rounded tw-mt-20px sm:tw-mt-0px sm:tw-ml-110px" v-if="!take_a_look_15_show">
+                    <img src="/src/assets/images/number_badge.svg" width="50" class="tw-absolute tw-left-10px tw--top-5px">
+                    <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-26px tw-text-description">15</h4>
+                    <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-64px tw-text-description">Try Step</h4>
+                    <div class="card_content tw-px-14px">
+                      <p class="tw-font-rubik tw-text-12px tw-text-secondary">Salesperson wants to ensure high levels of consumer satisfaction by providing top-notch sales service.</p>
+                    </div>
+                    <div class="tw-font-rubik tw-text-primary tw-absolute tw-left-14px tw-bottom-18px tw-text-12px tw-font-medium tw-cursor-pointer" @click="take_a_look_15_show = !take_a_look_15_show">Take a look</div>
+                    <img src="/src/assets/images/right_arrow.svg" width="50" class="tw-absolute right_arrow tw-hidden sm:tw-block">
                 </div>
+
+
                 <div class="card sm:tw-w-1/4 tw-flex tw-relative tw-rounded tw-mt-20px sm:tw-mt-0px sm:tw-ml-110px">
                   <img src="/src/assets/images/number_badge.svg" width="50" class="tw-absolute tw-left-10px tw--top-5px">
                   <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-26px tw-text-description">25</h4>
@@ -141,12 +167,14 @@
                   </div>
                   <div class="tw-font-rubik tw-text-primary tw-absolute tw-left-14px tw-bottom-18px tw-text-12px tw-font-medium tw-cursor-pointer">Take a look</div>
                 </div>
+
+
                 <div class="sm:tw-w-1/4 tw-flex tw-flex-col tw-relative tw-mt-20px sm:tw-mt-0px sm:tw-ml-70px">
                       <div class="tw-text-16px tw-text-secondary tw-font-semibold tw-mb-18px">Our Library</div>
 
 
-                  <div class="ui two column grid">
-                    <div class="column">
+                  <div class="ui column grid">
+                    <div :class="{'eight wide column':show_more_library , 'sixteen wide column' : !show_more_library}">
                       <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative tw-mb-12px">
                         <img src="/src/assets/images/library/creativity.png" width="26" class="tw-absolute tw--left-8px tw--top-2px">Creativity
                       </div>
@@ -165,9 +193,9 @@
                       <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
                         <img src="/src/assets/images/library/mindfullness.png" width="26" class="tw-absolute tw--left-8px tw--top-5px">Mindfulness
                       </div>
-
+                      <a @click="show_more_library = !show_more_library" v-if="!show_more_library" class="tw-font-rubik tw-cursor-pointer"> Show more <i class="icon angle down"></i></a>
                     </div>
-                    <div class="column">
+                    <div class="eight wide column" v-if="show_more_library">
                       <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
                         <img src="/src/assets/images/library/decision_making.png" width="26" class="tw-absolute tw--left-8px tw--top-4px">Decision making
                       </div>
@@ -187,7 +215,7 @@
                       <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
                         <img src="/src/assets/images/library/emotional_iq.png" width="26" class="tw-absolute tw--left-8px tw--top-4px">Emotional IQ
                       </div>
-                      <a href="/" class="tw-font-rubik"> Show less<i class="icon angle up"></i></a>
+                      <a @click="show_more_library = !show_more_library" class="tw-font-rubik tw-cursor-pointer"> Show less <i class="icon angle up"></i></a>
                     </div>
                   </div>
 
@@ -402,6 +430,8 @@ export default {
     name: 'Home',
     data() {
       return {
+        show_more_library:false,
+        take_a_look_15_show:false,
         slider_settings:{
           "autoplay": true,
           "dots": false,
@@ -533,7 +563,7 @@ export default {
       }
       .card{
         box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.15);
-         min-height: 220px;
+         height: 220px;
         h4{
           margin: 0;
           font-size: 14px;
@@ -546,6 +576,39 @@ export default {
           top: 50%;
           transform: translateY(-50%);
           width: 25px;
+        }
+        &.item-list{
+          div{
+            border-bottom: 1px solid #DEECF7;
+            img{
+              right: 12px;
+              width: 22px;
+              top: 13px;
+              opacity: 0.6;
+              cursor: pointer;
+              &:hover{
+                opacity: 0.8;
+              }
+            }
+          }
+          a{
+            font-size: 14px;
+            color: #3b3b3b;
+            border-bottom: 1px solid #DEECF7;
+            &:hover{
+              background-color: #F6FAFE;
+              color: #0065ad;
+              img{
+                display: block;
+              }
+            }
+            img{
+              right: 18px;
+              width: 9px;
+              top: 17px;
+              display: none;
+            }
+          }
         }
       }
 

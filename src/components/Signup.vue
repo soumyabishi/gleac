@@ -1,5 +1,5 @@
 <template>
-  <div class="Login">
+  <div class="Signup">
     <div class="tw-flex tw-justify-center tw-items-stretch sm:tw-h-screen">
       <div class="left-content tw-justify-center tw-items-center tw-flex tw-flex-col">
         <VueSlickCarousel :arrows="true" :dots="true" :autoplay="true" class="login_slider">
@@ -22,15 +22,15 @@
       <div class="right-content tw-flex tw-flex-col tw-relative">
 
         <a><img src="/src/assets/images/gleac-logo-colored.png" class="logo tw-absolute tw-top-30px tw-left-14px sm:tw-left-30px"></a>
-        <div class="tw-font-rubik tw-text-16px tw-absolute tw-top-30px tw-right-30px tw-hidden sm:tw-block">Don’t have an account? <a href="/" class="tw-text-primary tw-underline hover:tw-underline">Sign Up</a></div>
-        <div class="tw-font-rubik tw-text-16px tw-mt-30px tw-block sm:tw-hidden">Don’t have an account? <router-link :to="{ name: 'Login'}" class="tw-text-primary tw-underline hover:tw-underline">Login</router-link></div>
+        <div class="tw-font-rubik tw-text-16px tw-absolute tw-top-30px tw-right-30px tw-hidden sm:tw-block">Already have an account? <router-link :to="{ name: 'Login'}" class="tw-text-primary tw-underline hover:tw-underline">Login</router-link></div>
+        <div class="tw-font-rubik tw-text-16px tw-mt-30px tw-block sm:tw-hidden">Don’t have an account? <a href="/" class="tw-text-primary tw-underline hover:tw-underline">Sign Up</a></div>
 
         <h1 class="tw-text-32px tw-text-text-color tw-leading-38px tw-mb-12px tw-font-bold">Human Skills Matter</h1>
         <p class="tw-text-16px tw-text-secondary tw-font-medium tw-leading-26px tw-mb-34px tw-mt-20px">Gleac measures and
           develops human skills for any job in 10 minutes a day using A.I.</p>
 
         <div class="login_wrapper tw-text-center">
-          <div class="tw-text-16px tw-text-secondary tw-font-medium tw-leading-26px tw-mb-15px">Login with</div>
+          <div class="tw-text-16px tw-text-secondary tw-font-medium tw-leading-26px tw-mb-15px">Signup with</div>
           <a class="tw-mr-15px"><img src="/src/assets/images/google.svg"> </a>
           <a class="tw-mr-15px"><img src="/src/assets/images/facebook.svg"> </a>
           <a class="tw-mr-15px"><img src="/src/assets/images/linkedin.svg"> </a>
@@ -38,15 +38,29 @@
           <div class="tw-text-16px tw-text-secondary tw-font-medium tw-leading-26px tw-mt-20px tw-mb-10px">Or email</div>
           <form class="ui big form">
             <div class="field">
+              <input type="text" name="name" placeholder="Your Name">
+            </div>
+            <div class="field">
               <input type="email" name="email" placeholder="Email ID">
             </div>
             <div class="field">
               <input type="password" name="password" placeholder="Password">
             </div>
-            <div class="tw-text-primary tw-text-right tw-font-rubik tw-pointer tw-mb-32px tw-text-16px tw-underline hover:tw-underline">
-                Forgot Password?
+
+            <div class="field">
+              <div class="ui checkbox">
+                <input type="checkbox" tabindex="0" class="hidden">
+                <label><div class="tw-font-rubik tw-text-16px">I agree to Gleac <a href="/" class="tw-text-primary tw-underline hover:tw-underline">Terms of use</a> and <a href="/" class="tw-text-primary tw-underline hover:tw-underline">Privacy Policy</a></div></label>
+              </div>
             </div>
-            <button class="ui primary  big fluid button" type="login">Login</button>
+            <div class="field">
+              <div class="ui checkbox">
+                <input type="checkbox" tabindex="0" class="hidden">
+                <label><div class="tw-font-rubik tw-text-16px">I would like to receive newsletter from Gleac</div></label>
+              </div>
+            </div>
+
+            <button class="ui primary  big fluid button">Sign up</button>
           </form>
         </div>
       </div>
@@ -61,7 +75,7 @@
   // optional style for arrows & dots
   import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 export default {
-    name: 'Login',
+    name: 'Signup',
     data() {
       return {}
     },
@@ -79,7 +93,7 @@ export default {
   @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
 
   @media (max-width: 640px){
-    .Login {
+    .Signup {
       .left-content {
         display: none;
       }
@@ -91,7 +105,7 @@ export default {
   }
 
 
-  .Login{
+  .Signup{
     .left-content{
       width: 40%;
       background-color: #1C1C1C;
@@ -100,6 +114,9 @@ export default {
       width: 60%;
       overflow-y: auto;
       padding: 90px 210px;
+      .form{
+        text-align: left;
+      }
     }
 
     .logo{
