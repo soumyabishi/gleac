@@ -1,4 +1,4 @@
-# vue-webpack-template-plus
+# Gelac.com Landing
 
 [Vue's official webpack template](https://github.com/vuejs-templates/webpack) +
 [Vuex](https://vuex.vuejs.org) +
