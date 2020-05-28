@@ -19,7 +19,7 @@
             </div>
 
             <div class="center aligned column">
-              <img src="/src/assets/images/intro_image.png" class="intro_image tw-mt-20px sm:mt-0"/>
+              <img src="../assets/images/intro_image.png" class="intro_image tw-mt-20px sm:mt-0"/>
             </div>
           </div>
         </div>
@@ -39,48 +39,48 @@
           <VueSlickCarousel v-bind="slider_settings" class="">
             <div>
               <div class="image_wrapper" @click="open_case_study_modal()">
-                <img src="/src/assets/images/press/strada.png">
+                <img src="../assets/images/press/strada.png">
               </div>
             </div>
             <div>
               <div class="image_wrapper" @click="open_case_study_modal()">
-                <img src="/src/assets/images/press/prada.png">
+                <img src="../assets/images/press/prada.png">
               </div>
             </div>
             <div>
               <div class="image_wrapper" @click="open_case_study_modal()">
-                <img src="/src/assets/images/press/spottabl.png">
+                <img src="../assets/images/press/spottabl.png">
               </div>
             </div>
             <div>
               <div class="image_wrapper" @click="open_case_study_modal()">
-                <img src="/src/assets/images/press/pwc.png">
+                <img src="../assets/images/press/pwc.png">
               </div>
             </div>
             <div>
               <div class="image_wrapper" @click="open_case_study_modal()">
-                <img src="/src/assets/images/press/gulf.png">
+                <img src="../assets/images/press/gulf.png">
               </div>
             </div>
 
             <div>
               <div class="image_wrapper" @click="open_case_study_modal()">
-                <img src="/src/assets/images/press/expo.png">
+                <img src="../assets/images/press/expo.png">
               </div>
             </div>
             <div>
               <div class="image_wrapper" @click="open_case_study_modal()">
-                <img src="/src/assets/images/press/korn.png">
+                <img src="../assets/images/press/korn.png">
               </div>
             </div>
             <div>
               <div class="image_wrapper" @click="open_case_study_modal()">
-                <img src="/src/assets/images/press/accenture.png">
+                <img src="../assets/images/press/accenture.png">
               </div>
             </div>
             <div>
               <div class="image_wrapper" @click="open_case_study_modal()">
-                <img src="/src/assets/images/press/forbes.png">
+                <img src="../assets/images/press/forbes.png">
               </div>
             </div>
           </VueSlickCarousel>
@@ -99,67 +99,67 @@
               </div>
               <div class="tw-w-full sm:tw-w-1/2 tw-mt-20px sm:tw-m-0px tw-text-left sm:tw-text-right">
                     <div class="item tw-text-secondary tw-font-semibold tw-mb-10px md:tw-mb-auto md:tw-mr-22px tw-block md:tw-inline-block">
-                      <img src="/src/assets/images/check.svg" class="check tw-mr-8px">Learn by doing
+                      <img src="../assets/images/check.svg" class="check tw-mr-8px">Learn by doing
                     </div>
                     <div class="item tw-text-secondary tw-font-semibold tw-mb-10px md:tw-mb-auto md:tw-mr-22px tw-block md:tw-inline-block">
-                      <img src="/src/assets/images/check.svg" class="check tw-mr-8px">Job role focus content
+                      <img src="../assets/images/check.svg" class="check tw-mr-8px">Job role focus content
                     </div>
                     <div class="item tw-text-secondary tw-font-semibold tw-block tw-block md:tw-inline-block">
-                      <img src="/src/assets/images/check.svg" class="check tw-mr-8px">Practise at your level
+                      <img src="../assets/images/check.svg" class="check tw-mr-8px">Practise at your level
                     </div>
              </div>
            </div>
           <div class="steps">
               <div class="tw-flex tw-flex-col sm:tw-flex-row">
                  <div class="card sm:tw-w-1/4 tw-flex tw-relative tw-rounded">
-                   <img src="/src/assets/images/number_badge.svg" width="50" class="tw-absolute tw-left-10px tw--top-5px">
+                   <img src="../assets/images/number_badge.svg" width="50" class="tw-absolute tw-left-10px tw--top-5px">
                      <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-26px tw-text-description">01</h4>
                      <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-64px tw-text-description">Try Step</h4>
                       <div class="card_content tw-px-14px">
                         <p class="tw-font-rubik tw-text-12px tw-text-secondary">Arrives at work with personal stuff on their mind.</p>
                       </div>
                       <div class="tw-font-rubik tw-text-primary tw-absolute tw-left-14px tw-bottom-18px tw-text-12px tw-font-medium tw-cursor-pointer">Take a look</div>
-                      <img src="/src/assets/images/right_arrow.svg" width="50" class="tw-absolute right_arrow tw-hidden sm:tw-block">
+                      <img src="../assets/images/right_arrow.svg" width="50" class="tw-absolute right_arrow tw-hidden sm:tw-block">
                  </div>
 
                <div class="card item-list sm:tw-w-1/4 tw-flex tw-flex-col tw-items-stretch tw-relative tw-rounded tw-mt-20px sm:tw-mt-0px sm:tw-ml-110px" v-if="take_a_look_15_show">
 
                    <div class="tw-font-rubik tw-text-16px tw-py-14px tw-px-18px tw-block tw-w-full">Gleac Indicators
-                     <img src="/src/assets/images/close_icon.svg" @click="take_a_look_15_show = !take_a_look_15_show" class="tw-absolute">
+                     <img src="../assets/images/close_icon.svg" @click="take_a_look_15_show = !take_a_look_15_show" class="tw-absolute">
                    </div>
                    <a href="#" class="tw-font-rubik tw-text-16px tw-py-14px tw-px-18px tw-block tw-w-full tw-relative">
                      Self-regulation
-                     <img src="/src/assets/images/arrow-right.svg" class="tw-absolute">
+                     <img src="../assets/images/arrow-right.svg" class="tw-absolute">
                    </a>
                    <a href="#" class="tw-font-rubik tw-text-16px tw-py-14px tw-px-18px tw-block tw-w-full tw-relative">
                      Self-management
-                     <img src="/src/assets/images/arrow-right.svg" class="tw-absolute">
+                     <img src="../assets/images/arrow-right.svg" class="tw-absolute">
                    </a>
                    <a href="#" class="tw-font-rubik tw-text-16px tw-py-14px tw-px-18px tw-block tw-w-full tw-relative">
                      Self-awareness
-                     <img src="/src/assets/images/arrow-right.svg" class="tw-absolute">
+                     <img src="../assets/images/arrow-right.svg" class="tw-absolute">
                    </a>
 
 
-                 <img src="/src/assets/images/right_arrow.svg" width="50" class="tw-absolute right_arrow tw-hidden sm:tw-block">
+                 <img src="../assets/images/right_arrow.svg" width="50" class="tw-absolute right_arrow tw-hidden sm:tw-block">
 
                </div>
 
 
                 <div class="card sm:tw-w-1/4 tw-flex tw-relative tw-rounded tw-mt-20px sm:tw-mt-0px sm:tw-ml-110px" v-if="!take_a_look_15_show">
-                    <img src="/src/assets/images/number_badge.svg" width="50" class="tw-absolute tw-left-10px tw--top-5px">
+                    <img src="../assets/images/number_badge.svg" width="50" class="tw-absolute tw-left-10px tw--top-5px">
                     <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-26px tw-text-description">15</h4>
                     <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-64px tw-text-description">Try Step</h4>
                     <div class="card_content tw-px-14px">
                       <p class="tw-font-rubik tw-text-12px tw-text-secondary">Salesperson wants to ensure high levels of consumer satisfaction by providing top-notch sales service.</p>
                     </div>
                     <div class="tw-font-rubik tw-text-primary tw-absolute tw-left-14px tw-bottom-18px tw-text-12px tw-font-medium tw-cursor-pointer" @click="take_a_look_15_show = !take_a_look_15_show">Take a look</div>
-                    <img src="/src/assets/images/right_arrow.svg" width="50" class="tw-absolute right_arrow tw-hidden sm:tw-block">
+                    <img src="../assets/images/right_arrow.svg" width="50" class="tw-absolute right_arrow tw-hidden sm:tw-block">
                 </div>
 
 
                 <div class="card sm:tw-w-1/4 tw-flex tw-relative tw-rounded tw-mt-20px sm:tw-mt-0px sm:tw-ml-110px">
-                  <img src="/src/assets/images/number_badge.svg" width="50" class="tw-absolute tw-left-10px tw--top-5px">
+                  <img src="../assets/images/number_badge.svg" width="50" class="tw-absolute tw-left-10px tw--top-5px">
                   <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-26px tw-text-description">25</h4>
                   <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-64px tw-text-description">Try Step</h4>
                   <div class="card_content tw-px-14px">
@@ -176,44 +176,44 @@
                   <div class="ui column grid">
                     <div :class="{'eight wide column':show_more_library , 'sixteen wide column' : !show_more_library}">
                       <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative tw-mb-12px">
-                        <img src="/src/assets/images/library/creativity.png" width="26" class="tw-absolute tw--left-8px tw--top-2px">Creativity
+                        <img src="../assets/images/library/creativity.png" width="26" class="tw-absolute tw--left-8px tw--top-2px">Creativity
                       </div>
                       <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
-                        <img src="/src/assets/images/library/managing_people.png" width="26" class="tw-absolute tw--left-8px tw--top-4px">Managing People
-                      </div>
-
-                      <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
-                        <img src="/src/assets/images/library/interview_skills.png" width="26" class="tw-absolute tw--left-8px tw--top-3px">Interviewing Skills
+                        <img src="../assets/images/library/managing_people.png" width="26" class="tw-absolute tw--left-8px tw--top-4px">Managing People
                       </div>
 
                       <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
-                        <img src="/src/assets/images/library/critical_thinking.png" width="26" class="tw-absolute tw--left-8px tw--top-5px">Critical Thinking
+                        <img src="../assets/images/library/interview_skills.png" width="26" class="tw-absolute tw--left-8px tw--top-3px">Interviewing Skills
                       </div>
 
                       <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
-                        <img src="/src/assets/images/library/mindfullness.png" width="26" class="tw-absolute tw--left-8px tw--top-5px">Mindfulness
+                        <img src="../assets/images/library/critical_thinking.png" width="26" class="tw-absolute tw--left-8px tw--top-5px">Critical Thinking
+                      </div>
+
+                      <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
+                        <img src="../assets/images/library/mindfullness.png" width="26" class="tw-absolute tw--left-8px tw--top-5px">Mindfulness
                       </div>
                       <a @click="show_more_library = !show_more_library" v-if="!show_more_library" class="tw-font-rubik tw-cursor-pointer"> Show more <i class="icon angle down"></i></a>
                     </div>
                     <div class="eight wide column" v-if="show_more_library">
                       <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
-                        <img src="/src/assets/images/library/decision_making.png" width="26" class="tw-absolute tw--left-8px tw--top-4px">Decision making
+                        <img src="../assets/images/library/decision_making.png" width="26" class="tw-absolute tw--left-8px tw--top-4px">Decision making
                       </div>
 
                       <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
-                        <img src="/src/assets/images/library/self_direction.png" width="26" class="tw-absolute tw--left-8px tw--top-4px">Self Direction
+                        <img src="../assets/images/library/self_direction.png" width="26" class="tw-absolute tw--left-8px tw--top-4px">Self Direction
                       </div>
 
                       <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
-                        <img src="/src/assets/images/library/collaboration.png" width="26" class="tw-absolute tw--left-8px tw--top-4px">Collaboration
+                        <img src="../assets/images/library/collaboration.png" width="26" class="tw-absolute tw--left-8px tw--top-4px">Collaboration
                       </div>
 
                       <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
-                        <img src="/src/assets/images/library/communication.png" width="26" class="tw-absolute tw--left-8px tw--top-4px">Communication
+                        <img src="../assets/images/library/communication.png" width="26" class="tw-absolute tw--left-8px tw--top-4px">Communication
                       </div>
 
                       <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
-                        <img src="/src/assets/images/library/emotional_iq.png" width="26" class="tw-absolute tw--left-8px tw--top-4px">Emotional IQ
+                        <img src="../assets/images/library/emotional_iq.png" width="26" class="tw-absolute tw--left-8px tw--top-4px">Emotional IQ
                       </div>
                       <a @click="show_more_library = !show_more_library" class="tw-font-rubik tw-cursor-pointer"> Show less <i class="icon angle up"></i></a>
                     </div>
@@ -231,9 +231,9 @@
         <div class="tw-container tw-m-auto tw-px-14px sm:tw-px-0px">
           <div class="tw-font-rubik tw-text-white tw-w-full tw-text-center quote_wrapper">
             <div class="tw-text-20px tw-mb-6px tw-font-medium tw-relative tw-inline-block tw-mx-50px sm:tw-mx-0px">
-              <img class="tw-absolute tw--left-34px tw--top-12px" src="/src/assets/images/quote.svg"/>
+              <img class="tw-absolute tw--left-34px tw--top-12px" src="../assets/images/quote.svg"/>
               With the new day comes new strength and new thoughts.
-              <img class="tw-absolute tw--right-34px tw--bottom-22px" src="/src/assets/images/quote_inverted.svg"/>
+              <img class="tw-absolute tw--right-34px tw--bottom-22px" src="../assets/images/quote_inverted.svg"/>
             </div>
             <div class="tw-text-13px tw-text-center sm:tw-text-right tw-mr-10px">- Eleanor Roosevelt</div>
           </div>
@@ -249,7 +249,7 @@
             <div>
                  <div class="ui stackable grid">
                    <div class="three wide column">
-                       <img src="/src/assets/images/team/sallyann.png" width="120" class="tw-rounded-full">
+                       <img src="../assets/images/team/sallyann.png" width="120" class="tw-rounded-full">
                    </div>
                    <div class="thirteen wide column">
                      <div class="tw-font-medium tw-font-rubik tw-text-14px tw-mb-4px">Sallyann Della Casa</div>
@@ -261,7 +261,7 @@
             <div>
               <div class="ui stackable grid">
                 <div class="three wide column">
-                  <img src="/src/assets/images/team/sallyann.png" width="120" class="tw-rounded-full">
+                  <img src="../assets/images/team/sallyann.png" width="120" class="tw-rounded-full">
                 </div>
                 <div class="thirteen wide column">
                   <div class="tw-font-medium tw-font-rubik tw-text-14px tw-mb-4px">Sallyann Della Casa</div>
@@ -273,7 +273,7 @@
             <div>
               <div class="ui stackable grid">
                 <div class="three wide column">
-                  <img src="/src/assets/images/team/sallyann.png" width="120" class="tw-rounded-full">
+                  <img src="../assets/images/team/sallyann.png" width="120" class="tw-rounded-full">
                 </div>
                 <div class="thirteen wide column">
                   <div class="tw-font-medium tw-font-rubik tw-text-14px tw-mb-4px">Sallyann Della Casa</div>
@@ -291,7 +291,7 @@
       <section class="contact tw-bg-secondary">
         <div class="ui stackable grid container">
            <div class="eight wide column">
-             <img src="/src/assets/images/contact.png" class="tw-w-full">
+             <img src="../assets/images/contact.png" class="tw-w-full">
            </div>
           <div class="eight wide column">
             <div class="tw-pl-0px sm:tw-pl-20px">
@@ -333,7 +333,7 @@
             </div>
 
           <div class="tw-w-1/2 tw-justify-center tw-items-center tw-flex tw-flex-col tw-p-20px">
-            <img src="/src/assets/images/case_study_header.png" style="width: 78%">
+            <img src="../assets/images/case_study_header.png" style="width: 78%">
           </div>
 
         </div>
@@ -347,7 +347,7 @@
               </div>
 
             <div class="six wide center aligned column">
-              <img src="/src/assets/images/press/accenture.png" style="width: 180px;">
+              <img src="../assets/images/press/accenture.png" style="width: 180px;">
             </div>
 
           </div>
@@ -411,7 +411,7 @@
               <div class="tw-font-rubik tw-text-16px tw-text-secondary tw-mt-10px">Please click to start.</div>
             </div>
            <div class="six wide column">
-             <button class="ui primary large fluid button"><span class="tw-relative tw-pr-34px">Download <img src="/src/assets/images/donwload_icon.svg" class="tw-absolute tw--top-1px tw-right-10px"/></span></button>
+             <button class="ui primary large fluid button"><span class="tw-relative tw-pr-34px">Download <img src="../assets/images/donwload_icon.svg" class="tw-absolute tw--top-1px tw-right-10px"/></span></button>
            </div>
          </div>
       </div>
@@ -662,7 +662,7 @@ export default {
         }
         .slick-prev:before {
           content: "";
-          background-image: url(/src/assets/images/arrow-left.svg);
+          background-image: url(../assets/images/arrow-left.svg);
           width: 21px;
           height: 21px;
           background-size: 13px;
@@ -675,7 +675,7 @@ export default {
 
         .slick-next:before {
           content: "";
-          background-image: url(/src/assets/images/arrow-right.svg);
+          background-image: url(../assets/images/arrow-right.svg);
           width: 21px;
           height: 21px;
           background-size: 13px;

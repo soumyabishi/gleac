@@ -31,10 +31,10 @@
 
         <div class="login_wrapper tw-text-center">
           <div class="tw-text-16px tw-text-secondary tw-font-medium tw-leading-26px tw-mb-15px">Signup with</div>
-          <a class="tw-mr-15px"><img src="/src/assets/images/google.svg"> </a>
-          <a class="tw-mr-15px"><img src="/src/assets/images/facebook.svg"> </a>
-          <a class="tw-mr-15px"><img src="/src/assets/images/linkedin.svg"> </a>
-          <a><img src="/src/assets/images/apple.svg"> </a>
+          <a class="tw-mr-15px"><img src="../assets/images/google.svg"> </a>
+          <a class="tw-mr-15px"><img src="../assets/images/facebook.svg"> </a>
+          <a class="tw-mr-15px"><img src="../assets/images/linkedin.svg"> </a>
+          <a><img src="../assets/images/apple.svg"> </a>
           <div class="tw-text-16px tw-text-secondary tw-font-medium tw-leading-26px tw-mt-20px tw-mb-10px">Or email</div>
           <form class="ui big form">
             <div class="field">
@@ -133,18 +133,18 @@ export default {
         position: relative;
       }
       .slider_1{
-        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0, 1) 100%), url("/src/assets/images/login_slider/slider_1.jpg") no-repeat center center;
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0, 1) 100%), url("../assets/images/login_slider/slider_1.jpg") no-repeat center center;
         background-size: cover;
         height: 100vh;
       }
 
       .slider_2{
-        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0, 1) 100%), url("/src/assets/images/login_slider/slider_2.jpg") no-repeat center center;
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0, 1) 100%), url("../assets/images/login_slider/slider_2.jpg") no-repeat center center;
         background-size: cover;
         height: 100vh;
       }
       .slider_3{
-        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0, 1) 100%), url("/src/assets/images/login_slider/slider_3.jpg") no-repeat center center;
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0, 1) 100%), url("../assets/images/login_slider/slider_3.jpg") no-repeat center center;
         background-size: cover;
         height: 100vh;
       }
