@@ -32,12 +32,22 @@
       </div>
 
 
-      <div class="cookie_banner tw-fixed tw-w-full">
+      <div class="cookie_banner tw-fixed tw-w-full" v-if="show_cookies">
         <div class="tw-container tw-m-auto tw-px-14px sm:tw-px-0px">
-          <div class="tw-text-white tw-text-16px tw-font-semibold tw-mb-4px"><img src="/src/assets/images/cookie.svg"/>Oh, our Sweet Cookies..
-          </div>
-          <div class="tw-text-white tw-text-12px">We use cookies to provide the services and  features offeres on our website and improve our user experience  Learn More
-          </div>
+           <div class="ui middle aligned grid">
+              <div class="twelve wide column">
+                <div class="tw-text-white tw-text-16px tw-font-semibold tw-mb-4px tw-relative tw-pl-18px"><img src="/src/assets/images/cookie.svg" class="tw-absolute tw--left-3px"/>Oh, our Sweet Cookies..
+                </div>
+                <div class="tw-text-white tw-text-12px">We use cookies to provide the services and features offers on our website and improve our user experience  <a href="/" class="tw-underline tw-text-white hover:tw-text-white hover:tw-underline">Learn More</a>
+                </div>
+              </div>
+
+             <div class="four wide right aligned column">
+               <button class="ui button basic inverted" @click="show_cookies = !show_cookies">Got it</button>
+             </div>
+
+           </div>
+
         </div>
       </div>
 
@@ -506,6 +516,7 @@ export default {
     name: 'Home',
     data() {
       return {
+        show_cookies:true,
         slider_settings:{
           "autoplay": true,
           "dots": false,
