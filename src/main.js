@@ -5,6 +5,12 @@ import App from './App'
 import router from './router'
 import store from './store'
 
+import AppNav from './components/common/AppNav'
+Vue.component("app-nav", AppNav)
+
+import AppFooter from './components/common/AppFooter'
+Vue.component("app-footer", AppFooter)
+
 var VueScrollTo = require('vue-scrollto');
 Vue.use(VueScrollTo, {
   container: "body",
