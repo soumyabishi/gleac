@@ -111,32 +111,53 @@
            </div>
           <div class="steps">
               <div class="tw-flex tw-flex-col md:tw-flex-row">
-                 <div class="card md:tw-w-1/4 tw-flex tw-relative tw-rounded">
+
+                <div class="card item-list md:tw-w-1/4 tw-flex tw-flex-col tw-items-stretch tw-relative tw-rounded tw-mt-20px md:tw-mt-0px" v-if="take_a_look_5_show">
+
+                  <div class="tw-font-rubik tw-text-16px tw-py-14px tw-px-18px tw-block tw-w-full">Gleac Indicators
+                    <img src="../assets/images/close_icon.svg" @click="take_a_look_5_show = !take_a_look_5_show" class="tw-absolute">
+                  </div>
+                  <a href="#" class="tw-font-rubik tw-text-16px tw-py-14px tw-px-18px tw-block tw-w-full tw-relative">
+                    Critical Thinking
+                    <img src="../assets/images/arrow-right.svg" class="tw-absolute">
+                  </a>
+                  <a href="#" class="tw-font-rubik tw-text-16px tw-py-14px tw-px-18px tw-block tw-w-full tw-relative">
+                    Judgement and Decision Making
+                    <img src="../assets/images/arrow-right.svg" class="tw-absolute">
+                  </a>
+                  <a href="#" class="tw-font-rubik tw-text-16px tw-py-14px tw-px-18px tw-block tw-w-full tw-relative">
+                    Communication
+                    <img src="../assets/images/arrow-right.svg" class="tw-absolute">
+                  </a>
+
+
+                  <img src="../assets/images/right_arrow.svg" width="50" class="tw-absolute right_arrow tw-hidden md:tw-block">
+
+                </div>
+                <div class="card md:tw-w-1/4 tw-flex tw-relative tw-rounded" v-if="!take_a_look_5_show">
                    <img src="../assets/images/number_badge.svg" width="50" class="tw-absolute tw-left-10px tw--top-5px">
-                     <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-26px tw-text-description">01</h4>
+                     <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-26px tw-text-description">05</h4>
                      <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-64px tw-text-description">Try Step</h4>
                       <div class="card_content tw-px-14px">
-                        <p class="tw-font-rubik tw-text-12px tw-text-secondary">Arrives at work with personal stuff on their mind.</p>
+                        <p class="tw-font-rubik tw-text-12px tw-text-secondary">A salesperson sees a person enter a store and makes a judgement. These micro-practices
+                          focus on baas awareness and setting aside assumptions, non-verbal communication and
+                          judgement.</p>
                       </div>
-                      <div class="tw-font-rubik tw-text-primary tw-absolute tw-left-14px tw-bottom-18px tw-text-12px tw-font-medium tw-cursor-pointer">Take a look</div>
+                      <div class="tw-font-rubik tw-text-primary tw-absolute tw-left-14px tw-bottom-18px tw-text-12px tw-font-medium tw-cursor-pointer" @click="take_a_look_5_show = !take_a_look_5_show">Take a look</div>
                       <img src="../assets/images/right_arrow.svg" width="50" class="tw-absolute right_arrow tw-hidden md:tw-block">
                  </div>
 
-               <div class="card item-list md:tw-w-1/4 tw-flex tw-flex-col tw-items-stretch tw-relative tw-rounded tw-mt-20px md:tw-mt-0px md:tw-ml-110px" v-if="take_a_look_15_show">
+                <div class="card item-list md:tw-w-1/4 tw-flex tw-flex-col tw-items-stretch tw-relative tw-rounded tw-mt-20px md:tw-mt-0px md:tw-ml-110px" v-if="take_a_look_15_show">
 
                    <div class="tw-font-rubik tw-text-16px tw-py-14px tw-px-18px tw-block tw-w-full">Gleac Indicators
                      <img src="../assets/images/close_icon.svg" @click="take_a_look_15_show = !take_a_look_15_show" class="tw-absolute">
                    </div>
                    <a href="#" class="tw-font-rubik tw-text-16px tw-py-14px tw-px-18px tw-block tw-w-full tw-relative">
-                     Self-regulation
+                     Emotional IQ
                      <img src="../assets/images/arrow-right.svg" class="tw-absolute">
                    </a>
                    <a href="#" class="tw-font-rubik tw-text-16px tw-py-14px tw-px-18px tw-block tw-w-full tw-relative">
-                     Self-management
-                     <img src="../assets/images/arrow-right.svg" class="tw-absolute">
-                   </a>
-                   <a href="#" class="tw-font-rubik tw-text-16px tw-py-14px tw-px-18px tw-block tw-w-full tw-relative">
-                     Self-awareness
+                     Self-Direction
                      <img src="../assets/images/arrow-right.svg" class="tw-absolute">
                    </a>
 
@@ -144,28 +165,41 @@
                  <img src="../assets/images/right_arrow.svg" width="50" class="tw-absolute right_arrow tw-hidden md:tw-block">
 
                </div>
-
-
                 <div class="card md:tw-w-1/4 tw-flex tw-relative tw-rounded tw-mt-20px md:tw-mt-0px md:tw-ml-110px" v-if="!take_a_look_15_show">
                     <img src="../assets/images/number_badge.svg" width="50" class="tw-absolute tw-left-10px tw--top-5px">
                     <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-26px tw-text-description">15</h4>
                     <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-64px tw-text-description">Try Step</h4>
                     <div class="card_content tw-px-14px">
-                      <p class="tw-font-rubik tw-text-12px tw-text-secondary">Salesperson wants to ensure high levels of consumer satisfaction by providing top-notch sales service.</p>
+                      <p class="tw-font-rubik tw-text-12px tw-text-secondary">Salesperson is under a lot of pressure to succeed and perform well.</p>
                     </div>
                     <div class="tw-font-rubik tw-text-primary tw-absolute tw-left-14px tw-bottom-18px tw-text-12px tw-font-medium tw-cursor-pointer" @click="take_a_look_15_show = !take_a_look_15_show">Take a look</div>
                     <img src="../assets/images/right_arrow.svg" width="50" class="tw-absolute right_arrow tw-hidden md:tw-block">
                 </div>
 
 
-                <div class="card md:tw-w-1/4 tw-flex tw-relative tw-rounded tw-mt-20px md:tw-mt-0px md:tw-ml-110px">
+                <div class="card item-list md:tw-w-1/4 tw-flex tw-flex-col tw-items-stretch tw-relative tw-rounded tw-mt-20px md:tw-mt-0px md:tw-ml-110px" v-if="take_a_look_25_show">
+
+                  <div class="tw-font-rubik tw-text-16px tw-py-14px tw-px-18px tw-block tw-w-full">Gleac Indicators
+                    <img src="../assets/images/close_icon.svg" @click="take_a_look_25_show = !take_a_look_25_show" class="tw-absolute">
+                  </div>
+                  <a href="#" class="tw-font-rubik tw-text-16px tw-py-14px tw-px-18px tw-block tw-w-full tw-relative">
+                    Communication
+                    <img src="../assets/images/arrow-right.svg" class="tw-absolute">
+                  </a>
+
+
+                  <img src="../assets/images/right_arrow.svg" width="50" class="tw-absolute right_arrow tw-hidden md:tw-block">
+
+                </div>
+                <div class="card md:tw-w-1/4 tw-flex tw-relative tw-rounded tw-mt-20px md:tw-mt-0px md:tw-ml-110px" v-if="!take_a_look_25_show">
                   <img src="../assets/images/number_badge.svg" width="50" class="tw-absolute tw-left-10px tw--top-5px">
                   <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-26px tw-text-description">25</h4>
                   <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-64px tw-text-description">Try Step</h4>
                   <div class="card_content tw-px-14px">
-                    <p class="tw-font-rubik tw-text-12px tw-text-secondary">Arrives at work with personal stuff on their mind.</p>
+                    <p class="tw-font-rubik tw-text-12px tw-text-secondary">Salesperson is trying to effectively deal with a customer who is complaining/ranting (e.g. in
+                      person, chat, or over the phone.)</p>
                   </div>
-                  <div class="tw-font-rubik tw-text-primary tw-absolute tw-left-14px tw-bottom-18px tw-text-12px tw-font-medium tw-cursor-pointer">Take a look</div>
+                  <div class="tw-font-rubik tw-text-primary tw-absolute tw-left-14px tw-bottom-18px tw-text-12px tw-font-medium tw-cursor-pointer" @click="take_a_look_25_show = !take_a_look_25_show">Take a look</div>
                 </div>
 
 
@@ -431,7 +465,9 @@ export default {
     data() {
       return {
         show_more_library:false,
+        take_a_look_5_show:false,
         take_a_look_15_show:false,
+        take_a_look_25_show:false,
         slider_settings:{
           "arrows":false,
           "autoplay": true,
@@ -588,7 +624,7 @@ export default {
       }
       .card{
         box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.15);
-         height: 220px;
+         height: 278px;
         h4{
           margin: 0;
           font-size: 14px;
@@ -605,6 +641,8 @@ export default {
         &.item-list{
           div{
             border-bottom: 1px solid #DEECF7;
+            background: #f9f9f9;
+            font-weight: 500;
             img{
               right: 12px;
               width: 22px;
