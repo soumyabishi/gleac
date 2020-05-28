@@ -34,7 +34,7 @@
 
     <div class="cookie_banner tw-fixed tw-w-full" v-if="show_cookies">
       <div class="tw-container tw-m-auto tw-px-14px">
-        <div class="ui middle aligned grid">
+        <div class="ui middle aligned stackable grid">
           <div class="twelve wide column">
             <div class="tw-text-white tw-text-16px tw-font-semibold tw-mb-4px tw-relative tw-pl-18px"><img src="../../assets/images/cookie.svg" class="tw-absolute tw--left-3px"/>Oh, our Sweet Cookies..
             </div>
@@ -43,7 +43,9 @@
           </div>
 
           <div class="four wide right aligned column">
-            <button class="ui button basic inverted" @click="show_cookies = !show_cookies">Got it</button>
+            <span class="tw-hidden sm:tw-block"><button class="ui button basic inverted" @click="show_cookies = !show_cookies">Got it</button></span>
+            <span class="tw-block sm:tw-hidden"><button class="ui fluid button basic inverted" @click="show_cookies = !show_cookies">Got it</button></span>
+
           </div>
 
         </div>

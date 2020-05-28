@@ -90,6 +90,26 @@ export default {
     }
   }
 
+  @media (max-width: 768px){
+    .Signup {
+      .right-content {
+        width: 100% !important;
+        padding: 100px 34px !important;
+      }
+    }
+  }
+
+  @media (max-width: 1024px){
+    .Signup {
+      .right-content {
+        width: 100% !important;
+        padding: 100px 34px !important;
+      }
+    }
+  }
+
+
+
 
   .Login{
     .left-content{
