@@ -665,6 +665,14 @@ export default {
       }
     }
 
+    @media (min-width: 768px){
+      .tw-container{
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+      }
+    }
+
+
     section.quote{
       padding: 40px 0;
       .quote_wrapper{

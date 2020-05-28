@@ -30,8 +30,6 @@
         </div>
       </div>
     </div>
-
-
     <div class="cookie_banner tw-fixed tw-w-full" v-if="show_cookies">
       <div class="tw-container tw-m-auto tw-px-14px">
         <div class="ui middle aligned stackable grid">
