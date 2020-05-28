@@ -91,7 +91,7 @@ export default {
   }
 
   @media (max-width: 768px){
-    .Signup {
+    .Login {
       .right-content {
         width: 100% !important;
         padding: 100px 34px !important;
@@ -100,7 +100,7 @@ export default {
   }
 
   @media (max-width: 1024px){
-    .Signup {
+    .Login {
       .right-content {
         width: 100% !important;
         padding: 100px 34px !important;
