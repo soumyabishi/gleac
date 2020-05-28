@@ -186,10 +186,6 @@
                     Communication
                     <img src="../assets/images/arrow-right.svg" class="tw-absolute">
                   </a>
-
-
-                  <img src="../assets/images/right_arrow.svg" width="50" class="tw-absolute right_arrow tw-hidden md:tw-block">
-
                 </div>
                 <div class="card md:tw-w-1/4 tw-flex tw-relative tw-rounded tw-mt-20px md:tw-mt-0px md:tw-ml-110px" v-if="!take_a_look_25_show">
                   <img src="../assets/images/number_badge.svg" width="50" class="tw-absolute tw-left-10px tw--top-5px">
@@ -642,7 +638,6 @@ export default {
           div{
             border-bottom: 1px solid #DEECF7;
             background: #f9f9f9;
-            font-weight: 500;
             img{
               right: 12px;
               width: 22px;
