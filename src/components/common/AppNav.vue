@@ -4,7 +4,7 @@
       <div class="tw-container tw-m-auto">
         <div class="ui middle aligned grid">
           <div class="eight wide column">
-            <a href="/" class="logo tw-inline-block"><img class="tw-w-full" src="/src/assets/images/gleac-logo.png"></a>
+            <a href="/" class="logo tw-inline-block"><img class="tw-w-full" src="../../assets/images/gleac-logo.png"></a>
           </div>
           <div class="eight wide right aligned computer only column">
             <div class="menu">
@@ -36,7 +36,7 @@
       <div class="tw-container tw-m-auto tw-px-14px sm:tw-px-0px">
         <div class="ui middle aligned grid">
           <div class="twelve wide column">
-            <div class="tw-text-white tw-text-16px tw-font-semibold tw-mb-4px tw-relative tw-pl-18px"><img src="/src/assets/images/cookie.svg" class="tw-absolute tw--left-3px"/>Oh, our Sweet Cookies..
+            <div class="tw-text-white tw-text-16px tw-font-semibold tw-mb-4px tw-relative tw-pl-18px"><img src="../../assets/images/cookie.svg" class="tw-absolute tw--left-3px"/>Oh, our Sweet Cookies..
             </div>
             <div class="tw-text-white tw-text-12px">We use cookies to provide the services and features offers on our website and improve our user experience  <a href="/" class="tw-underline tw-text-white hover:tw-text-white hover:tw-underline">Learn More</a>
             </div>

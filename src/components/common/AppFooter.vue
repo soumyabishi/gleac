@@ -5,12 +5,12 @@
       <div class="tw-container tw-m-auto">
         <div class="ui stackable grid">
           <div class="seven wide column">
-            <img src="/src/assets/images/footer_logo.png" style="width:106px">
+            <img src="../../assets/images/footer_logo.png" style="width:106px">
             <div class="tw-font-rubik tw-text-12px tw-mt-20px tw-mb-4px">admin@gleac.com</div>
             <div class="tw-font-rubik tw-text-12px">5th Floor, Tower-C , DLF Cyber <br>Greens, Gurgaon Gurgaon HR<br> 122002 IN</div>
           </div>
           <div class="two wide column">
-            <img src="/src/assets/images/badges.png" style="width:67px">
+            <img src="../../assets/images/badges.png" style="width:67px">
           </div>
           <div class="three wide column">
             <div class="tw-font-rubik tw-font-medium">Company</div>
