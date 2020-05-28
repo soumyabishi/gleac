@@ -1,7 +1,7 @@
 <template>
   <div class="app_nav">
-    <header class="desktop tw-px-30px tw-py-18px tw-bg-white tw-fixed tw-w-full tw-z-50">
-      <div class="tw-container tw-m-auto">
+    <header class="desktop tw-py-18px tw-bg-white tw-fixed tw-w-full tw-z-50">
+      <div class="tw-container tw-m-auto tw-px-14px">
         <div class="ui middle aligned grid">
           <div class="eight wide column">
             <a href="/" class="logo tw-inline-block"><img class="tw-w-full" src="../../assets/images/gleac-logo.png"></a>
@@ -24,7 +24,7 @@
     </header>
 
     <div class="banner tw-fixed tw-bg-primary tw-w-full">
-      <div class="tw-container tw-m-auto tw-px-14px sm:tw-px-0px">
+      <div class="tw-container tw-m-auto tw-px-14px">
         <div class="tw-font-rubik  tw-text-white  tw-text-13px sm:tw-text-16px">Check your job fitment for the No. I growing job ( over 100k job available in the US alone) as a CONTACT TRACER <a
           href="/" class="tw-underline tw-text-white hover:tw-text-white hover:tw-underline">here</a>
         </div>
@@ -33,7 +33,7 @@
 
 
     <div class="cookie_banner tw-fixed tw-w-full" v-if="show_cookies">
-      <div class="tw-container tw-m-auto tw-px-14px sm:tw-px-0px">
+      <div class="tw-container tw-m-auto tw-px-14px">
         <div class="ui middle aligned grid">
           <div class="twelve wide column">
             <div class="tw-text-white tw-text-16px tw-font-semibold tw-mb-4px tw-relative tw-pl-18px"><img src="../../assets/images/cookie.svg" class="tw-absolute tw--left-3px"/>Oh, our Sweet Cookies..

@@ -2,7 +2,7 @@
   <div class="footer">
     <!-- footer section start-->
     <section class="footer tw-bg-primary tw-text-white">
-      <div class="tw-container tw-m-auto">
+      <div class="tw-container tw-m-auto tw-px-14px">
         <div class="ui stackable grid">
           <div class="seven wide column">
             <img src="../../assets/images/footer_logo.png" style="width:106px">
@@ -48,7 +48,7 @@
     <!-- footer section end-->
 
     <section class="sub-footer tw-bg-primary tw-text-white">
-      <div class="tw-container tw-m-auto">
+      <div class="tw-container tw-m-auto tw-px-14px">
         <div class="ui two column stackable grid">
           <div class="column">
             <div class="tw-font-rubik">©GLEAC 2019. All Rights Reserved</div>

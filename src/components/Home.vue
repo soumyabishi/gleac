@@ -6,7 +6,7 @@
 
       <!-- intro section start -->
       <section class="intro">
-        <div class="tw-container tw-m-auto">
+        <div class="tw-container tw-m-auto tw-px-14px">
           <div class="ui two column middle aligned stackable grid">
             <div class="column">
               <h1 class="tw-text-34px tw-text-text-color tw-leading-38px tw-mb-6px tw-font-bold">Human Skills Matter</h1>
@@ -33,7 +33,7 @@
 
       <!-- press section start -->
       <section class="press tw-bg-secondary">
-        <div class="tw-container tw-m-auto tw-px-14px sm:tw-px-0px">
+        <div class="tw-container tw-m-auto tw-px-14px">
 
 
           <VueSlickCarousel v-bind="slider_settings" class="">
@@ -91,13 +91,13 @@
 
       <!-- explore section start -->
       <section class="explore">
-        <div class="tw-container tw-m-auto tw-px-14px sm:tw-px-0px">
-           <div class="tw-flex tw-flex-col sm:tw-flex-row">
+        <div class="tw-container tw-m-auto tw-px-14px">
+           <div class="tw-flex tw-flex-col md:tw-flex-row">
               <div class="tw-w-full sm:tw-w-1/2">
                  <h2 class="tw-text-20px tw-mb-12px tw-text-primary tw-font-semibold">Explore our Micro-Practices</h2>
                  <p class="tw-text-14px tw-text-description tw-font-medium tw-opacity-50">Journey Map of  a sales person’s daily challenges</p>
               </div>
-              <div class="tw-w-full sm:tw-w-1/2 tw-mt-20px sm:tw-m-0px tw-text-left sm:tw-text-right">
+              <div class="tw-w-full md:tw-w-1/2 tw-mt-20px md:tw-m-0px tw-text-left md:tw-text-right">
                     <div class="item tw-text-secondary tw-font-semibold tw-mb-10px md:tw-mb-auto md:tw-mr-22px tw-block md:tw-inline-block">
                       <img src="../assets/images/check.svg" class="check tw-mr-8px">Learn by doing
                     </div>
@@ -110,8 +110,8 @@
              </div>
            </div>
           <div class="steps">
-              <div class="tw-flex tw-flex-col sm:tw-flex-row">
-                 <div class="card sm:tw-w-1/4 tw-flex tw-relative tw-rounded">
+              <div class="tw-flex tw-flex-col md:tw-flex-row">
+                 <div class="card md:tw-w-1/4 tw-flex tw-relative tw-rounded">
                    <img src="../assets/images/number_badge.svg" width="50" class="tw-absolute tw-left-10px tw--top-5px">
                      <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-26px tw-text-description">01</h4>
                      <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-64px tw-text-description">Try Step</h4>
@@ -119,10 +119,10 @@
                         <p class="tw-font-rubik tw-text-12px tw-text-secondary">Arrives at work with personal stuff on their mind.</p>
                       </div>
                       <div class="tw-font-rubik tw-text-primary tw-absolute tw-left-14px tw-bottom-18px tw-text-12px tw-font-medium tw-cursor-pointer">Take a look</div>
-                      <img src="../assets/images/right_arrow.svg" width="50" class="tw-absolute right_arrow tw-hidden sm:tw-block">
+                      <img src="../assets/images/right_arrow.svg" width="50" class="tw-absolute right_arrow tw-hidden md:tw-block">
                  </div>
 
-               <div class="card item-list sm:tw-w-1/4 tw-flex tw-flex-col tw-items-stretch tw-relative tw-rounded tw-mt-20px sm:tw-mt-0px sm:tw-ml-110px" v-if="take_a_look_15_show">
+               <div class="card item-list md:tw-w-1/4 tw-flex tw-flex-col tw-items-stretch tw-relative tw-rounded tw-mt-20px md:tw-mt-0px md:tw-ml-110px" v-if="take_a_look_15_show">
 
                    <div class="tw-font-rubik tw-text-16px tw-py-14px tw-px-18px tw-block tw-w-full">Gleac Indicators
                      <img src="../assets/images/close_icon.svg" @click="take_a_look_15_show = !take_a_look_15_show" class="tw-absolute">
@@ -141,12 +141,12 @@
                    </a>
 
 
-                 <img src="../assets/images/right_arrow.svg" width="50" class="tw-absolute right_arrow tw-hidden sm:tw-block">
+                 <img src="../assets/images/right_arrow.svg" width="50" class="tw-absolute right_arrow tw-hidden md:tw-block">
 
                </div>
 
 
-                <div class="card sm:tw-w-1/4 tw-flex tw-relative tw-rounded tw-mt-20px sm:tw-mt-0px sm:tw-ml-110px" v-if="!take_a_look_15_show">
+                <div class="card md:tw-w-1/4 tw-flex tw-relative tw-rounded tw-mt-20px md:tw-mt-0px md:tw-ml-110px" v-if="!take_a_look_15_show">
                     <img src="../assets/images/number_badge.svg" width="50" class="tw-absolute tw-left-10px tw--top-5px">
                     <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-26px tw-text-description">15</h4>
                     <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-64px tw-text-description">Try Step</h4>
@@ -154,11 +154,11 @@
                       <p class="tw-font-rubik tw-text-12px tw-text-secondary">Salesperson wants to ensure high levels of consumer satisfaction by providing top-notch sales service.</p>
                     </div>
                     <div class="tw-font-rubik tw-text-primary tw-absolute tw-left-14px tw-bottom-18px tw-text-12px tw-font-medium tw-cursor-pointer" @click="take_a_look_15_show = !take_a_look_15_show">Take a look</div>
-                    <img src="../assets/images/right_arrow.svg" width="50" class="tw-absolute right_arrow tw-hidden sm:tw-block">
+                    <img src="../assets/images/right_arrow.svg" width="50" class="tw-absolute right_arrow tw-hidden md:tw-block">
                 </div>
 
 
-                <div class="card sm:tw-w-1/4 tw-flex tw-relative tw-rounded tw-mt-20px sm:tw-mt-0px sm:tw-ml-110px">
+                <div class="card md:tw-w-1/4 tw-flex tw-relative tw-rounded tw-mt-20px md:tw-mt-0px md:tw-ml-110px">
                   <img src="../assets/images/number_badge.svg" width="50" class="tw-absolute tw-left-10px tw--top-5px">
                   <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-26px tw-text-description">25</h4>
                   <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-64px tw-text-description">Try Step</h4>
@@ -169,7 +169,7 @@
                 </div>
 
 
-                <div class="sm:tw-w-1/4 tw-flex tw-flex-col tw-relative tw-mt-20px sm:tw-mt-0px sm:tw-ml-70px">
+                <div class="md:tw-w-1/4 tw-flex tw-flex-col tw-relative tw-mt-20px md:tw-mt-0px md:tw-ml-70px">
                       <div class="tw-text-16px tw-text-secondary tw-font-semibold tw-mb-18px">Our Library</div>
 
 
@@ -228,7 +228,7 @@
 
       <!-- quote section start-->
       <section class="quote tw-bg-primary">
-        <div class="tw-container tw-m-auto tw-px-14px sm:tw-px-0px">
+        <div class="tw-container tw-m-auto tw-px-14px">
           <div class="tw-font-rubik tw-text-white tw-w-full tw-text-center quote_wrapper">
             <div class="tw-text-20px tw-mb-6px tw-font-medium tw-relative tw-inline-block tw-mx-50px sm:tw-mx-0px">
               <img class="tw-absolute tw--left-34px tw--top-12px" src="../assets/images/quote.svg"/>
@@ -243,7 +243,7 @@
 
       <!-- about section start-->
       <section class="about" id="about">
-        <div class="tw-container tw-m-auto tw-px-14px sm:tw-px-0px">
+        <div class="tw-container tw-m-auto tw-px-14px">
           <div class="tw-text-primary tw-text-24px tw-font-semibold">GLEAC Leadership Mafia</div>
           <VueSlickCarousel class="team_slider" v-bind="team_slider_settings">
             <div>
@@ -433,8 +433,8 @@ export default {
         show_more_library:false,
         take_a_look_15_show:false,
         slider_settings:{
+          "arrows":false,
           "autoplay": true,
-          "dots": false,
           "focusOnSelect": true,
           "infinite": true,
           "speed": 500,
@@ -448,12 +448,25 @@ export default {
                 "slidesToShow": 6,
                 "slidesToScroll": 6,
                 "infinite": true,
+                "dots": false,
+                "arrows":false,
+              }
+            },
+            {
+              "breakpoint": 768,
+              "settings": {
+                "slidesToShow": 5,
+                "slidesToScroll": 5,
+                "infinite": true,
+                "dots": false,
+                "arrows":false,
               }
             },
             {
               "breakpoint": 640,
               "settings": {
                 "arrows":false,
+                "dots": false,
                 "slidesToShow": 3,
                 "slidesToScroll": 3,
                 "infinite": true,
@@ -463,14 +476,26 @@ export default {
         },
 
         team_slider_settings:{
-          "arrow": true,
-          "dots": true,
           "responsive": [
             {
               "breakpoint": 640,
               "settings": {
                 "dots": true,
                 "arrows":false
+              }
+            },
+            {
+              "breakpoint": 768,
+              "settings": {
+                "dots": true,
+                "arrows":false
+              }
+            },
+            {
+              "breakpoint": 1024,
+              "settings": {
+                "dots": true,
+                "arrows":true
               }
             },
           ]
