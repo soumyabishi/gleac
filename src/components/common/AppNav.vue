@@ -11,7 +11,7 @@
               <a class="item tw-text-12px tw-font-semibold tw-text-primary tw-mr-12px tw-cursor-pointer" @click="$parent.open_white_paper_modal()">Our Whitepaper</a>
               <a class="item tw-text-12px tw-font-semibold tw-text-primary tw-mr-12px" href="#" v-scroll-to="{el:'#about', offset: -150}">About Us</a>
 
-              <router-link :to="{ name: 'Login'}" class="item tw-text-12px tw-font-semibold tw-text-primary tw-mr-12px">
+              <router-link :to="{ name: 'BenchmarkLogin'}" class="item tw-text-12px tw-font-semibold tw-text-primary tw-mr-12px">
                 Take Benchmark
               </router-link>
               <router-link :to="{ name: 'Login'}" class="ui basic primary button">
@@ -25,7 +25,7 @@
 
     <div class="banner tw-fixed tw-bg-primary tw-w-full">
       <div class="tw-container tw-m-auto tw-px-14px">
-        <div class="tw-font-rubik  tw-text-white  tw-text-13px sm:tw-text-16px">Check your job fitment for the No. I growing job ( over 100k job available in the US alone) as a CONTACT TRACER <a
+        <div class="tw-font-rubik  tw-text-white  tw-text-13px sm:tw-text-16px">Check your job fit for the No. 1 growing job (over 100k job available in the US alone) as a CONTACT TRACER <a
           href="/" class="tw-underline tw-text-white hover:tw-text-white hover:tw-underline">here</a>
         </div>
       </div>

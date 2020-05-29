@@ -11,7 +11,7 @@
             <div class="column">
               <h1 class="tw-text-34px tw-text-text-color tw-leading-38px tw-mb-6px tw-font-bold">Human Skills Matter</h1>
               <p class="tw-text-16px tw-text-text-color tw-font-medium tw-leading-26px tw-mb-34px">Gleac measures and
-                develops human skills for any job in 10 minutes a day using A.I.</p>
+                develops human skills for any job in <br>10 minutes a day using A.I.</p>
               <div class="ui action big fluid input">
                 <input type="text" placeholder="Type in a job title and see the skills needed">
                 <button class="ui primary large button">Search</button>
@@ -38,9 +38,9 @@
 
           <VueSlickCarousel v-bind="slider_settings" class="">
             <div>
-              <div class="image_wrapper" @click="open_case_study_modal()">
+              <a class="image_wrapper" href="https://www.stradaeducation.org/spotlight/developing-the-human-side-of-skills/">
                 <img src="../assets/images/press/strada.png">
-              </div>
+              </a>
             </div>
             <div>
               <div class="image_wrapper" @click="open_case_study_modal()">
@@ -58,9 +58,9 @@
               </div>
             </div>
             <div>
-              <div class="image_wrapper" @click="open_case_study_modal()">
+              <a class="image_wrapper" href="https://gulfbusiness.com/entry-interviews-can-save-business/">
                 <img src="../assets/images/press/gulf.png">
-              </div>
+              </a>
             </div>
 
             <div>
@@ -79,9 +79,9 @@
               </div>
             </div>
             <div>
-              <div class="image_wrapper" @click="open_case_study_modal()">
+              <a class="image_wrapper" href="https://www.forbes.com/sites/jeanneallen/2020/03/13/how-technological-innovation-in-education-is-taking-on-covid-19/#11ae45197bc7">
                 <img src="../assets/images/press/forbes.png">
-              </div>
+              </a>
             </div>
           </VueSlickCarousel>
 
@@ -95,7 +95,7 @@
            <div class="tw-flex tw-flex-col md:tw-flex-row">
               <div class="tw-w-full sm:tw-w-1/2">
                  <h2 class="tw-text-20px tw-mb-12px tw-text-primary tw-font-semibold">Explore our Micro-Practices</h2>
-                 <p class="tw-text-14px tw-text-description tw-font-medium tw-opacity-50">Journey Map of  a sales person’s daily challenges</p>
+                 <p class="tw-text-14px tw-text-description tw-font-medium tw-opacity-50">Journey Map of  a salesperson’s daily challenges</p>
               </div>
               <div class="tw-w-full md:tw-w-1/2 tw-mt-20px md:tw-m-0px tw-text-left md:tw-text-right">
                     <div class="item tw-text-secondary tw-font-semibold tw-mb-10px md:tw-mb-auto md:tw-mr-22px tw-block md:tw-inline-block">
@@ -105,7 +105,7 @@
                       <img src="../assets/images/check.svg" class="check tw-mr-8px">Job role focus content
                     </div>
                     <div class="item tw-text-secondary tw-font-semibold tw-block tw-block md:tw-inline-block">
-                      <img src="../assets/images/check.svg" class="check tw-mr-8px">Practise at your level
+                      <img src="../assets/images/check.svg" class="check tw-mr-8px">Practice at your level
                     </div>
              </div>
            </div>
@@ -263,7 +263,7 @@
             <div class="tw-text-20px tw-mb-6px tw-font-medium tw-relative tw-inline-block tw-mx-50px sm:tw-mx-0px">
               <img class="tw-absolute tw--left-34px tw--top-12px" src="../assets/images/quote.svg"/>
               With the new day comes new strength and new thoughts.
-              <img class="tw-absolute tw--right-34px tw--bottom-22px" src="../assets/images/quote_inverted.svg"/>
+              <img class="tw-absolute tw--right-34px tw--bottom-12px" src="../assets/images/quote_inverted.svg"/>
             </div>
             <div class="tw-text-13px tw-text-center sm:tw-text-right tw-mr-10px">- Eleanor Roosevelt</div>
           </div>
@@ -338,7 +338,7 @@
                   <input type="email" name="email" placeholder="Email ID">
                 </div>
 
-                <button class="ui primary button" type="submit">Submit</button>
+                <button class="ui primary button" type="submit">Talk to me &nbsp;&nbsp;<i class="heart icon"></i></button>
               </form>
             </div>
 
@@ -508,6 +508,7 @@ export default {
         },
 
         team_slider_settings:{
+          "dots": true,
           "responsive": [
             {
               "breakpoint": 640,
@@ -596,6 +597,7 @@ export default {
       .image_wrapper {
         padding: 6px 24px;
         cursor: pointer;
+        display: block;
       }
       .image_wrapper:hover {
         background-color: #fff;
@@ -651,20 +653,16 @@ export default {
           }
           a{
             font-size: 14px;
-            color: #3b3b3b;
             border-bottom: 1px solid #DEECF7;
+            color: #0065ad;
             &:hover{
               background-color: #F6FAFE;
-              color: #0065ad;
-              img{
-                display: block;
-              }
             }
             img{
               right: 18px;
               width: 9px;
               top: 17px;
-              display: none;
+              display: block;
             }
           }
         }
@@ -676,12 +674,6 @@ export default {
       section.explore{
         .card{
           min-height: 180px;
-        }
-      }
-
-      section.contact{
-        .ui.form{
-          margin-right: 0 !important;
         }
       }
 
@@ -764,9 +756,6 @@ export default {
     section.contact{
       padding-top: 50px;
       padding-bottom: 50px;
-      .ui.form{
-        margin-right: 150px;
-      }
     }
 
   }

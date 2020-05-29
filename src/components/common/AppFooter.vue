@@ -6,15 +6,16 @@
         <div class="ui stackable grid">
           <div class="seven wide column">
             <img src="../../assets/images/footer_logo.png" style="width:106px">
-            <div class="tw-font-rubik tw-text-12px tw-mt-20px tw-mb-4px">admin@gleac.com</div>
-            <div class="tw-font-rubik tw-text-12px">5th Floor, Tower-C , DLF Cyber <br>Greens, Gurgaon Gurgaon HR<br> 122002 IN</div>
+            <a href="mailto:yourvoice@gleac.com" class="tw-font-rubik tw-text-white hover:tw-text-white hover:tw-underline tw-block tw-mt-20px tw-mb-4px">yourvoice@gleac.com</a>
+
+            <div class="tw-font-rubik tw-text-12px">Dubai/India/US</div>
           </div>
           <div class="two wide column">
             <img src="../../assets/images/badges.png" style="width:67px">
           </div>
           <div class="three wide column">
             <div class="tw-font-rubik tw-font-medium">Company</div>
-            <a @click="$parent.open_white_paper_modal()" class="tw-font-rubik tw-text-white tw-block hover:tw-text-white hover:tw-underline tw-mt-14px tw-cursor-pointer">Our whitepaper</a>
+            <a @click="$parent.open_white_paper_modal()" class="tw-font-rubik tw-text-white tw-block hover:tw-text-white hover:tw-underline tw-mt-14px tw-cursor-pointer">Our Whitepaper</a>
             <router-link :to="{ name: 'Login'}" class="tw-font-rubik tw-text-white tw-block hover:tw-text-white hover:tw-underline tw-mt-14px">
               Benchmark
             </router-link>
@@ -51,13 +52,12 @@
       <div class="tw-container tw-m-auto tw-px-14px">
         <div class="ui two column stackable grid">
           <div class="column">
-            <div class="tw-font-rubik">©GLEAC 2019. All Rights Reserved</div>
+            <div class="tw-font-rubik">©GLEAC 2020. All Rights Reserved</div>
           </div>
 
           <div class="column tw-text-left sm:tw-text-right">
             <a href="" class="tw-font-rubik tw-text-white hover:tw-text-white hover:tw-underline tw-mr-14px">Terms and Condition</a>
-            <a href="" class="tw-font-rubik tw-text-white hover:tw-text-white hover:tw-underline tw-mr-14px">Privacy Policy</a>
-            <a href="" class="tw-font-rubik tw-text-white hover:tw-text-white hover:tw-underline">Data Policy</a>
+            <a href="" class="tw-font-rubik tw-text-white hover:tw-text-white hover:tw-underline tw-mr-14px">Privacy & Data Policy</a>
           </div>
 
         </div>

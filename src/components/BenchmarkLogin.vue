@@ -1,5 +1,5 @@
 <template>
-  <div class="Login">
+  <div class="BenchmarkLogin">
     <div class="tw-flex tw-justify-center tw-items-stretch sm:tw-h-screen">
       <div class="left-content tw-justify-center tw-items-center tw-flex tw-flex-col">
         <VueSlickCarousel :arrows="true" :dots="true" :autoplay="true" class="login_slider">
@@ -22,8 +22,8 @@
       <div class="right-content tw-flex tw-flex-col tw-relative">
 
         <router-link :to="{ name: 'Home'}"><img src="../assets/images/gleac-logo-colored.png" class="logo tw-absolute tw-top-30px tw-left-14px sm:tw-left-30px"></router-link>
-        <div class="tw-font-rubik tw-text-16px tw-absolute tw-top-30px tw-right-30px tw-hidden sm:tw-block">Don’t have an account? <router-link :to="{ name: 'Signup'}" class="tw-text-primary tw-underline hover:tw-underline">Sign Up</router-link></div>
-        <div class="tw-font-rubik tw-text-16px tw-mt-30px tw-block sm:tw-hidden">Don’t have an account? <router-link :to="{ name: 'Signup'}" class="tw-text-primary tw-underline hover:tw-underline">Sign Up</router-link></div>
+        <div class="tw-font-rubik tw-text-16px tw-absolute tw-top-30px tw-right-30px tw-hidden sm:tw-block">Don’t have an account? <router-link :to="{ name: 'BenchmarkSignup'}" class="tw-text-primary tw-underline hover:tw-underline">Sign Up</router-link></div>
+        <div class="tw-font-rubik tw-text-16px tw-mt-30px tw-block sm:tw-hidden">Don’t have an account? <router-link :to="{ name: 'BenchmarkSignup'}" class="tw-text-primary tw-underline hover:tw-underline">Sign Up</router-link></div>
 
         <h1 class="tw-text-32px tw-text-text-color tw-leading-38px tw-mb-12px tw-font-bold">Human Skills Matter</h1>
         <p class="tw-text-16px tw-text-secondary tw-font-medium tw-leading-26px tw-mb-34px tw-mt-20px">Gleac measures and
@@ -61,7 +61,7 @@
   // optional style for arrows & dots
   import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 export default {
-    name: 'Login',
+    name: 'BenchmarkLogin',
     data() {
       return {}
     },
@@ -79,7 +79,7 @@ export default {
   @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
 
   @media (max-width: 640px){
-    .Login {
+    .BenchmarkLogin {
       .left-content {
         display: none;
       }
@@ -91,7 +91,7 @@ export default {
   }
 
   @media (max-width: 768px){
-    .Login {
+    .BenchmarkLogin {
       .right-content {
         width: 100% !important;
         padding: 100px 34px !important;
@@ -100,7 +100,7 @@ export default {
   }
 
   @media (max-width: 1300px){
-    .Login {
+    .BenchmarkLogin {
       .right-content {
         width: 100% !important;
         padding: 100px 34px !important;
@@ -111,7 +111,7 @@ export default {
 
 
 
-  .Login{
+  .BenchmarkLogin{
     .left-content{
       width: 40%;
       background-color: #1C1C1C;
@@ -136,18 +136,18 @@ export default {
         position: relative;
       }
       .slider_1{
-        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0, 1) 100%), url("../assets/images/login_slider/slider_4.jpg") no-repeat center center;
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0, 1) 100%), url("../assets/images/login_slider/slider_1.jpg") no-repeat center center;
         background-size: cover;
         height: 100vh;
       }
 
       .slider_2{
-        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0, 1) 100%), url("../assets/images/login_slider/slider_5.jpg") no-repeat center center;
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0, 1) 100%), url("../assets/images/login_slider/slider_2.jpg") no-repeat center center;
         background-size: cover;
         height: 100vh;
       }
       .slider_3{
-        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0, 1) 100%), url("../assets/images/login_slider/slider_6.jpg") no-repeat center center;
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0, 1) 100%), url("../assets/images/login_slider/slider_3.jpg") no-repeat center center;
         background-size: cover;
         height: 100vh;
       }

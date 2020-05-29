@@ -151,18 +151,18 @@ export default {
         position: relative;
       }
       .slider_1{
-        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0, 1) 100%), url("../assets/images/login_slider/slider_1.jpg") no-repeat center center;
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0, 1) 100%), url("../assets/images/login_slider/slider_4.jpg") no-repeat center center;
         background-size: cover;
         height: 100vh;
       }
 
       .slider_2{
-        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0, 1) 100%), url("../assets/images/login_slider/slider_2.jpg") no-repeat center center;
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0, 1) 100%), url("../assets/images/login_slider/slider_5.jpg") no-repeat center center;
         background-size: cover;
         height: 100vh;
       }
       .slider_3{
-        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0, 1) 100%), url("../assets/images/login_slider/slider_3.jpg") no-repeat center center;
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0, 1) 100%), url("../assets/images/login_slider/slider_6.jpg") no-repeat center center;
         background-size: cover;
         height: 100vh;
       }
