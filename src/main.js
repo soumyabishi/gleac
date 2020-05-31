@@ -26,6 +26,14 @@ Vue.use(VueScrollTo, {
   y: true
 })
 
+import vSelect from 'vue-select';
+Vue.component('v-select', vSelect);
+
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+
+Vue.use(VueAxios, axios)
+
 
 import '../src/assets/css/tailwind.css';
 

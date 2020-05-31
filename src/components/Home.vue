@@ -2,7 +2,7 @@
   <div class="home">
       <app-nav></app-nav>
 
-      <div class="content">
+      <div class="content_wrapper">
 
       <!-- intro section start -->
       <section class="intro">
@@ -12,17 +12,42 @@
               <h1 class="tw-text-34px tw-text-text-color tw-leading-38px tw-mb-6px tw-font-bold">Human Skills Matter</h1>
               <p class="tw-text-16px tw-text-text-color tw-font-medium tw-leading-26px tw-mb-34px">Gleac measures and
                 develops human skills for any job in <br>10 minutes a day using A.I.</p>
-              <div class="ui action big fluid input">
-                <input type="text" placeholder="Type in a job title and see the skills needed">
-                <button class="ui primary large button">Search</button>
-              </div>
+              <!--<div class="ui action big fluid input">-->
+                <!--<input type="text" placeholder="Type in a job title and see the skills needed">-->
+                <!--<button class="ui primary large button">Search</button>-->
+              <!--</div>-->
+              <v-select :options="job_list" class="job-dropdown" placeholder="Type a job title and see the skills needed" v-model="selected_job"  @input="fetch_skills" >
+                <template v-slot:no-options="{ search, searching }">
+                  <template v-if="searching">
+                    Sorry, no jobs found
+                  </template>
+                </template>
+              </v-select>
+
             </div>
 
-            <div class="center aligned column">
-              <img src="../assets/images/intro_image.png" class="intro_image tw-mt-20px sm:mt-0"/>
+            <div class="center aligned column" style="position: relative">
+
+              <div class="skills_card tw-shadow-lg tw-absolute tw-text-left" v-if="selected_job">
+                <div class="loading" v-if="skill_loading">
+                  <img src="../assets/images/skill_placeholder.svg" style="width: 100%">
+                </div>
+                <div v-if="!skill_loading">
+                  <div class="tw-text-16px tw-text-text-color tw-font-semibold tw-mb-10px">{{selected_job}}</div>
+                  <div class="tw-text-14px tw-text-text-color tw-font-medium tw-mb-12px">Skills Required</div>
+                  <ul class="tags" v-if="skill_list.length>0">
+                    <li class="tag" v-for="skill in skill_list">{{skill.skillName}}</li>
+                  </ul>
+                  <router-link :to="{name: 'BenchmarkLogin'}" class="ui primary big fluid button">Enter Focus Mode</router-link>
+                </div>
+              </div>
+
+              <img src="../assets/images/intro_image.png" :class="{'tw-invisible': selected_job}" class="intro_image tw-mt-20px sm:mt-0"/>
             </div>
+
           </div>
         </div>
+
 
         <div class="appstore_icons tw-absolute tw-right-30px tw-my-20px sm:tw-my-0px">
           <a href="https://play.google.com/store/apps/details?id=com.gleac"><i class="icon large google play tw-cursor-pointer"></i></a>
@@ -261,7 +286,7 @@
         <div class="tw-container tw-m-auto tw-px-14px">
           <div class="tw-font-rubik tw-text-white tw-w-full tw-text-center quote_wrapper">
             <div class="tw-text-20px tw-mb-6px tw-font-medium tw-relative tw-inline-block tw-mx-50px sm:tw-mx-0px">
-              <img class="tw-absolute tw--left-34px tw--top-12px" src="../assets/images/quote.svg"/>
+              <img class="tw-absolute tw--left-34px tw--top-10px" src="../assets/images/quote.svg"/>
               With the new day comes new strength and new thoughts.
               <img class="tw-absolute tw--right-34px tw--bottom-12px" src="../assets/images/quote_inverted.svg"/>
             </div>
@@ -435,10 +460,9 @@
         <div class="ui hidden divider"></div>
         <div class="ui hidden divider"></div>
 
-         <div class="ui stackable grid">
+         <div class="ui stackable middle aligned grid">
             <div class="ten wide column">
               <div class="tw-font-rubik tw-font-medium tw-text-24px">Thank you lovely human</div>
-              <div class="tw-font-rubik tw-text-16px tw-text-secondary tw-mt-10px">Please click to start.</div>
             </div>
            <div class="six wide column">
              <button class="ui primary large fluid button"><span class="tw-relative tw-pr-34px">Download <img src="../assets/images/donwload_icon.svg" class="tw-absolute tw--top-1px tw-right-10px"/></span></button>
@@ -460,6 +484,10 @@ export default {
     name: 'Home',
     data() {
       return {
+        job_list:[],
+        selected_job:'',
+        skill_list: [],
+        skill_loading:false,
         show_more_library:false,
         take_a_look_5_show:false,
         take_a_look_15_show:false,
@@ -532,7 +560,7 @@ export default {
               }
             },
           ]
-        }
+        },
       }
     },
     methods:{
@@ -545,7 +573,22 @@ export default {
         $('.ui.modal.whitepaper')
           .modal('show')
         ;
+      },
+      fetch_joblist(){
+        this.axios.get('https://dashboardapi.gleac.com/api/Dashboard/jobs').then((response) => {
+          this.job_list = response.data.result;
+        })
+      },
+      fetch_skills(){
+        this.skill_loading = true;
+        this.axios.get('https://dashboardapi.gleac.com/api/JobIndex/job/' + this.selected_job).then((response) => {
+          this.skill_list = response.data.result;
+          this.skill_loading = false;
+        })
       }
+    },
+    mounted(){
+      this.fetch_joblist();
     },
     components:{
       VueSlickCarousel
@@ -557,10 +600,42 @@ export default {
   @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+  @import "../../node_modules/vue-select/src/scss/vue-select.scss";
+
+  .v-select{
+    font-family: Montserrat, sans-serif;
+  }
+
+  .job-dropdown .vs__dropdown-toggle,
+  .job-dropdown .vs__dropdown-menu {
+    background: #fff;
+    border-left: 2px solid #eaeaea;
+    border-right: 2px solid #eaeaea;
+    border-top: 2px solid #eaeaea;
+  }
+
+  .job-dropdown .vs__search::placeholder, .job-dropdown .vs__dropdown-toggle{
+    padding: 8px 7px;
+  }
+
+  .job-dropdown .vs__search, .vs__selected{
+    font-size: 20px;
+    font-family: Montserrat, sans-serif;
+    margin-top: 0;
+  }
+
+  .job-dropdown .vs__dropdown-toggle:focus{
+    border-color: #0065ad;
+  }
+
+  .job-dropdown .vs__clear,
+  .job-dropdown .vs__open-indicator {
+
+  }
 
   .home {
     // Content wrapper
-    .content {
+    .content_wrapper {
       padding-top: 135px;
     }
 
@@ -574,6 +649,36 @@ export default {
 
       .intro_image{
         width: 410px;
+      }
+      .skills_card{
+        background-color: #fff;
+        width: 400px;
+        -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.15);
+        box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.15);
+        padding: 20px;
+        border-radius: 8px;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        ul {
+          padding: 0;
+          margin: 0;
+          margin-bottom: 10px;
+          li {
+            list-style: none;
+            display: inline-block;
+            background-color: rgba(213, 241, 253, 0.98);
+            color: #0065AD;
+            padding: 6px 20px;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 7px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+          }
+        }
       }
     }
 
@@ -697,6 +802,12 @@ export default {
       }
     }
 
+    @media (max-width: 768px){
+      .skills_card{
+        width: 100% !important;
+      }
+    }
+
 
     section.quote{
       padding: 40px 0;
@@ -765,6 +876,10 @@ export default {
    .tw-m-auto{
      margin: 0 auto;
    }
+
+  .tw-invisible{
+    visibility: hidden;
+  }
 
 
   .ui.modal.whitepaper{
