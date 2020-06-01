@@ -344,7 +344,7 @@
                        <img src="../assets/images/team/sallyann.png" width="120" class="tw-rounded-full">
                    </div>
                    <div class="thirteen wide column">
-                     <div class="tw-font-medium tw-font-rubik tw-text-14px tw-mb-4px">Sallyann Della Casa</div>
+                     <div class="tw-font-medium tw-font-rubik tw-text-14px tw-mb-4px">Sallyann Della Casa <a href="https://www.linkedin.com/in/sallyanndellacasa/"><i class="linkedin large icon"></i></a></div>
                      <div class="tw-font-plex tw-text-12px">Founder</div>
                      <p class="tw-font-plex tw-mt-13px tw-text-12px">For the last years she has obsessively been beta testing the science behind's Gleac' s patent pending human skills mapping and development methodology through her Foundation, Growing Leaders. She discovered technology to scale her passion in a brief stint at Careem in 2016.  She holds degrees and accreditations from Harvard University, University of Toronto and Franklin College. She is a published author. She practiced law for 10 years.</p>
                    </div>
@@ -353,24 +353,38 @@
             <div>
               <div class="ui stackable grid">
                 <div class="three wide column">
-                  <img src="../assets/images/team/sallyann.png" width="120" class="tw-rounded-full">
+                  <img src="../assets/images/team/kathy.png" width="120" class="tw-rounded-full">
                 </div>
                 <div class="thirteen wide column">
-                  <div class="tw-font-medium tw-font-rubik tw-text-14px tw-mb-4px">Sallyann Della Casa</div>
-                  <div class="tw-font-plex tw-text-12px">Founder</div>
-                  <p class="tw-font-plex tw-mt-13px tw-text-12px">For the last years she has obsessively been beta testing the science behind's Gleac' s patent pending human skills mapping and development methodology through her Foundation, Growing Leaders. She discovered technology to scale her passion in a brief stint at Careem in 2016.  She holds degrees and accreditations from Harvard University, University of Toronto and Franklin College. She is a published author. She practiced law for 10 years.</p>
+                  <div class="tw-font-medium tw-font-rubik tw-text-14px tw-mb-4px">Dr. Kathy Shalhoub</div>
+                  <div class="tw-font-plex tw-text-12px">Partner</div>
+                  <p class="tw-font-plex tw-mt-13px tw-text-12px">Kathy oversees global curriculum architecture and lessons development team at GLEAC. She holds accreditations and degrees from UPMC, MIT and ICF. Her work over the last 10 years, besides being a mother of 3, spans from teaching entrepreneurship to life coaching to innovation consulting. She currently advises on leadership strategy at the American College of Cardiology. Her latest book,  Futureproof, is a guide for youth on how to successfully tackle the 21rst century without compromising on who they are.
+                  </p>
                 </div>
               </div>
             </div>
             <div>
               <div class="ui stackable grid">
                 <div class="three wide column">
-                  <img src="../assets/images/team/sallyann.png" width="120" class="tw-rounded-full">
+                  <img src="../assets/images/team/ousamma.png" width="120" class="tw-rounded-full">
                 </div>
                 <div class="thirteen wide column">
-                  <div class="tw-font-medium tw-font-rubik tw-text-14px tw-mb-4px">Sallyann Della Casa</div>
-                  <div class="tw-font-plex tw-text-12px">Founder</div>
-                  <p class="tw-font-plex tw-mt-13px tw-text-12px">For the last years she has obsessively been beta testing the science behind's Gleac' s patent pending human skills mapping and development methodology through her Foundation, Growing Leaders. She discovered technology to scale her passion in a brief stint at Careem in 2016.  She holds degrees and accreditations from Harvard University, University of Toronto and Franklin College. She is a published author. She practiced law for 10 years.</p>
+                  <div class="tw-font-medium tw-font-rubik tw-text-14px tw-mb-4px">Ousamma Berqui</div>
+                  <div class="tw-font-plex tw-text-12px">Advisor and Partner</div>
+                  <p class="tw-font-plex tw-mt-13px tw-text-12px">Formerly Chief Data Scientist and Head of Engineering at Careem ( acquired by Uber for 3.1b), Ousamma guides the Tech and Data team on dev. ops, machine learning and architecture. </p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="ui stackable grid">
+                <div class="three wide column">
+                  <img src="../assets/images/team/eden.png" width="120" class="tw-rounded-full">
+                </div>
+                <div class="thirteen wide column">
+                  <div class="tw-font-medium tw-font-rubik tw-text-14px tw-mb-4px">Eden Millon</div>
+                  <div class="tw-font-plex tw-text-12px">Advisor and Partner</div>
+                  <p class="tw-font-plex tw-mt-13px tw-text-12px">Eden, based in Ethiopia, and with a decade in TOEFL and education leads development of the Gleac micro-practice curriculum.
+                  </p>
                 </div>
               </div>
             </div>
