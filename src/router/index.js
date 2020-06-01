@@ -7,8 +7,7 @@ import BenchmarkLogin from '@/components/BenchmarkLogin'
 import BenchmarkSignup from '@/components/BenchmarkSignup'
 import Terms from '@/components/Terms'
 import DataPrivacy from '@/components/DataPrivacy'
-
-
+import CookiePolicy from '@/components/CookiePolicy'
 
 Vue.use(Router)
 
@@ -48,6 +47,11 @@ export default new Router({
       path: '/data-privacy',
       name: 'DataPrivacy',
       component: DataPrivacy
+    },
+    {
+      path: '/cookie-privacy',
+      name: 'CookiePolicy',
+      component: CookiePolicy
     }
   ]
 })

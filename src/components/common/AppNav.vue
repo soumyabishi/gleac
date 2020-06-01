@@ -37,7 +37,8 @@
           <div class="twelve wide column">
             <div class="tw-text-white tw-text-16px tw-font-semibold tw-mb-4px tw-relative tw-pl-18px"><img src="../../assets/images/cookie.svg" class="tw-absolute tw--left-3px"/>Oh, our Sweet Cookies..
             </div>
-            <div class="tw-text-white tw-text-12px">We use cookies to provide the services and features offers on our website and improve our user experience  <a href="/" class="tw-underline tw-text-white hover:tw-text-white hover:tw-underline">Learn More</a>
+            <div class="tw-text-white tw-text-12px">We use cookies to provide the services and features offers on our website and improve our user experience
+              <router-link :to="{ name: 'CookiePolicy'}" class="tw-underline tw-text-white hover:tw-text-white hover:tw-underline">Learn More</router-link>
             </div>
           </div>
 
