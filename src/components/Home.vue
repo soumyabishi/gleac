@@ -429,7 +429,7 @@
     </div>
 
       <!-- case study modal start-->
-      <div class="ui modal case_study">
+      <div class="ui large modal case_study">
         <i class="close icon"></i>
 
         <div class="tw-flex tw-justify-center tw-items-stretch">
@@ -438,8 +438,8 @@
                 accenture</div>
             </div>
 
-          <div class="tw-w-1/2 tw-justify-center tw-items-center tw-flex tw-flex-col tw-p-20px">
-            <img src="../assets/images/case_study_header.png" style="width: 78%">
+          <div class="tw-w-1/2 tw-justify-center tw-items-center tw-flex tw-flex-col">
+            <img src="../assets/images/case_study_header.png" style="width: 100%">
           </div>
 
         </div>

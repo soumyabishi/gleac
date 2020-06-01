@@ -56,8 +56,8 @@
           </div>
 
           <div class="column tw-text-left sm:tw-text-right">
-            <a href="" class="tw-font-rubik tw-text-white hover:tw-text-white hover:tw-underline tw-mr-14px">Terms and Condition</a>
-            <a href="" class="tw-font-rubik tw-text-white hover:tw-text-white hover:tw-underline tw-mr-14px">Privacy & Data Policy</a>
+            <router-link :to="{ name: 'Terms'}" class="tw-font-rubik tw-text-white hover:tw-text-white hover:tw-underline tw-mr-14px">Terms and Condition</router-link>
+            <router-link :to="{ name: 'DataPrivacy'}" class="tw-font-rubik tw-text-white hover:tw-text-white hover:tw-underline">Privacy & Data Policy</router-link>
           </div>
 
         </div>
