@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="58px" height="58px" viewBox="0 0 58 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 4</title>
+    <defs>
+        <filter x="-14.4%" y="-14.4%" width="128.9%" height="128.9%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.104102928 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Benchmark-login-1" transform="translate(-717.000000, -249.000000)">
+            <g id="Group-11" transform="translate(519.496340, 87.707174)">
+                <g id="Group-10" transform="translate(0.000000, 123.689605)">
+                    <g id="Group" transform="translate(54.723280, 44.228404)">
+                        <g id="Group-4" filter="url(#filter-1)" transform="translate(149.926794, 0.000000)">
+                            <rect id="Rectangle-Copy-4" fill="#1377B5" x="0" y="0" width="44.9780381" height="44.9780381" rx="22.489019"></rect>
+                            <g id="linkedin-(1)" transform="translate(11.244510, 11.244510)" fill="#FFFFFF" fill-rule="nonzero">
+                                <path d="M22.4833968,22.489019 L22.4833968,22.488082 L22.489019,22.488082 L22.489019,14.2402343 C22.489019,10.2053294 21.6203807,7.09715959 16.9033089,7.09715959 C14.6356662,7.09715959 13.1139092,8.34155198 12.4926501,9.52128843 L12.4270571,9.52128843 L12.4270571,7.47385066 L7.95455344,7.47385066 L7.95455344,22.488082 L12.6116545,22.488082 L12.6116545,15.0535871 C12.6116545,13.0961054 12.9827233,11.2032796 15.4068521,11.2032796 C17.7953734,11.2032796 17.830981,13.4371889 17.830981,15.1791508 L17.830981,22.489019 L22.4833968,22.489019 Z" id="Path"></path>
+                                <polygon id="Path" points="0.371068814 7.4747877 5.03379209 7.4747877 5.03379209 22.489019 0.371068814 22.489019"></polygon>
+                                <path d="M2.70055637,0 C1.20972182,0 0,1.20972182 0,2.70055637 C0,4.19139092 1.20972182,5.42641288 2.70055637,5.42641288 C4.19139092,5.42641288 5.40111274,4.19139092 5.40111274,2.70055637 C5.4001757,1.20972182 4.19045388,0 2.70055637,0 Z" id="Path"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

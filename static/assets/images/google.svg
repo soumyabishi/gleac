@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="57px" height="58px" viewBox="0 0 57 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 2</title>
+    <defs>
+        <filter x="-14.4%" y="-14.4%" width="128.9%" height="128.9%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.104102928 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Benchmark-login-1" transform="translate(-568.000000, -249.000000)">
+            <g id="Group-11" transform="translate(519.496340, 87.707174)">
+                <g id="Group-10" transform="translate(0.000000, 123.689605)">
+                    <g id="Group" transform="translate(54.723280, 44.228404)">
+                        <g id="Group-2" filter="url(#filter-1)">
+                            <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="44.9780381" height="44.9780381" rx="22.489019"></rect>
+                            <g id="google-hangouts" transform="translate(7.496340, 7.496340)" fill-rule="nonzero">
+                                <path d="M6.64538799,18.1205271 L5.60163982,22.0169839 L1.78676428,22.0976867 C0.646676428,19.9830747 0,17.5636896 0,14.9926794 C0,12.50653 0.604626647,10.1620498 1.67636896,8.09768668 L1.67718887,8.09768668 L5.07349927,8.72035139 L6.56128843,12.0962811 C6.24989751,13.0040996 6.0801757,13.9786237 6.0801757,14.9926794 C6.08029283,16.0932357 6.27964861,17.1477013 6.64538799,18.1205271 Z" id="Path" fill="#FBBB00"></path>
+                                <path d="M29.7233968,12.1918594 C29.8955783,13.0987994 29.9853587,14.0354319 29.9853587,14.9926794 C29.9853587,16.0660615 29.8725037,17.1130893 29.657511,18.1230454 C28.927672,21.5598243 27.0206149,24.5608199 24.3787994,26.6845095 L24.3779795,26.6836896 L20.1001464,26.4654173 L19.4946999,22.6859151 C21.247672,21.6578624 22.6176281,20.049019 23.3392679,18.1230454 L15.322284,18.1230454 L15.322284,12.1918594 L23.4562225,12.1918594 L29.7233968,12.1918594 L29.7233968,12.1918594 Z" id="Path" fill="#518EF8"></path>
+                                <path d="M24.3779209,26.6836896 L24.3787408,26.6845095 C21.809429,28.7496925 18.545593,29.9853587 14.9926794,29.9853587 C9.28310395,29.9853587 4.31906296,26.7940849 1.78676428,22.0977452 L6.64538799,18.1205857 C7.91150805,21.4996779 11.1711859,23.9051245 14.9926794,23.9051245 C16.6352562,23.9051245 18.1741142,23.4610835 19.4945827,22.6859151 L24.3779209,26.6836896 Z" id="Path" fill="#28B446"></path>
+                                <path d="M24.5624597,3.4515959 L19.7054758,7.42793558 C18.338858,6.57370425 16.7233968,6.08023426 14.9926794,6.08023426 C11.0846852,6.08023426 7.764041,8.59601757 6.561347,12.0962811 L1.67718887,8.09768668 L1.67636896,8.09768668 C4.1715959,3.28685212 9.19824305,0 14.9926794,0 C18.6304539,0 21.9659151,1.29581259 24.5624597,3.4515959 Z" id="Path" fill="#F14336"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

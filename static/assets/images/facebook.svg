@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="58px" height="58px" viewBox="0 0 58 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 3</title>
+    <defs>
+        <filter x="-14.4%" y="-14.4%" width="128.9%" height="128.9%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.104102928 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Benchmark-login-1" transform="translate(-642.000000, -249.000000)">
+            <g id="Group-11" transform="translate(519.496340, 87.707174)">
+                <g id="Group-10" transform="translate(0.000000, 123.689605)">
+                    <g id="Group" transform="translate(54.723280, 44.228404)">
+                        <g id="Group-3" filter="url(#filter-1)" transform="translate(74.963397, 0.000000)">
+                            <rect id="Rectangle-Copy-2" fill="#3A5A98" x="0" y="0" width="44.9780381" height="44.9780381" rx="22.489019"></rect>
+                            <path d="M24.1756955,18.272328 L24.1756955,14.8989751 C24.1756955,13.9679297 24.9313265,13.2122987 25.8623719,13.2122987 L27.5490483,13.2122987 L27.5490483,8.99560761 L24.1756955,8.99560761 C21.3808726,8.99560761 19.1156662,11.2608141 19.1156662,14.0556369 L19.1156662,18.272328 L15.7423133,18.272328 L15.7423133,22.489019 L19.1156662,22.489019 L19.1156662,35.9824305 L24.1756955,35.9824305 L24.1756955,22.489019 L27.5490483,22.489019 L29.2357247,18.272328 L24.1756955,18.272328 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

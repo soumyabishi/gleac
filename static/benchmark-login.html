@@ -3,119 +3,152 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Gleac | Human Skills Matter</title>
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <title>Benchmark Login: Gleac </title>
+  <link rel="stylesheet" type="text/css" href="https://kenwheeler.github.io/slick/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://kenwheeler.github.io/slick/slick/slick-theme.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+
 </head>
 
 <body>
 
+<div class="BenchmarkLogin">
+  <div class="tw-flex tw-justify-center tw-items-stretch sm:tw-h-screen">
+    <div class="left-content tw-justify-center tw-items-center tw-flex tw-flex-col">
+      <div class="login_slider">
+        <div class="slider slider_1">
+          <div class="text">Our Benchmarks are British Psychology Approved and highly accurate showing a knee-jerk of your unique strengths and gap areas.</div>
+        </div>
 
+        <div class="slider slider_2">
+          <div class="text">Our benchmarks can be taken right off you phones are are just 10-15 minutes.</div>
+        </div>
+
+        <div class="slider slider_3">
+          <div class="text">Our benchmarks pinpoints behavioral job fitment and the skills needed to be developed for the role.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="right-content tw-flex tw-flex-col tw-relative">
+
+      <router-link :to="{ name: 'Home'}"><img src="assets/images/gleac-logo.png" class="logo tw-absolute tw-top-30px tw-left-14px sm:tw-left-30px"></router-link>
+      <div class="tw-font-rubik tw-text-16px tw-absolute tw-top-30px tw-right-30px tw-hidden sm:tw-block">Don’t have an account? <router-link :to="{ name: 'BenchmarkSignup'}" class="tw-text-primary tw-underline hover:tw-underline">Sign Up</router-link></div>
+      <div class="tw-font-rubik tw-text-16px tw-mt-30px tw-block sm:tw-hidden">Don’t have an account? <router-link :to="{ name: 'BenchmarkSignup'}" class="tw-text-primary tw-underline hover:tw-underline">Sign Up</router-link></div>
+
+      <h1 class="tw-text-32px tw-text-text-color tw-leading-38px tw-mb-12px tw-font-bold">Human Skills Matter</h1>
+      <p class="tw-text-16px tw-text-secondary tw-font-medium tw-leading-26px tw-mb-34px tw-mt-20px">Gleac measures and
+        develops human skills for any job in 10 minutes a day using A.I.</p>
+
+      <div class="login_wrapper tw-text-center">
+        <div class="tw-text-16px tw-text-secondary tw-font-medium tw-leading-26px tw-mb-15px">Login with</div>
+        <a class="tw-mr-15px"><img src="assets/images/google.svg"> </a>
+        <a class="tw-mr-15px"><img src="assets/images/facebook.svg"> </a>
+        <a class="tw-mr-15px"><img src="assets/images/linkedin.svg"> </a>
+        <a><img src="assets/images/apple.svg"> </a>
+        <div class="tw-text-16px tw-text-secondary tw-font-medium tw-leading-26px tw-mt-20px tw-mb-10px">Or email</div>
+        <form class="ui big form">
+          <div class="field">
+            <input type="email" name="email" placeholder="Email ID">
+          </div>
+          <div class="field">
+            <input type="password" name="password" placeholder="Password">
+          </div>
+          <div class="tw-text-primary tw-text-right tw-font-rubik tw-pointer tw-mb-32px tw-text-16px tw-underline hover:tw-underline">
+            Forgot Password?
+          </div>
+          <button class="ui primary  big fluid button" type="login">Login</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
 </body>
 
-<body>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="https://kenwheeler.github.io/slick/slick/slick.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 
 
-
-</body>
-</html>
-
-<script>
-  import VueSlickCarousel from 'vue-slick-carousel'
-  import 'vue-slick-carousel/dist/vue-slick-carousel.css'
-  // optional style for arrows & dots
-  import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
-  export default {
-    name: 'BenchmarkLogin',
-    data() {
-      return {}
-    },
-    methods:{
-    },
-    components:{
-      VueSlickCarousel
-    }
-  }
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.login_slider').slick({
+      dots: true,
+      autoplay:true,
+      arrows:false
+  });
+  });
 </script>
 
-<style lang="scss">
+<style>
   @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
 
-  @media (max-width: 640px){
-    .BenchmarkLogin {
-    .left-content {
+  @media (max-width: 640px) {
+    .BenchmarkLogin .left-content {
       display: none;
     }
-    .right-content {
+    .BenchmarkLogin .right-content {
       width: 100% !important;
       padding: 100px 14px !important;
     }
   }
-  }
-
-  @media (max-width: 768px){
-    .BenchmarkLogin {
-    .right-content {
+  @media (max-width: 768px) {
+    .BenchmarkLogin .right-content {
       width: 100% !important;
       padding: 100px 34px !important;
     }
   }
-  }
-
-  @media (max-width: 1300px){
-    .BenchmarkLogin {
-    .right-content {
+  @media (max-width: 1300px) {
+    .BenchmarkLogin .right-content {
       width: 100% !important;
       padding: 100px 34px !important;
     }
   }
-  }
-
-
-
-
-  .BenchmarkLogin{
-  .left-content{
+  .BenchmarkLogin .left-content {
     width: 40%;
-    background-color: #1C1C1C;
+    background-color: #1c1c1c;
   }
-  .right-content{
+  .BenchmarkLogin .right-content {
     width: 60%;
     overflow-y: auto;
     padding: 90px 210px;
   }
-
-  .logo{
+  .BenchmarkLogin .logo {
     width: 111px;
   }
-  .login_slider{
+  .BenchmarkLogin .login_slider {
     width: 100%;
     position: relative;
-  div:focus{
+  }
+  .BenchmarkLogin .login_slider div:focus {
     outline: none;
   }
-
-  .slider{
+  .BenchmarkLogin .login_slider .slider {
     position: relative;
   }
-  .slider_1{
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0, 1) 100%), url("../assets/images/login_slider/slider_1.jpg") no-repeat center center;
+  .BenchmarkLogin .login_slider .slider_1 {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%), url("assets/images/login_slider/slider_1.jpg") no-repeat center center;
     background-size: cover;
     height: 100vh;
   }
-
-  .slider_2{
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0, 1) 100%), url("../assets/images/login_slider/slider_2.jpg") no-repeat center center;
+  .BenchmarkLogin .login_slider .slider_2 {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%), url("assets/images/login_slider/slider_2.jpg") no-repeat center center;
     background-size: cover;
     height: 100vh;
   }
-  .slider_3{
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0, 1) 100%), url("../assets/images/login_slider/slider_3.jpg") no-repeat center center;
+  .BenchmarkLogin .login_slider .slider_3 {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%), url("assets/images/login_slider/slider_3.jpg") no-repeat center center;
     background-size: cover;
     height: 100vh;
   }
-  .text{
+  .BenchmarkLogin .login_slider .text {
     position: absolute;
     bottom: 100px;
     color: #fff;
@@ -124,19 +157,618 @@
     font-size: 16px;
     line-height: 1.6;
   }
-
-  .slick-dots{
+  .BenchmarkLogin .login_slider .slick-dots {
     bottom: 55px !important;
   }
-  .slick-dots li.slick-active button:before{
-    color:white !important;
+  .BenchmarkLogin .login_slider .slick-dots li.slick-active button:before {
+    color: white !important;
   }
-
-  .slick-dots li button:before{
-    color:white !important;
-  }
-  }
+  .BenchmarkLogin .login_slider .slick-dots li button:before {
+    color: white !important;
   }
 
 </style>
 
+
+<style>
+
+  body{
+    font-family: "Montserrat", sans-serif, "Montserrat", sans-serif ;
+  }
+
+  .ui.dimmer{
+       background-color: rgba(0, 0, 0, 0.46) !important;
+   }
+
+  .ui.button{
+    font-weight: 600 !important;
+    font-family: "Montserrat", sans-serif, "Montserrat", sans-serif !important;
+  }
+
+  .ui.form input:not([type]), .ui.form input[type="date"], .ui.form input[type="datetime-local"], .ui.form input[type="email"], .ui.form input[type="number"], .ui.form input[type="password"], .ui.form input[type="search"], .ui.form input[type="tel"], .ui.form input[type="time"], .ui.form input[type="text"], .ui.form input[type="file"], .ui.form input[type="url"]{
+    font-family: Rubik, 'sans-serif' !important;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: "Montserrat", sans-serif, "Montserrat", sans-serif;
+    line-height: 1.28571429em;
+    margin: calc(2rem - 0.14285714em) 0em 1rem;
+    font-weight: bold;
+    padding: 0em;
+  }
+
+</style>
+
+<style type="text/css">
+
+.tw-container {
+  width: 100%
+}
+
+@media (min-width: 640px) {
+  .tw-container {
+    max-width: 640px
+  }
+}
+
+@media (min-width: 768px) {
+  .tw-container {
+    max-width: 768px
+  }
+}
+
+@media (min-width: 1024px) {
+  .tw-container {
+    max-width: 1024px
+  }
+}
+
+@media (min-width: 1280px) {
+  .tw-container {
+    max-width: 1280px
+  }
+}
+
+/* tailwind end components */
+
+.tw-bg-primary {
+  --bg-opacity: 1;
+  background-color: #0065ad;
+  background-color: rgba(0, 101, 173, var(--bg-opacity))
+}
+
+.tw-bg-white {
+  --bg-opacity: 1;
+  background-color: #FFFFFF;
+  background-color: rgba(255, 255, 255, var(--bg-opacity))
+}
+
+.tw-bg-secondary {
+  background-color: rgba(117, 122, 160, 0.05)
+}
+
+.tw-rounded {
+  border-radius: 0.25rem
+}
+
+.tw-rounded-full {
+  border-radius: 9999px
+}
+
+.tw-cursor-pointer {
+  cursor: pointer
+}
+
+.tw-block {
+  display: block
+}
+
+.tw-inline-block {
+  display: inline-block
+}
+
+.tw-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+
+.tw-hidden {
+  display: none
+}
+
+.tw-flex-col {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column
+}
+
+.tw-items-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+
+.tw-items-stretch {
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch
+}
+
+.tw-justify-center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center
+}
+
+.tw-font-rubik {
+  font-family: Rubik, sans-serif
+}
+
+.tw-font-plex {
+  font-family: IBM Plex Sans, sans-serif
+}
+
+.tw-font-medium {
+  font-weight: 500
+}
+
+.tw-font-semibold {
+  font-weight: 600
+}
+
+.tw-font-bold {
+  font-weight: 700
+}
+
+.tw-text-13px {
+  font-size: 13px
+}
+
+.tw-text-14px {
+  font-size: 14px
+}
+
+.tw-text-16px {
+  font-size: 16px
+}
+
+.tw-text-20px {
+  font-size: 20px
+}
+
+.tw-text-24px {
+  font-size: 24px
+}
+
+.tw-text-28px {
+  font-size: 28px
+}
+
+.tw-text-32px {
+  font-size: 32px
+}
+
+.tw-text-34px {
+  font-size: 34px
+}
+
+.tw-leading-20px {
+  line-height: 20px
+}
+
+.tw-leading-26px {
+  line-height: 26px
+}
+
+.tw-leading-38px {
+  line-height: 38px
+}
+
+.tw-my-20px {
+  margin-top: 20px;
+  margin-bottom: 20px
+}
+
+.tw-mx-50px {
+  margin-left: 50px;
+  margin-right: 50px
+}
+
+.tw-mb-4px {
+  margin-bottom: 4px
+}
+
+.tw-mb-6px {
+  margin-bottom: 6px
+}
+
+.tw-mr-8px {
+  margin-right: 8px
+}
+
+.tw-mt-10px {
+  margin-top: 10px
+}
+
+.tw-mr-10px {
+  margin-right: 10px
+}
+
+.tw-mb-10px {
+  margin-bottom: 10px
+}
+
+.tw-mr-12px {
+  margin-right: 12px
+}
+
+.tw-mb-12px {
+  margin-bottom: 12px
+}
+
+.tw-mt-13px {
+  margin-top: 13px
+}
+
+.tw-mt-14px {
+  margin-top: 14px
+}
+
+.tw-mr-14px {
+  margin-right: 14px
+}
+
+.tw-mb-14px {
+  margin-bottom: 14px
+}
+
+.tw-mr-15px {
+  margin-right: 15px
+}
+
+.tw-mb-15px {
+  margin-bottom: 15px
+}
+
+.tw-mb-18px {
+  margin-bottom: 18px
+}
+
+.tw-mt-20px {
+  margin-top: 20px
+}
+
+.tw-mb-20px {
+  margin-bottom: 20px
+}
+
+.tw-mb-24px {
+  margin-bottom: 24px
+}
+
+.tw-mb-32px {
+  margin-bottom: 32px
+}
+
+.tw-mb-34px {
+  margin-bottom: 34px
+}
+
+.tw-mt-38px {
+  margin-top: 38px
+}
+
+.tw-opacity-50 {
+  opacity: 0.5
+}
+
+.tw-p-30px {
+  padding: 30px
+}
+
+.tw-py-14px {
+  padding-top: 14px;
+  padding-bottom: 14px
+}
+
+.tw-px-14px {
+  padding-left: 14px;
+  padding-right: 14px
+}
+
+.tw-py-18px {
+  padding-top: 18px;
+  padding-bottom: 18px
+}
+
+.tw-px-18px {
+  padding-left: 18px;
+  padding-right: 18px
+}
+
+.tw-pl-0px {
+  padding-left: 0px
+}
+
+.tw-pl-18px {
+  padding-left: 18px
+}
+
+.tw-pl-20px {
+  padding-left: 20px
+}
+
+.tw-pr-34px {
+  padding-right: 34px
+}
+
+.tw-fixed {
+  position: fixed
+}
+
+.tw-absolute {
+  position: absolute
+}
+
+.tw-relative {
+  position: relative
+}
+
+.tw-right-10px {
+  right: 10px
+}
+
+.tw-left-10px {
+  left: 10px
+}
+
+.tw-left-14px {
+  left: 14px
+}
+
+.tw-top-18px {
+  top: 18px
+}
+
+.tw-bottom-18px {
+  bottom: 18px
+}
+
+.tw-left-20px {
+  left: 20px
+}
+
+.tw-left-26px {
+  left: 26px
+}
+
+.tw-top-30px {
+  top: 30px
+}
+
+.tw-right-30px {
+  right: 30px
+}
+
+.tw-left-64px {
+  left: 64px
+}
+
+.tw--top-1px {
+  top: -1px
+}
+
+.tw--top-2px {
+  top: -2px
+}
+
+.tw--top-3px {
+  top: -3px
+}
+
+.tw--left-3px {
+  left: -3px
+}
+
+.tw--top-4px {
+  top: -4px
+}
+
+.tw--top-5px {
+  top: -5px
+}
+
+.tw--left-8px {
+  left: -8px
+}
+
+.tw--top-10px {
+  top: -10px
+}
+
+.tw--bottom-10px {
+  bottom: -10px
+}
+
+.tw--right-34px {
+  right: -34px
+}
+
+.tw--left-34px {
+  left: -34px
+}
+
+.tw-shadow-lg {
+  -webkit-box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)
+}
+
+.tw-text-left {
+  text-align: left
+}
+
+.tw-text-center {
+  text-align: center
+}
+
+.tw-text-right {
+  text-align: right
+}
+
+.tw-text-primary {
+  --text-opacity: 1;
+  color: #0065ad;
+  color: rgba(0, 101, 173, var(--text-opacity))
+}
+
+.tw-text-text-color {
+  --text-opacity: 1;
+  color: #3b3b3b;
+  color: rgba(59, 59, 59, var(--text-opacity))
+}
+
+.tw-text-description {
+  --text-opacity: 1;
+  color: #212961;
+  color: rgba(33, 41, 97, var(--text-opacity))
+}
+
+.tw-text-white {
+  --text-opacity: 1;
+  color: #ffffff;
+  color: rgba(255, 255, 255, var(--text-opacity))
+}
+
+.tw-text-secondary {
+  --text-opacity: 1;
+  color: #757aa0;
+  color: rgba(117, 122, 160, var(--text-opacity))
+}
+
+.hover\:tw-text-white:hover {
+  --text-opacity: 1;
+  color: #ffffff;
+  color: rgba(255, 255, 255, var(--text-opacity))
+}
+
+.tw-underline {
+  text-decoration: underline
+}
+
+.hover\:tw-underline:hover {
+  text-decoration: underline
+}
+
+.tw-invisible {
+  visibility: hidden
+}
+
+.tw-w-1\/2 {
+  width: 50%
+}
+
+.tw-w-full {
+  width: 100%
+}
+
+.tw-z-50 {
+  z-index: 50
+}
+
+@media (min-width: 640px) {
+  .sm\:tw-block {
+    display: block
+  }
+
+  .sm\:tw-hidden {
+    display: none
+  }
+
+  .sm\:tw-h-screen {
+    height: 100vh
+  }
+
+  .sm\:tw-text-16px {
+    font-size: 16px
+  }
+
+  .sm\:tw-my-0px {
+    margin-top: 0px;
+    margin-bottom: 0px
+  }
+
+  .sm\:tw-mx-0px {
+    margin-left: 0px;
+    margin-right: 0px
+  }
+
+  .sm\:tw-pl-20px {
+    padding-left: 20px
+  }
+
+  .sm\:tw-left-30px {
+    left: 30px
+  }
+
+  .sm\:tw-text-right {
+    text-align: right
+  }
+
+  .sm\:tw-w-1\/2 {
+    width: 50%
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:tw-block {
+    display: block
+  }
+
+  .md\:tw-inline-block {
+    display: inline-block
+  }
+
+  .md\:tw-flex-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row
+  }
+
+  .md\:tw-m-0px {
+    margin: 0px
+  }
+
+  .md\:tw-mt-0px {
+    margin-top: 0px
+  }
+
+  .md\:tw-mr-22px {
+    margin-right: 22px
+  }
+
+  .md\:tw-ml-70px {
+    margin-left: 70px
+  }
+
+  .md\:tw-ml-110px {
+    margin-left: 110px
+  }
+
+  .md\:tw-text-right {
+    text-align: right
+  }
+
+  .md\:tw-w-1\/2 {
+    width: 50%
+  }
+
+  .md\:tw-w-1\/4 {
+    width: 25%
+  }
+}
+</style>
+
+</html>
