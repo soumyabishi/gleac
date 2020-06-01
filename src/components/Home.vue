@@ -228,51 +228,88 @@
                       <div class="tw-text-16px tw-text-secondary tw-font-semibold tw-mb-18px">Our Library</div>
 
 
-                  <div class="ui column grid">
-                    <div :class="{'eight wide column':show_more_library , 'sixteen wide column' : !show_more_library}">
-                      <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative tw-mb-12px">
-                        <img src="../assets/images/library/creativity.png" width="26" class="tw-absolute tw--left-8px tw--top-2px">Creativity
-                      </div>
-                      <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
-                        <img src="../assets/images/library/managing_people.png" width="26" class="tw-absolute tw--left-8px tw--top-4px">Managing People
-                      </div>
+                  <div>
 
-                      <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
-                        <img src="../assets/images/library/interview_skills.png" width="26" class="tw-absolute tw--left-8px tw--top-3px">Interviewing Skills
-                      </div>
-
-                      <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
-                        <img src="../assets/images/library/critical_thinking.png" width="26" class="tw-absolute tw--left-8px tw--top-5px">Critical Thinking
-                      </div>
-
-                      <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
-                        <img src="../assets/images/library/mindfullness.png" width="26" class="tw-absolute tw--left-8px tw--top-5px">Mindfulness
-                      </div>
-                      <a @click="show_more_library = !show_more_library" v-if="!show_more_library" class="tw-font-rubik tw-cursor-pointer"> Show more <i class="icon angle down"></i></a>
+                    <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
+                      <img src="../assets/images/library/managing_people.png" width="26" class="tw-absolute tw--left-8px tw--top-4px">Managing People
                     </div>
-                    <div class="eight wide column" v-if="show_more_library">
-                      <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
-                        <img src="../assets/images/library/decision_making.png" width="26" class="tw-absolute tw--left-8px tw--top-4px">Decision making
-                      </div>
 
-                      <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
-                        <img src="../assets/images/library/self_direction.png" width="26" class="tw-absolute tw--left-8px tw--top-4px">Self Direction
-                      </div>
+                    <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
+                      <img src="../assets/images/library/covid.png" width="26" class="tw-absolute tw--left-8px tw--top-4px">Coping with Covid for Parents, Teachers and Students
+                    </div>
 
-                      <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
-                        <img src="../assets/images/library/collaboration.png" width="26" class="tw-absolute tw--left-8px tw--top-4px">Collaboration
-                      </div>
+                    <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
+                      <img src="../assets/images/library/managing_people.png" width="26" class="tw-absolute tw--left-8px tw--top-4px">Sales
+                    </div>
 
+                    <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
+                      <img src="../assets/images/library/recruitment.png" width="26" class="tw-absolute tw--left-8px tw--top-4px">Recruitment
+                    </div>
+
+                    <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
+                      <img src="../assets/images/library/interviewing.png" width="26" class="tw-absolute tw--left-8px tw--top-3px">Interviewing
+                    </div>
+
+                    <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
+                      <img src="../assets/images/library/off-boarding.png" width="26" class="tw-absolute tw--left-8px tw--top-3px">Off-Boarding for Employees
+                    </div>
+
+                    <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
+                      <img src="../assets/images/library/interview_skills.png" width="26" class="tw-absolute tw--left-8px tw--top-3px">Customer Facing Roles
+                    </div>
+
+
+                  </div>
+
+                    <a @click="show_more_library = !show_more_library" v-if="!show_more_library" class="tw-font-rubik tw-cursor-pointer"> Show more <i class="icon angle down"></i></a>
+
+                    <div v-if="show_more_library">
                       <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
                         <img src="../assets/images/library/communication.png" width="26" class="tw-absolute tw--left-8px tw--top-4px">Communication
                       </div>
+                        <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
+                          <img src="../assets/images/library/critical_thinking.png" width="26" class="tw-absolute tw--left-8px tw--top-5px">Critical Thinking
+                        </div>
 
-                      <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
-                        <img src="../assets/images/library/emotional_iq.png" width="26" class="tw-absolute tw--left-8px tw--top-4px">Emotional IQ
-                      </div>
-                      <a @click="show_more_library = !show_more_library" class="tw-font-rubik tw-cursor-pointer"> Show less <i class="icon angle up"></i></a>
+                        <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative tw-mb-12px">
+                          <img src="../assets/images/library/creativity.png" width="26" class="tw-absolute tw--left-8px tw--top-2px">Creativity
+                        </div>
+
+                        <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
+                          <img src="../assets/images/library/collaboration.png" width="26" class="tw-absolute tw--left-8px tw--top-4px">Collaboration
+                        </div>
+
+
+                        <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
+                          <img src="../assets/images/library/decision_making.png" width="26" class="tw-absolute tw--left-8px tw--top-4px">Judgement and Decision making
+                        </div>
+
+                        <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
+                          <img src="../assets/images/library/leadership.png" width="26" class="tw-absolute tw--left-8px tw--top-4px">Leadership
+                        </div>
+
+                        <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
+                          <img src="../assets/images/library/self_direction.png" width="26" class="tw-absolute tw--left-8px tw--top-4px">Self Direction
+                        </div>
+
+                        <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
+                          <img src="../assets/images/library/mindfullness.png" width="26" class="tw-absolute tw--left-8px tw--top-5px">Mindfulness
+                        </div>
+
+                        <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
+                          <img src="../assets/images/library/entrepreneurship.png" width="26" class="tw-absolute tw--left-8px tw--top-5px">Entrepreneurship
+                        </div>
+
+                        <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
+                          <img src="../assets/images/library/emotional.png" width="26" class="tw-absolute tw--left-8px tw--top-5px">Emotional IQ
+                        </div>
+
+                         <a @click="show_more_library = !show_more_library" class="tw-font-rubik tw-cursor-pointer"> Show less <i class="icon angle up"></i></a>
                     </div>
-                  </div>
+
+
+
+
 
                 </div>
               </div>
