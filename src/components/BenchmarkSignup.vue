@@ -130,7 +130,7 @@ export default {
     }
     .right-content{
       width: 60%;
-      overflow-y: auto;
+      overflow-y: hidden;
       padding: 90px 210px;
       .form{
         text-align: left;
