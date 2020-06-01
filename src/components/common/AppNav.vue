@@ -25,8 +25,7 @@
 
     <div class="banner tw-fixed tw-bg-primary tw-w-full">
       <div class="tw-container tw-m-auto tw-px-14px">
-        <div class="tw-font-rubik  tw-text-white  tw-text-13px sm:tw-text-16px">Check your job fit for the No. 1 growing job (over 100k job available in the US alone) as a CONTACT TRACER <a
-          href="/" class="tw-underline tw-text-white hover:tw-text-white hover:tw-underline">here</a>
+        <div class="tw-font-rubik  tw-text-white  tw-text-13px sm:tw-text-16px">Check your fit for the No.1 emerging job as a <a href="#" style="color:#fff" class="tw-underline">Contact Tracer</a> or try and develop the new skills needed in <a href="https://readiness.gleac.com/micro-practice-sales" class="tw-underline" style="color:#fff">Sales</a> in a Covid world.
         </div>
       </div>
     </div>
@@ -37,7 +36,8 @@
           <div class="twelve wide column">
             <div class="tw-text-white tw-text-16px tw-font-semibold tw-mb-4px tw-relative tw-pl-18px"><img src="../../assets/images/cookie.svg" class="tw-absolute tw--left-3px"/>Oh, our Sweet Cookies..
             </div>
-            <div class="tw-text-white tw-text-12px">We use cookies to provide the services and features offers on our website and improve our user experience  <a href="/" class="tw-underline tw-text-white hover:tw-text-white hover:tw-underline">Learn More</a>
+            <div class="tw-text-white tw-text-12px">We use cookies to provide the services and features offers on our website and improve our user experience
+              <router-link :to="{ name: 'CookiePolicy'}" class="tw-underline tw-text-white hover:tw-text-white hover:tw-underline">Learn More</router-link>
             </div>
           </div>
 

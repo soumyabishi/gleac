@@ -21,7 +21,7 @@
 
       <div class="right-content tw-flex tw-flex-col tw-relative">
 
-        <router-link :to="{ name: 'Home'}"><img src="../assets/images/gleac-logo-colored.png" class="logo tw-absolute tw-top-30px tw-left-14px sm:tw-left-30px"></router-link>
+        <router-link :to="{ name: 'Home'}"><img src="../assets/images/gleac-logo.png" class="logo tw-absolute tw-top-30px tw-left-14px sm:tw-left-30px"></router-link>
         <div class="tw-font-rubik tw-text-16px tw-absolute tw-top-30px tw-right-30px tw-hidden sm:tw-block">Already have an account? <router-link :to="{ name: 'BenchmarkLogin'}" class="tw-text-primary tw-underline hover:tw-underline">Login</router-link></div>
         <div class="tw-font-rubik tw-text-16px tw-mt-30px tw-block sm:tw-hidden">Already have an account? <router-link :to="{ name: 'BenchmarkLogin'}" class="tw-text-primary tw-underline hover:tw-underline">Login</router-link></div>
 

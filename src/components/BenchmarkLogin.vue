@@ -4,15 +4,15 @@
       <div class="left-content tw-justify-center tw-items-center tw-flex tw-flex-col">
         <VueSlickCarousel :arrows="true" :dots="true" :autoplay="true" class="login_slider">
           <div class="slider slider_1">
-              <div class="text tw-text-center">Our Benchmarks are British Psychology Approved and highly accurate showing a knee-jerk of your unique strengths and gap areas.</div>
+              <div class="text">Our Benchmarks are British Psychology Approved and highly accurate showing a knee-jerk of your unique strengths and gap areas.</div>
           </div>
 
           <div class="slider slider_2">
-            <div class="text tw-text-center">Our benchmarks can be taken right off you phones are are just 10-15 minutes.</div>
+            <div class="text">Our benchmarks can be taken right off you phones are are just 10-15 minutes.</div>
           </div>
 
           <div class="slider slider_3">
-            <div class="text tw-text-center">Our benchmarks pinpoints behavioral job fitment and the skills needed to be developed for the role.
+            <div class="text">Our benchmarks pinpoints behavioral job fitment and the skills needed to be developed for the role.
             </div>
           </div>
 
@@ -21,7 +21,7 @@
 
       <div class="right-content tw-flex tw-flex-col tw-relative">
 
-        <router-link :to="{ name: 'Home'}"><img src="../assets/images/gleac-logo-colored.png" class="logo tw-absolute tw-top-30px tw-left-14px sm:tw-left-30px"></router-link>
+        <router-link :to="{ name: 'Home'}"><img src="../assets/images/gleac-logo.png" class="logo tw-absolute tw-top-30px tw-left-14px sm:tw-left-30px"></router-link>
         <div class="tw-font-rubik tw-text-16px tw-absolute tw-top-30px tw-right-30px tw-hidden sm:tw-block">Don’t have an account? <router-link :to="{ name: 'BenchmarkSignup'}" class="tw-text-primary tw-underline hover:tw-underline">Sign Up</router-link></div>
         <div class="tw-font-rubik tw-text-16px tw-mt-30px tw-block sm:tw-hidden">Don’t have an account? <router-link :to="{ name: 'BenchmarkSignup'}" class="tw-text-primary tw-underline hover:tw-underline">Sign Up</router-link></div>
 
