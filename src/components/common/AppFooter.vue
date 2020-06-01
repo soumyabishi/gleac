@@ -24,9 +24,10 @@
           <div class="four wide column">
             <div class="tw-font-rubik tw-font-medium tw-mb-14px">Subscribe To Newsletter</div>
             <div class="ui inverted action fluid input">
-              <input type="text" placeholder="Enter your Email ID">
-              <button class="ui primary button">Subscribe</button>
+              <input type="email" placeholder="Enter your Email ID" v-model="subscribeEmail">
+              <button class="ui primary button" @click="subscribeToNewsletter">Subscribe</button>
             </div>
+						<div class="text-white" v-html="subscribeMessage"></div>
             <div class="ui two column grid">
               <div class="column">
                 <div class="tw-font-rubik tw-font-medium tw-mt-14px tw-mb-14px">Follow us</div>
@@ -72,8 +73,35 @@
     name: 'AppFooter',
     data(){
       return{
+				subscribeEmail: "",
+				subscribeMessage: "",
       }
-    }
+		},
+		methods: {
+			subscribeToNewsletter() {
+				const reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+				console.log("Regex check", reg.test(this.subscribeEmail.toLowerCase()))
+				if (this.subscribeEmail !== "" && reg.test(this.subscribeEmail.toLowerCase())) {
+					console.log("Email is valid!");
+					const response = this.axios.get(`https://gleac.us16.list-manage.com/subscribe/post-json?u=5f51f150a24c51e9eefd7b405&id=17f933f6a5&subscribe=Subscribe&EMAIL=${this.subscribeEmail}`);
+					response.then(res => {
+						let resJson = res.data;
+						let msg = resJson.msg;
+						if (msg.indexOf("0 - ") > -1) {
+							msg = msg.split("0 - ")[1];
+						}
+						this.subscribeMessage = msg;
+					})
+					response.catch(e => {
+						console.log(e);
+						this.subscribeMessage = "Something went wrong. Please try again later";
+					})
+				} else {
+					this.subscribeMessage = "Please enter a valid email address"
+					console.log("Email is invalid")
+				}
+			}
+		}
   }
 </script>
 
