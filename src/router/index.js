@@ -5,6 +5,10 @@ import Login from '@/components/Login'
 import Signup from '@/components/Signup'
 import BenchmarkLogin from '@/components/BenchmarkLogin'
 import BenchmarkSignup from '@/components/BenchmarkSignup'
+import Terms from '@/components/Terms'
+import DataPrivacy from '@/components/DataPrivacy'
+
+
 
 Vue.use(Router)
 
@@ -34,6 +38,16 @@ export default new Router({
       path: '/benchmark-signup',
       name: 'BenchmarkSignup',
       component: BenchmarkSignup
+    },
+    {
+      path: '/terms',
+      name: 'Terms',
+      component: Terms
+    },
+    {
+      path: '/data-privacy',
+      name: 'DataPrivacy',
+      component: DataPrivacy
     }
   ]
 })
