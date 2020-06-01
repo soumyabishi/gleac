@@ -413,8 +413,8 @@
                 <div class="field">
                   <input type="email" name="email" placeholder="Email ID" v-model="contact_email">
                 </div>
-
                 <button class="ui primary button" @click.prevent="submit_contact_request">Talk to me &nbsp;&nbsp;<i class="heart icon"></i></button>
+								<p v-html="contact_message"></p>
               </form>
             </div>
 
@@ -684,6 +684,7 @@ export default {
 				const name = this.contact_name;
 				const company = this.contact_company;
 				const email = this.contact_email;
+				this.contact_message = "";
 				if (name === "" || company === "" || email === "") {
 					this.contact_message = "Please fill out all the details"
 				} else if (!reg.test(email.toLowerCase())) {
@@ -695,7 +696,8 @@ export default {
 						organization: company,
 					}
 					const response = this.axios.post("https://dashboardapi.gleac.com/api/Dashboard/contact", body).then(res => {
-						console.log(res)
+						console.log(res);
+						this.contact_message = res.data.result;
 					}).catch(err => {
 						console.log(err);
 						this.contact_message = "Something went wrong. Please try again later."
