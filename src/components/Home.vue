@@ -142,15 +142,15 @@
                   <div class="tw-font-rubik tw-text-16px tw-py-14px tw-px-18px tw-block tw-w-full">Gleac Indicators
                     <img src="../assets/images/close_icon.svg" @click="take_a_look_5_show = !take_a_look_5_show" class="tw-absolute">
                   </div>
-                  <a href="#" class="tw-font-rubik tw-text-16px tw-py-14px tw-px-18px tw-block tw-w-full tw-relative">
+                  <a href="https://community.gleac.com/demo/NmRlN2Y4ZWUtNWNkZC00ZGI3LTgwOWYtZTAyMTIyODZjMmVl" class="tw-font-rubik tw-text-16px tw-py-14px tw-px-18px tw-block tw-w-full tw-relative">
                     Critical Thinking
                     <img src="../assets/images/arrow-right.svg" class="tw-absolute">
                   </a>
-                  <a href="#" class="tw-font-rubik tw-text-16px tw-py-14px tw-px-18px tw-block tw-w-full tw-relative">
+                  <a href="https://community.gleac.com/demo/NmM3OWFlNzQtMmFjZi00ZDhkLTk3ZTEtNjdlMmQzOTU0YzVi" class="tw-font-rubik tw-text-16px tw-py-14px tw-px-18px tw-block tw-w-full tw-relative">
                     Judgement and Decision Making
                     <img src="../assets/images/arrow-right.svg" class="tw-absolute">
                   </a>
-                  <a href="#" class="tw-font-rubik tw-text-16px tw-py-14px tw-px-18px tw-block tw-w-full tw-relative">
+                  <a href="https://community.gleac.com/demo/Mzc4NWZjYWUtNzMyYi00NWI5LWJjYzgtNzdlMmZjMGY4OGEy" class="tw-font-rubik tw-text-16px tw-py-14px tw-px-18px tw-block tw-w-full tw-relative">
                     Communication
                     <img src="../assets/images/arrow-right.svg" class="tw-absolute">
                   </a>
@@ -177,11 +177,11 @@
                    <div class="tw-font-rubik tw-text-16px tw-py-14px tw-px-18px tw-block tw-w-full">Gleac Indicators
                      <img src="../assets/images/close_icon.svg" @click="take_a_look_15_show = !take_a_look_15_show" class="tw-absolute">
                    </div>
-                   <a href="#" class="tw-font-rubik tw-text-16px tw-py-14px tw-px-18px tw-block tw-w-full tw-relative">
+                   <a href="https://community.gleac.com/demo/ZjA4YzQyMTAtMTk0YS00YmRiLTg2YmQtMjUzYzY5YTBiOTQx" class="tw-font-rubik tw-text-16px tw-py-14px tw-px-18px tw-block tw-w-full tw-relative">
                      Emotional IQ
                      <img src="../assets/images/arrow-right.svg" class="tw-absolute">
                    </a>
-                   <a href="#" class="tw-font-rubik tw-text-16px tw-py-14px tw-px-18px tw-block tw-w-full tw-relative">
+                   <a href="https://community.gleac.com/demo/ZGRiNTk5NzMtNjljMi00Mjg1LWExZTYtNTFmOTc5MDZiMDgx" class="tw-font-rubik tw-text-16px tw-py-14px tw-px-18px tw-block tw-w-full tw-relative">
                      Self-Direction
                      <img src="../assets/images/arrow-right.svg" class="tw-absolute">
                    </a>
@@ -207,7 +207,7 @@
                   <div class="tw-font-rubik tw-text-16px tw-py-14px tw-px-18px tw-block tw-w-full">Gleac Indicators
                     <img src="../assets/images/close_icon.svg" @click="take_a_look_25_show = !take_a_look_25_show" class="tw-absolute">
                   </div>
-                  <a href="#" class="tw-font-rubik tw-text-16px tw-py-14px tw-px-18px tw-block tw-w-full tw-relative">
+                  <a href="https://community.gleac.com/demo/NTY4NjllNzItM2IzMC00YmM3LWFiM2EtM2ZjMTU5NDA5MTA0" class="tw-font-rubik tw-text-16px tw-py-14px tw-px-18px tw-block tw-w-full tw-relative">
                     Communication
                     <img src="../assets/images/arrow-right.svg" class="tw-absolute">
                   </a>
