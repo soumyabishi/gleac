@@ -404,17 +404,17 @@
               <div class="tw-font-rubik tw-text-primary tw-font-medium tw-text-20px tw-mb-20px">Contact Us</div>
               <form class="ui form">
                 <div class="field">
-                  <input type="text" name="name" placeholder="Full Name">
+                  <input type="text" name="name" placeholder="Full Name" v-model="contact_name">
                 </div>
                 <div class="field">
-                  <input type="text" name="company-name" placeholder="Company Name">
+                  <input type="text" name="company-name" placeholder="Company Name" v-model="contact_company">
                 </div>
 
                 <div class="field">
-                  <input type="email" name="email" placeholder="Email ID">
+                  <input type="email" name="email" placeholder="Email ID" v-model="contact_email">
                 </div>
 
-                <button class="ui primary button" type="submit">Talk to me &nbsp;&nbsp;<i class="heart icon"></i></button>
+                <button class="ui primary button" @click.prevent="submit_contact_request">Talk to me &nbsp;&nbsp;<i class="heart icon"></i></button>
               </form>
             </div>
 
@@ -446,11 +446,11 @@
         <div class="modal_content tw-p-30px">
 
           <div class="ui stackable grid">
-              <div class="ten wide column">
-                 <div class="tw-font-rubik tw-text-16px tw-leading-20px">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
-                 </div>
-              </div>
+						<div class="ten wide column">
+								<div class="tw-font-rubik tw-text-16px tw-leading-20px">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+								</div>
+						</div>
 
             <div class="six wide center aligned column">
               <img src="../assets/images/press/accenture.png" style="width: 180px;">
@@ -493,32 +493,35 @@
           <div class="tw-font-rubik tw-text-16px tw-text-secondary tw-mt-10px tw-mb-24px">Please share your details to download the whitepaper</div>
           <form class="ui big form">
             <div class="field">
-              <label>Name</label>
-              <input type="text" name="namee" placeholder="Enter your name">
+              <label>First Name*</label>
+              <input type="text" name="first-name" placeholder="Enter your first name" v-model="whitepaper_fname">
             </div>
             <div class="field">
-              <label>Company name</label>
-              <input type="text" name="namee" placeholder="Enter your company name">
+              <label>Last Name*</label>
+              <input type="text" name="last-name" placeholder="Enter your last name" v-model="whitepaper_lname">
             </div>
             <div class="field">
-              <label>Email ID</label>
-              <input type="email" name="email" placeholder="Email ID">
+              <label>Email ID*</label>
+              <input type="email" name="email" placeholder="Email ID" v-model="whitepaper_email">
             </div>
-            <button class="ui primary large button">Submit</button>
+						<p v-html="whitepaper_message"></p>
+            <button class="ui primary large button" @click.prevent="whitepaper_submit">Submit</button>
           </form>
 
-        <div class="ui hidden divider"></div>
-        <div class="ui hidden divider"></div>
-        <div class="ui hidden divider"></div>
+				<div v-if="show_whitepaper_download">
+					<div class="ui hidden divider"></div>
+					<div class="ui hidden divider"></div>
+					<div class="ui hidden divider"></div>
+				</div>
 
-         <div class="ui stackable middle aligned grid">
-            <div class="ten wide column">
-              <div class="tw-font-rubik tw-font-medium tw-text-24px">Thank you lovely human</div>
-            </div>
-           <div class="six wide column">
-             <button class="ui primary large fluid button"><span class="tw-relative tw-pr-34px">Download <img src="../assets/images/donwload_icon.svg" class="tw-absolute tw--top-1px tw-right-10px"/></span></button>
-           </div>
-         </div>
+        <div class="ui stackable middle aligned grid" v-if="show_whitepaper_download">
+					<div class="ten wide column">
+						<div class="tw-font-rubik tw-font-medium tw-text-24px">Thank you lovely human</div>
+					</div>
+					<div class="six wide column">
+						<button class="ui primary large fluid button"><span class="tw-relative tw-pr-34px">Download <img src="../assets/images/donwload_icon.svg" class="tw-absolute tw--top-1px tw-right-10px"/></span></button>
+					</div>
+        </div>
       </div>
       <!-- white paper modal end-->
 
@@ -611,7 +614,16 @@ export default {
               }
             },
           ]
-        },
+				},
+				whitepaper_fname: "",
+				whitepaper_lname: "",
+				whitepaper_email: "",
+				show_whitepaper_download: false,
+				whitepaper_message: "",
+				contact_name: "",
+				contact_company: "",
+				contact_email: "",
+				contact_message: "",
       }
     },
     methods:{
@@ -636,7 +648,60 @@ export default {
           this.skill_list = response.data.result;
           this.skill_loading = false;
         })
-      }
+			},
+			whitepaper_submit() {
+				const reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+				const fname = this.whitepaper_fname;
+				const lname = this.whitepaper_lname;
+				const email = this.whitepaper_email;
+				if (fname === "" || lname === "" || email === "") {
+					this.whitepaper_message = "Please fill out all the details"
+				} else if (!reg.test(email.toLowerCase())) {
+					this.whitepaper_message = "Please enter a valid email address"
+				} else {
+					this.whitepaper_message = "";
+					const response = this.axios.get(`https://gleac.us16.list-manage.com/subscribe/post-json?u=5f51f150a24c51e9eefd7b405&id=9a79d535d4&subscribe=Subscribe&EMAIL=${email}&FNAME=${fname}&LNAME=${lname}`)
+						.then(res => {
+							if (res.data.result === "success") {
+								this.show_whitepaper_download = true;
+								return;
+							} else {
+								let msg = res.data.msg;
+								if (msg.indexOf("0 - ") > -1) {
+									msg = msg.split("0 - ")[1];
+								}
+								this.whitepaper_message = msg;
+							}
+						})
+						.catch(err => {
+							console.log(err);
+							this.whitepaper_message = "Something went wrong. Please try again later"
+						})
+				}
+			},
+			submit_contact_request() {
+				const reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+				const name = this.contact_name;
+				const company = this.contact_company;
+				const email = this.contact_email;
+				if (name === "" || company === "" || email === "") {
+					this.contact_message = "Please fill out all the details"
+				} else if (!reg.test(email.toLowerCase())) {
+					this.contact_message = "Please enter a valid email address"
+				} else {
+					const body = {
+						name,
+						email,
+						organization: company,
+					}
+					const response = this.axios.post("https://dashboardapi.gleac.com/api/Dashboard/contact", body).then(res => {
+						console.log(res)
+					}).catch(err => {
+						console.log(err);
+						this.contact_message = "Something went wrong. Please try again later."
+					})
+				}
+			}
     },
     mounted(){
       this.fetch_joblist();
