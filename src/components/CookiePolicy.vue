@@ -2,7 +2,7 @@
   <div class="Cookie">
     <app-nav></app-nav>
 
-    <div class="content_wrapper">
+    <div class="content_wrapper_page">
       <div class="ui container tw-font-rubik">
 
          <h2>Cookie Policy</h2>
@@ -159,7 +159,7 @@ export default {
     margin: 0 auto;
   }
 
-  .content_wrapper {
+  .content_wrapper_page {
     padding-top: 200px;
     padding-bottom: 200px;
   }

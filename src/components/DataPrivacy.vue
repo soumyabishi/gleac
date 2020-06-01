@@ -2,7 +2,7 @@
   <div class="DataPrivacy">
     <app-nav></app-nav>
 
-    <div class="content_wrapper">
+    <div class="content_wrapper_page">
       <div class="ui container tw-font-rubik">
 
          <h2>Technical and Organizational Measures of Data Protection at GLEAC
@@ -86,7 +86,7 @@ export default {
     margin: 0 auto;
   }
 
-  .content_wrapper {
+  .content_wrapper_page {
     padding-top: 200px;
     padding-bottom: 200px;
   }
