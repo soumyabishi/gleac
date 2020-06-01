@@ -34,6 +34,7 @@ import VueAxios from 'vue-axios'
 
 Vue.use(VueAxios, axios)
 
+Vue.use(require('vue-cookies'))
 
 import '../src/assets/css/tailwind.css';
 

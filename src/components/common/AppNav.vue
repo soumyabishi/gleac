@@ -41,8 +41,8 @@
           </div>
 
           <div class="four wide right aligned column">
-            <span class="tw-hidden sm:tw-block"><button class="ui button basic inverted" @click="show_cookies = !show_cookies">Got it</button></span>
-            <span class="tw-block sm:tw-hidden"><button class="ui fluid button basic inverted" @click="show_cookies = !show_cookies">Got it</button></span>
+            <span class="tw-hidden sm:tw-block"><button class="ui button basic inverted" @click="hideCookieBanner">Got it</button></span>
+            <span class="tw-block sm:tw-hidden"><button class="ui fluid button basic inverted" @click="hideCookieBanner">Got it</button></span>
 
           </div>
 
@@ -55,14 +55,24 @@
 </template>
 
 <script>
-
   export default {
     name: 'AppNav',
     data(){
       return{
         show_cookies:true,
       }
-    }
+    },
+		methods:{
+			hideCookieBanner() {
+				this.show_cookies = false;
+				this.$cookies.set("cookiebanner", "false");
+			}
+		},
+		mounted() {
+			if (this.$cookies.isKey("cookiebanner")) {
+				this.show_cookies = false;
+			}
+		}
   }
 </script>
 
