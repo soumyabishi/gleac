@@ -16,9 +16,9 @@
           <div class="three wide column">
             <div class="tw-font-rubik tw-font-medium">Company</div>
             <a @click="$parent.open_white_paper_modal()" class="tw-font-rubik tw-text-white tw-block hover:tw-text-white hover:tw-underline tw-mt-14px tw-cursor-pointer">Our Whitepaper</a>
-            <router-link :to="{ name: 'BenchmarkLogin'}" class="tw-font-rubik tw-text-white tw-block hover:tw-text-white hover:tw-underline tw-mt-14px">
+            <a href="/static/benchmark-login.html" class="tw-font-rubik tw-text-white tw-block hover:tw-text-white hover:tw-underline tw-mt-14px">
               Benchmark
-            </router-link>
+            </a>
             <a href="#" v-scroll-to="{el:'#about', offset: -150}" class="tw-font-rubik tw-text-white tw-block hover:tw-text-white hover:tw-underline tw-mt-14px">About Us</a>
           </div>
           <div class="four wide column">

@@ -10,13 +10,12 @@
             <div class="menu">
               <a class="item tw-text-12px tw-font-semibold tw-text-primary tw-mr-12px tw-cursor-pointer" @click="$parent.open_white_paper_modal()">Our Whitepaper</a>
               <a class="item tw-text-12px tw-font-semibold tw-text-primary tw-mr-12px" href="#" v-scroll-to="{el:'#about', offset: -150}">About Us</a>
-
-              <router-link :to="{ name: 'BenchmarkLogin'}" class="item tw-text-12px tw-font-semibold tw-text-primary tw-mr-12px">
+              <a href="/static/benchmark-login.html" class="item tw-text-12px tw-font-semibold tw-text-primary tw-mr-12px">
                 Take Benchmark
-              </router-link>
-              <router-link :to="{ name: 'Login'}" class="ui basic primary button">
+              </a>
+              <a href="/static/login.html" class="ui basic primary button">
                 Login
-              </router-link>
+              </a>
             </div>
           </div>
         </div>
