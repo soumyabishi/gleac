@@ -8,7 +8,7 @@
             <img src="../../assets/images/footer_logo.png" style="width:106px">
             <a href="mailto:yourvoice@gleac.com" class="tw-font-rubik tw-text-white hover:tw-text-white hover:tw-underline tw-block tw-mt-20px tw-mb-4px">yourvoice@gleac.com</a>
 
-            <div class="tw-font-rubik tw-text-12px">Dubai/India/US</div>
+            <div class="tw-font-rubik tw-text-12px tw-font-semibold">Dubai | India | US</div>
           </div>
           <div class="two wide column">
             <img src="../../assets/images/badges.png" style="width:67px">

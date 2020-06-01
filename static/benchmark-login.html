@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Gleac | Human Skills Matter</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+
+
+</body>
+</html>
+
+
+
+<script>
+  import VueSlickCarousel from 'vue-slick-carousel'
+  import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+  // optional style for arrows & dots
+  import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+  export default {
+    name: 'BenchmarkLogin',
+    data() {
+      return {}
+    },
+    methods:{
+    },
+    components:{
+      VueSlickCarousel
+    }
+  }
+</script>
+
+<style lang="scss">
+  @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+
+  @media (max-width: 640px){
+    .BenchmarkLogin {
+    .left-content {
+      display: none;
+    }
+    .right-content {
+      width: 100% !important;
+      padding: 100px 14px !important;
+    }
+  }
+  }
+
+  @media (max-width: 768px){
+    .BenchmarkLogin {
+    .right-content {
+      width: 100% !important;
+      padding: 100px 34px !important;
+    }
+  }
+  }
+
+  @media (max-width: 1300px){
+    .BenchmarkLogin {
+    .right-content {
+      width: 100% !important;
+      padding: 100px 34px !important;
+    }
+  }
+  }
+
+
+
+
+  .BenchmarkLogin{
+  .left-content{
+    width: 40%;
+    background-color: #1C1C1C;
+  }
+  .right-content{
+    width: 60%;
+    overflow-y: auto;
+    padding: 90px 210px;
+  }
+
+  .logo{
+    width: 111px;
+  }
+  .login_slider{
+    width: 100%;
+    position: relative;
+  div:focus{
+    outline: none;
+  }
+
+  .slider{
+    position: relative;
+  }
+  .slider_1{
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0, 1) 100%), url("../assets/images/login_slider/slider_1.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+  }
+
+  .slider_2{
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0, 1) 100%), url("../assets/images/login_slider/slider_2.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+  }
+  .slider_3{
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0, 1) 100%), url("../assets/images/login_slider/slider_3.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+  }
+  .text{
+    position: absolute;
+    bottom: 100px;
+    color: #fff;
+    font-family: Rubik, sans-serif;
+    padding: 0 20px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .slick-dots{
+    bottom: 55px !important;
+  }
+  .slick-dots li.slick-active button:before{
+    color:white !important;
+  }
+
+  .slick-dots li button:before{
+    color:white !important;
+  }
+  }
+  }
+
+</style>
+

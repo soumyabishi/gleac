@@ -34,11 +34,12 @@
                 </div>
                 <div v-if="!skill_loading">
                   <div class="tw-text-16px tw-text-text-color tw-font-semibold tw-mb-10px">{{selected_job}}</div>
-                  <div class="tw-text-14px tw-text-text-color tw-font-medium tw-mb-12px">Skills Required</div>
+                  <div class="tw-text-14px tw-text-text-color tw-font-medium tw-mb-12px">Human Skills Required</div>
                   <ul class="tags" v-if="skill_list.length>0">
                     <li class="tag" v-for="skill in skill_list">{{skill.skillName}}</li>
                   </ul>
-                  <router-link :to="{name: 'BenchmarkLogin'}" class="ui primary big fluid button">Enter Focus Mode</router-link>
+
+                  <div v-scroll-to="{el:'#explore', offset: -150}" class="ui primary big fluid button">Start Upskilling</div>
                 </div>
               </div>
 
@@ -115,7 +116,7 @@
       <!-- press section start -->
 
       <!-- explore section start -->
-      <section class="explore">
+      <section class="explore" id="explore">
         <div class="tw-container tw-m-auto tw-px-14px">
            <div class="tw-flex tw-flex-col md:tw-flex-row">
               <div class="tw-w-full sm:tw-w-1/2">
@@ -250,20 +251,19 @@
                       <img src="../assets/images/library/interviewing.png" width="26" class="tw-absolute tw--left-8px tw--top-3px">Interviewing
                     </div>
 
-                    <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
-                      <img src="../assets/images/library/off-boarding.png" width="26" class="tw-absolute tw--left-8px tw--top-3px">Off-Boarding for Employees
-                    </div>
-
-                    <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
-                      <img src="../assets/images/library/interview_skills.png" width="26" class="tw-absolute tw--left-8px tw--top-3px">Customer Facing Roles
-                    </div>
-
-
                   </div>
 
                     <a @click="show_more_library = !show_more_library" v-if="!show_more_library" class="tw-font-rubik tw-cursor-pointer"> Show more <i class="icon angle down"></i></a>
 
                     <div v-if="show_more_library">
+                      <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
+                        <img src="../assets/images/library/off-boarding.png" width="26" class="tw-absolute tw--left-8px tw--top-3px">Off-Boarding for Employees
+                      </div>
+
+                      <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
+                        <img src="../assets/images/library/interview_skills.png" width="26" class="tw-absolute tw--left-8px tw--top-3px">Customer Facing Roles
+                      </div>
+
                       <div class="tw-text-secondary tw-font-rubik tw-pl-20px tw-relative  tw-mb-12px">
                         <img src="../assets/images/library/communication.png" width="26" class="tw-absolute tw--left-8px tw--top-4px">Communication
                       </div>
@@ -325,7 +325,7 @@
             <div class="tw-text-20px tw-mb-6px tw-font-medium tw-relative tw-inline-block tw-mx-50px sm:tw-mx-0px">
               <img class="tw-absolute tw--left-34px tw--top-10px" src="../assets/images/quote.svg"/>
               With the new day comes new strength and new thoughts.
-              <img class="tw-absolute tw--right-34px tw--bottom-12px" src="../assets/images/quote_inverted.svg"/>
+              <img class="tw-absolute tw--right-34px tw--bottom-10px" src="../assets/images/quote_inverted.svg"/>
             </div>
             <div class="tw-text-13px tw-text-center sm:tw-text-right tw-mr-10px">- Eleanor Roosevelt</div>
           </div>
@@ -345,7 +345,7 @@
                    </div>
                    <div class="thirteen wide column">
                      <div class="tw-font-medium tw-font-rubik tw-text-14px tw-mb-4px">Sallyann Della Casa <a href="https://www.linkedin.com/in/sallyanndellacasa/"><i class="linkedin large icon"></i></a></div>
-                     <div class="tw-font-plex tw-text-12px">Founder</div>
+                     <div class="tw-font-plex tw-text-12px">Founder and Chief Identity Hacker</div>
                      <p class="tw-font-plex tw-mt-13px tw-text-12px">For the last years she has obsessively been beta testing the science behind's Gleac' s patent pending human skills mapping and development methodology through her Foundation, Growing Leaders. She discovered technology to scale her passion in a brief stint at Careem in 2016.  She holds degrees and accreditations from Harvard University, University of Toronto and Franklin College. She is a published author. She practiced law for 10 years.</p>
                    </div>
                  </div>
@@ -356,7 +356,7 @@
                   <img src="../assets/images/team/kathy.png" width="120" class="tw-rounded-full">
                 </div>
                 <div class="thirteen wide column">
-                  <div class="tw-font-medium tw-font-rubik tw-text-14px tw-mb-4px">Dr. Kathy Shalhoub</div>
+                  <div class="tw-font-medium tw-font-rubik tw-text-14px tw-mb-4px">Dr. Kathy Shalhoub <a href="https://www.linkedin.com/in/katniewiadomska/"><i class="linkedin large icon"></i></a></div>
                   <div class="tw-font-plex tw-text-12px">Partner</div>
                   <p class="tw-font-plex tw-mt-13px tw-text-12px">Kathy oversees global curriculum architecture and lessons development team at GLEAC. She holds accreditations and degrees from UPMC, MIT and ICF. Her work over the last 10 years, besides being a mother of 3, spans from teaching entrepreneurship to life coaching to innovation consulting. She currently advises on leadership strategy at the American College of Cardiology. Her latest book,  Futureproof, is a guide for youth on how to successfully tackle the 21rst century without compromising on who they are.
                   </p>
@@ -369,9 +369,9 @@
                   <img src="../assets/images/team/ousamma.png" width="120" class="tw-rounded-full">
                 </div>
                 <div class="thirteen wide column">
-                  <div class="tw-font-medium tw-font-rubik tw-text-14px tw-mb-4px">Ousamma Berqui</div>
+                  <div class="tw-font-medium tw-font-rubik tw-text-14px tw-mb-4px">Ousamma Berqui <a href="https://www.linkedin.com/in/oussama-berqi-204b6073/"><i class="linkedin large icon"></i></a></div>
                   <div class="tw-font-plex tw-text-12px">Advisor and Partner</div>
-                  <p class="tw-font-plex tw-mt-13px tw-text-12px">Formerly Chief Data Scientist and Head of Engineering at Careem ( acquired by Uber for 3.1b), Ousamma guides the Tech and Data team on dev. ops, machine learning and architecture. </p>
+                  <p class="tw-font-plex tw-mt-13px tw-text-12px">Formerly Chief Data Scientist and Head of Engineering at Careem (acquired by Uber for $3.1 billion), Ousamma guides the Tech and Data team on dev. ops, machine learning and architecture. </p>
                 </div>
               </div>
             </div>
@@ -381,8 +381,8 @@
                   <img src="../assets/images/team/eden.png" width="120" class="tw-rounded-full">
                 </div>
                 <div class="thirteen wide column">
-                  <div class="tw-font-medium tw-font-rubik tw-text-14px tw-mb-4px">Eden Millon</div>
-                  <div class="tw-font-plex tw-text-12px">Advisor and Partner</div>
+                  <div class="tw-font-medium tw-font-rubik tw-text-14px tw-mb-4px">Eden Millon <a href="https://www.linkedin.com/in/eden-m-7b5579149/"><i class="linkedin large icon"></i></a></div>
+                  <div class="tw-font-plex tw-text-12px">Lead Curriculum Designer</div>
                   <p class="tw-font-plex tw-mt-13px tw-text-12px">Eden, based in Ethiopia, and with a decade in TOEFL and education leads development of the Gleac micro-practice curriculum.
                   </p>
                 </div>
@@ -432,14 +432,14 @@
       <div class="ui large modal case_study">
         <i class="close icon"></i>
 
-        <div class="tw-flex tw-justify-center tw-items-stretch">
+        <div class="tw-flex tw-justify-center tw-items-stretch" style="border-bottom: 1px solid #0065ad;">
             <div class="tw-w-1/2 tw-bg-primary tw-justify-center tw-items-center tw-flex tw-flex-col">
               <div class="tw-font-medium tw-font-rubik tw-text-28px tw-mb-4px tw-text-white">Case Study<br>
                 accenture</div>
             </div>
 
           <div class="tw-w-1/2 tw-justify-center tw-items-center tw-flex tw-flex-col">
-            <img src="../assets/images/case_study_header.png" style="width: 100%">
+            <img src="../assets/images/case_study_header.png" style="width: 100%;margin-bottom: 12px;">
           </div>
 
         </div>
