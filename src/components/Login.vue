@@ -167,7 +167,7 @@ export default {
       }
 
       .slider_4{
-        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0, 1) 100%), url("../assets/images/login_slider/slider_6.jpg") no-repeat center center;
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0, 1) 100%), url("../assets/images/login_slider/slider_8.jpg") no-repeat center center;
         background-size: cover;
         height: 100vh;
       }

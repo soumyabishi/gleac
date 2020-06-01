@@ -25,9 +25,11 @@
             <div class="tw-font-rubik tw-font-medium tw-mb-14px">Subscribe To Newsletter</div>
             <div class="ui inverted action fluid input">
               <input type="email" placeholder="Enter your Email ID" v-model="subscribeEmail">
-              <button class="ui primary button" @click="subscribeToNewsletter">Subscribe</button>
+              <button class="ui primary button" :class="{'loading': subscribing}" @click="subscribeToNewsletter">Subscribe</button>
             </div>
-						<div class="text-white" v-html="subscribeMessage"></div>
+
+            <div class="text-white tw-text-12 tw-mt-14px" v-html="subscribeMessage"></div>
+
             <div class="ui two column grid">
               <div class="column">
                 <div class="tw-font-rubik tw-font-medium tw-mt-14px tw-mb-14px">Follow us</div>
@@ -75,14 +77,14 @@
       return{
 				subscribeEmail: "",
 				subscribeMessage: "",
+        subscribing:false,
       }
 		},
 		methods: {
 			subscribeToNewsletter() {
+        this.subscribing=true;
 				const reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-				console.log("Regex check", reg.test(this.subscribeEmail.toLowerCase()))
 				if (this.subscribeEmail !== "" && reg.test(this.subscribeEmail.toLowerCase())) {
-					console.log("Email is valid!");
 					const response = this.axios.get(`https://gleac.us16.list-manage.com/subscribe/post-json?u=5f51f150a24c51e9eefd7b405&id=17f933f6a5&subscribe=Subscribe&EMAIL=${this.subscribeEmail}`);
 					response.then(res => {
 						let resJson = res.data;
@@ -91,15 +93,17 @@
 							msg = msg.split("0 - ")[1];
 						}
 						this.subscribeMessage = msg;
+            this.subscribing=false;
+            this.subscribeEmail ='';
 					})
 					response.catch(e => {
-						console.log(e);
 						this.subscribeMessage = "Something went wrong. Please try again later";
-					})
+            this.subscribing=false;
+          })
 				} else {
 					this.subscribeMessage = "Please enter a valid email address"
-					console.log("Email is invalid")
-				}
+          this.subscribing=false;
+        }
 			}
 		}
   }

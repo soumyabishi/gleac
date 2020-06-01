@@ -413,8 +413,8 @@
                 <div class="field">
                   <input type="email" name="email" placeholder="Email ID" v-model="contact_email">
                 </div>
-                <button class="ui primary button" @click.prevent="submit_contact_request">Talk to me &nbsp;&nbsp;<i class="heart icon"></i></button>
-								<p v-html="contact_message"></p>
+                <p class="tw-text-14px error_message" :class="{'success': contact_message_success}" v-html="contact_message" v-if="contact_message"></p>
+                <button class="ui primary button"  :class="{'loading':contact_form_submitting}" @click.prevent="submit_contact_request">Talk to me &nbsp;&nbsp;<i class="heart icon"></i></button>
               </form>
             </div>
 
@@ -489,6 +489,7 @@
 
       <!-- white paper modal start-->
       <div class="ui small modal whitepaper">
+        <template v-if="!show_whitepaper_download">
           <div class="tw-font-rubik tw-font-medium tw-text-24px">Gleac Whitepaper</div>
           <div class="tw-font-rubik tw-text-16px tw-text-secondary tw-mt-10px tw-mb-24px">Please share your details to download the whitepaper</div>
           <form class="ui big form">
@@ -504,22 +505,17 @@
               <label>Email ID*</label>
               <input type="email" name="email" placeholder="Email ID" v-model="whitepaper_email">
             </div>
-						<p v-html="whitepaper_message"></p>
-            <button class="ui primary large button" @click.prevent="whitepaper_submit">Submit</button>
+            <p class="tw-text-14px error_message" v-html="whitepaper_message" v-if="whitepaper_message"></p>
+            <button class="ui primary large button" :class="{'loading': white_paper_submitting}" @click.prevent="whitepaper_submit">Submit</button>
           </form>
-
-				<div v-if="show_whitepaper_download">
-					<div class="ui hidden divider"></div>
-					<div class="ui hidden divider"></div>
-					<div class="ui hidden divider"></div>
-				</div>
+        </template>
 
         <div class="ui stackable middle aligned grid" v-if="show_whitepaper_download">
 					<div class="ten wide column">
 						<div class="tw-font-rubik tw-font-medium tw-text-24px">Thank you lovely human</div>
 					</div>
 					<div class="six wide column">
-						<button class="ui primary large fluid button"><span class="tw-relative tw-pr-34px">Download <img src="../assets/images/donwload_icon.svg" class="tw-absolute tw--top-1px tw-right-10px"/></span></button>
+						<a class="ui primary large fluid button" href="../../static/documents/whitepaperbrochure.pdf"><span class="tw-relative tw-pr-34px">Download <img src="../assets/images/donwload_icon.svg" class="tw-absolute tw--top-1px tw-right-10px"/></span></a>
 					</div>
         </div>
       </div>
@@ -546,6 +542,9 @@ export default {
         take_a_look_5_show:false,
         take_a_look_15_show:false,
         take_a_look_25_show:false,
+        white_paper_submitting:false,
+        contact_form_submitting:false,
+        contact_message_success: false,
         slider_settings:{
           "arrows":false,
           "autoplay": true,
@@ -660,6 +659,7 @@ export default {
 					this.whitepaper_message = "Please enter a valid email address"
 				} else {
 					this.whitepaper_message = "";
+          this.white_paper_submitting = true;
 					const response = this.axios.get(`https://gleac.us16.list-manage.com/subscribe/post-json?u=5f51f150a24c51e9eefd7b405&id=9a79d535d4&subscribe=Subscribe&EMAIL=${email}&FNAME=${fname}&LNAME=${lname}`)
 						.then(res => {
 							if (res.data.result === "success") {
@@ -671,10 +671,12 @@ export default {
 									msg = msg.split("0 - ")[1];
 								}
 								this.whitepaper_message = msg;
-							}
+              }
+              this.white_paper_submitting = false;
 						})
 						.catch(err => {
 							console.log(err);
+              this.white_paper_submitting = false;
 							this.whitepaper_message = "Something went wrong. Please try again later"
 						})
 				}
@@ -695,11 +697,16 @@ export default {
 						email,
 						organization: company,
 					}
+          this.contact_form_submitting = true;
 					const response = this.axios.post("https://dashboardapi.gleac.com/api/Dashboard/contact", body).then(res => {
-						console.log(res);
+            this.contact_form_submitting = false;
+            this.contact_message_success = true,
 						this.contact_message = res.data.result;
+            this.contact_name ='';
+            this.contact_company='';
+            this.contact_email = '';
 					}).catch(err => {
-						console.log(err);
+            this.contact_form_submitting = false;
 						this.contact_message = "Something went wrong. Please try again later."
 					})
 				}
@@ -722,6 +729,32 @@ export default {
 
   .v-select{
     font-family: Montserrat, sans-serif;
+  }
+
+  p.error_message{
+    color:#e53e3e;
+    position: relative;
+    padding-left: 20px;
+    &:before{
+      content: '';
+      background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTdweCIgaGVpZ2h0PSIxN3B4IiB2aWV3Qm94PSIwIDAgMTcgMTciIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8dGl0bGU+YWxlcnQtbGluZSAoMik8L3RpdGxlPgogICAgPGcgaWQ9IldlbGNvbWUiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJsb2dpbi00LWNvcHkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC02OTcuMDAwMDAwLCAtNTk0LjAwMDAwMCkiPgogICAgICAgICAgICA8ZyBpZD0iR3JvdXAtMTEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDY5My4wMDAwMDAsIDEwMy4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDxnIGlkPSJHcm91cC0xMCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsIDIwNi4wMDAwMDApIj4KICAgICAgICAgICAgICAgICAgICA8ZyBpZD0iR3JvdXAtOCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsIDEyOS4wMDAwMDApIj4KICAgICAgICAgICAgICAgICAgICAgICAgPGcgaWQ9Ikdyb3VwLTEyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjAwMDAwMCwgODQuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZyBpZD0iR3JvdXAtNi1Db3B5Ij4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZyBpZD0iR3JvdXAtMTkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQuMDAwMDAwLCA3Mi4wMDAwMDApIj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGcgaWQ9ImFsZXJ0LWxpbmUtKDIpIj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxwb2x5Z29uIGlkPSJQYXRoIiBwb2ludHM9IjAgMCAxNyAwIDE3IDE3IDAgMTciPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik05LjExMzQxNjY3LDIuMTI1IEwxNS44NjEsMTMuODEyNSBDMTUuOTg3NTMsMTQuMDMxNjU2MyAxNS45ODc1MzE3LDE0LjMwMTY2NzYgMTUuODYxMDA0NSwxNC41MjA4MjU1IEMxNS43MzQ0NzczLDE0LjczOTk4MzUgMTUuNTAwNjQzMiwxNC44NzUgMTUuMjQ3NTgzMywxNC44NzUgTDEuNzUyNDE2NjcsMTQuODc1IEMxLjQ5OTM1Njc1LDE0Ljg3NSAxLjI2NTUyMjY3LDE0LjczOTk4MzUgMS4xMzg5OTU1LDE0LjUyMDgyNTUgQzEuMDEyNDY4MzMsMTQuMzAxNjY3NiAxLjAxMjQ3MDA0LDE0LjAzMTY1NjMgMS4xMzksMTMuODEyNSBMNy44ODY1ODMzMywyLjEyNSBDOC4wMTMxMTk2LDEuOTA1ODU4NDcgOC4yNDY5NDk3MywxLjc3MDg2NDUgOC41LDEuNzcwODY0NSBDOC43NTMwNTAyNywxLjc3MDg2NDUgOC45ODY4ODA0LDEuOTA1ODU4NDcgOS4xMTM0MTY2NywyLjEyNSBaIE0yLjk3OTI1LDEzLjQ1ODMzMzMgTDE0LjAyMDc1LDEzLjQ1ODMzMzMgTDguNSwzLjg5NTgzMzMzIEwyLjk3OTI1LDEzLjQ1ODMzMzMgWiBNNy43OTE2NjY2NywxMS4zMzMzMzMzIEw5LjIwODMzMzMzLDExLjMzMzMzMzMgTDkuMjA4MzMzMzMsMTIuNzUgTDcuNzkxNjY2NjcsMTIuNzUgTDcuNzkxNjY2NjcsMTEuMzMzMzMzMyBaIE03Ljc5MTY2NjY3LDYuMzc1IEw5LjIwODMzMzMzLDYuMzc1IEw5LjIwODMzMzMzLDkuOTE2NjY2NjcgTDcuNzkxNjY2NjcsOS45MTY2NjY2NyBMNy43OTE2NjY2Nyw2LjM3NSBaIiBpZD0iU2hhcGUiIGZpbGw9IiNGRjUyNTIiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9wYXRoPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=) no-repeat;
+      width: 15px;
+      height: 15px;
+      background-size: 15px;
+      position: absolute;
+      left: 0;
+      top: 1px;
+    }
+
+    &.success{
+      padding-left: 0;
+      &:before{
+        display: none;
+      }
+      font-weight: 600;
+      color: #27AE60 !important;
+    }
+
   }
 
   .job-dropdown .vs__dropdown-toggle,
