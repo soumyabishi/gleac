@@ -62,7 +62,7 @@
         <div class="tw-container tw-m-auto tw-px-14px">
 
 
-          <VueSlickCarousel v-bind="slider_settings" class="">
+          <VueSlickCarousel v-bind="slider_settings">
             <div>
               <a class="image_wrapper" href="https://www.stradaeducation.org/spotlight/developing-the-human-side-of-skills/">
                 <img src="../assets/images/press/strada.png">
@@ -320,15 +320,54 @@
 
       <!-- quote section start-->
       <section class="quote tw-bg-primary">
+
         <div class="tw-container tw-m-auto tw-px-14px">
-          <div class="tw-font-rubik tw-text-white tw-w-full tw-text-center quote_wrapper">
-            <div class="tw-text-20px tw-mb-6px tw-font-medium tw-relative tw-inline-block tw-mx-50px sm:tw-mx-0px">
-              <img class="tw-absolute tw--left-34px tw--top-10px" src="../assets/images/quote.svg"/>
-              With the new day comes new strength and new thoughts.
-              <img class="tw-absolute tw--right-34px tw--bottom-10px" src="../assets/images/quote_inverted.svg"/>
+          <VueSlickCarousel v-bind="slider_settings_quote" class="quote_slider_home">
+            <div>
+            <div class="tw-font-rubik tw-text-white tw-w-full tw-text-center quote_wrapper">
+              <div class="tw-text-20px tw-mb-6px tw-font-medium tw-relative tw-inline-block tw-mx-50px sm:tw-mx-0px tw-leading-25px">
+                <img class="tw-absolute tw--left-34px tw--top-10px" src="../assets/images/quote.svg"/>
+                GLEAC showed me it is not only selling , to reach your goals and improve your performance there are a lot more factors involved.
+                <img class="tw-absolute tw--right-34px tw-bottom-6px" src="../assets/images/quote_inverted.svg"/>
+              </div>
+              <div class="tw-text-13px tw-text-center tw-mr-10px tw-mt-12px">- Sales Team, PRADA USA</div>
             </div>
-            <div class="tw-text-13px tw-text-center sm:tw-text-right tw-mr-10px">- Eleanor Roosevelt</div>
           </div>
+
+            <div>
+              <div class="tw-font-rubik tw-text-white tw-w-full tw-text-center quote_wrapper">
+                <div class="tw-text-20px tw-mb-6px tw-font-medium tw-relative tw-inline-block tw-mx-50px sm:tw-mx-0px tw-leading-25px">
+                  <img class="tw-absolute tw--left-34px tw--top-10px" src="../assets/images/quote.svg"/>
+                  The Benchmark was Excellent and Bang on with actual science backing my intuition.
+                  <img class="tw-absolute tw--right-34px tw-bottom-6px" src="../assets/images/quote_inverted.svg"/>
+                </div>
+                <div class="tw-text-13px tw-text-center tw-mr-10px  tw-mt-12px">- Founder, Tech Startup</div>
+              </div>
+            </div>
+
+            <div>
+              <div class="tw-font-rubik tw-text-white tw-w-full tw-text-center quote_wrapper">
+                <div class="tw-text-20px tw-mb-6px tw-font-medium tw-relative tw-inline-block tw-mx-50px sm:tw-mx-0px tw-leading-25px">
+                  <img class="tw-absolute tw--left-34px tw--top-10px" src="../assets/images/quote.svg"/>
+                  I felt the benchmark articulated my nature and workplace behaviour almost perfectly.
+                  <img class="tw-absolute tw--right-34px tw-bottom-6px" src="../assets/images/quote_inverted.svg"/>
+                </div>
+                <div class="tw-text-13px tw-text-center tw-mr-10px  tw-mt-12px">- Principal of High School</div>
+              </div>
+            </div>
+
+            <div>
+              <div class="tw-font-rubik tw-text-white tw-w-full tw-text-center quote_wrapper">
+                <div class="tw-text-20px tw-mb-6px tw-font-medium tw-relative tw-inline-block tw-mx-50px sm:tw-mx-0px tw-leading-25px">
+                  <img class="tw-absolute tw--left-34px tw--top-10px" src="../assets/images/quote.svg"/>
+                  I practice active listening and staying calm to find a solution.
+                  <img class="tw-absolute tw--right-34px tw-bottom-6px" src="../assets/images/quote_inverted.svg"/>
+                </div>
+                <div class="tw-text-13px tw-text-center tw-mr-10px  tw-mt-12px">- Aiesec University Student</div>
+              </div>
+            </div>
+
+          </VueSlickCarousel>
         </div>
       </section>
       <!-- quote section end -->
@@ -545,6 +584,13 @@ export default {
         white_paper_submitting:false,
         contact_form_submitting:false,
         contact_message_success: false,
+        slider_settings_quote:{
+          "arrows":false,
+          "autoplay": false,
+          "infinite": true,
+          "slidesToShow": 1,
+           "slidesToScroll": 1,
+        },
         slider_settings:{
           "arrows":false,
           "autoplay": true,
@@ -965,6 +1011,20 @@ export default {
       .quote_wrapper{
         max-width: 570px;
         margin: 0 auto;
+      }
+      .quote_slider_home{
+        div:focus{
+          outline: none;
+        }
+        .tw-leading-25px{
+          line-height: 25px !important;
+        }
+        .slick-slide{
+          padding-top: 20px;
+        }
+        .tw-bottom-6px{
+          bottom:6px !important;
+        }
       }
     }
 
