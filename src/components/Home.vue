@@ -586,7 +586,7 @@ export default {
         contact_message_success: false,
         slider_settings_quote:{
           "arrows":false,
-          "autoplay": false,
+          "autoplay": true,
           "infinite": true,
           "slidesToShow": 1,
            "slidesToScroll": 1,
