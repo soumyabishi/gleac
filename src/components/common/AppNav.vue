@@ -24,7 +24,7 @@
 
     <div class="banner tw-fixed tw-bg-primary tw-w-full">
       <div class="tw-container tw-m-auto tw-px-14px">
-        <div class="tw-font-rubik  tw-text-white  tw-text-13px sm:tw-text-16px">Check your fit for the No.1 emerging job as a <a href="#" style="color: #fff" class="tw-underline tw-text-white hover:tw-underline">Contact Tracer</a> or try and develop the new skills needed in <a href="https://readiness.gleac.com/micro-practice-sales" style="color: #fff" class="tw-underline tw-text-white hover:tw-underline">Sales</a> in a Covid world.
+        <div class="tw-font-rubik  tw-text-white  tw-text-13px sm:tw-text-16px">Check your fit for the No.1 emerging job as a <a href="#" @click="$parent.open_contact_tracer_modal()" style="color: #fff" class="tw-underline tw-text-white hover:tw-underline tw-pointer">Contact Tracer</a> or try and develop the new skills needed in <a href="https://readiness.gleac.com/micro-practice-sales" style="color: #fff" class="tw-underline tw-text-white hover:tw-underline">Sales</a> in a Covid world.
         </div>
       </div>
     </div>

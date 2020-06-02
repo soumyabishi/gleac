@@ -561,6 +561,74 @@
       <!-- white paper modal end-->
 
 
+
+      <!-- contact_tracer modal start-->
+      <div class="ui large modal contact_tracer">
+        <i class="close icon"></i>
+
+        <div class="tw-flex tw-justify-center tw-items-stretch" style="border-bottom: 1px solid #0065ad;">
+          <div class="tw-w-1/2 tw-bg-primary tw-justify-center tw-items-center tw-flex tw-flex-col">
+            <div class="tw-font-medium tw-font-rubik tw-text-28px tw-mb-4px tw-text-white">Case Study<br>
+              Emerging Job Roles</div>
+          </div>
+
+          <div class="tw-w-1/2 tw-justify-center tw-items-center tw-flex tw-flex-col">
+            <img src="../assets/images/case_study_header.png" style="width: 100%;margin-bottom: 12px;">
+          </div>
+
+        </div>
+        <div class="modal_content tw-p-30px">
+
+          <!--
+          <div class="ui stackable grid">
+            <div class="ten wide column">
+              <div class="tw-font-rubik tw-text-16px tw-leading-20px">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+              </div>
+            </div>
+
+            <div class="six wide center aligned column">
+              <img src="../assets/images/press/accenture.png" style="width: 180px;">
+            </div>
+
+          </div>
+          -->
+
+          <div class="tw-font-rubik tw-font-medium tw-text-primary tw-text-20px tw-mt-38px tw-mb-20px">
+            Objective
+          </div>
+
+          <div class="tw-font-rubik tw-text-16px tw-leading-20px">
+            To create an output off our 10-15 min mater behavioral assessment SAAS to identify, map and
+            measure the behaviors needed and in what quantities for the job role Contact Tracer. <br> <br>
+            Pre-Covid this was a fairly non-emerging role. In the last 60 days, there are over 100k jobs for
+            this role in the US alone.<br> <br>
+            You can take the test <a class="tw-underline hover:tw-underline tw-font-medium" href="static/benchmark-login.html">here</a> and check your fit for the role.  </div>
+
+          <div class="tw-font-rubik tw-font-medium tw-text-primary tw-text-20px tw-mt-38px tw-mb-20px">
+            The Solution and Result
+          </div>
+
+          <div class="tw-font-rubik tw-text-16px tw-leading-20px">
+            After clustering a variety of similar job role descriptions such as Aid Worker, Investigator,
+            Researcher etc. and the underlying behaviors pertinent to the Contact Tracer role e.g. Rule-
+            Following, Learning Agility etc. a combination of behaviors were identified and a dynamic tool
+            for measuring same was created off our Saas dashboard. This was and will continue to be stress
+            tested on the Contact Tracer population to validate our baselines.
+          </div>
+
+          <div class="text-center" style="text-align: center">
+            <img src="../assets/images/case_study/contact_tracer/1.png" style="width: 100%">
+            <img src="../assets/images/case_study/contact_tracer/2.png" style="width: 70%">
+            <img src="../assets/images/case_study/contact_tracer/3.png" style="width: 100%">
+          </div>
+
+        </div>
+      </div>
+      <!-- contact_tracer modal end-->
+
+
+
   </div>
 </template>
 
@@ -674,6 +742,11 @@ export default {
     methods:{
       open_case_study_modal(){
         $('.ui.modal.case_study')
+          .modal('show')
+        ;
+      },
+      open_contact_tracer_modal(){
+        $('.ui.modal.contact_tracer')
           .modal('show')
         ;
       },
