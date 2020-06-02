@@ -165,9 +165,7 @@
                      <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-26px tw-text-description">05</h4>
                      <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-64px tw-text-description">Try Step</h4>
                       <div class="card_content tw-px-14px">
-                        <p class="tw-font-rubik tw-text-12px tw-text-secondary">A salesperson sees a person enter a store and makes a judgement. These micro-practices
-                          focus on baas awareness and setting aside assumptions, non-verbal communication and
-                          judgement.</p>
+                        <p class="tw-font-rubik tw-text-12px tw-text-secondary">A salesperson sees a person enter a store and makes a judgement.</p>
                       </div>
                       <div class="tw-font-rubik tw-text-primary tw-absolute tw-left-14px tw-bottom-18px tw-text-12px tw-font-medium tw-cursor-pointer" @click="take_a_look_5_show = !take_a_look_5_show">Take a look</div>
                       <img src="../assets/images/right_arrow.svg" width="50" class="tw-absolute right_arrow tw-hidden md:tw-block">
@@ -518,7 +516,7 @@
 
         <div class="ui stackable middle aligned grid" v-if="show_whitepaper_download">
 					<div class="ten wide column">
-						<div class="tw-font-rubik tw-font-medium tw-text-24px">Thank you lovely human</div>
+						<div class="tw-font-rubik tw-font-medium tw-text-24px">Thank you lovely human <i class="icon heart" style="color: #2185D0;"></i> </div>
 					</div>
 					<div class="six wide column">
 						<a class="ui primary large fluid button" href="../../static/documents/whitepaperbrochure.pdf"><span class="tw-relative tw-pr-34px">Download <img src="../assets/images/donwload_icon.svg" class="tw-absolute tw--top-1px tw-right-10px"/></span></a>
@@ -574,11 +572,12 @@
             <img src="../assets/images/case_study/contact_tracer/1.png" style="width: 100%">
             <img src="../assets/images/case_study/contact_tracer/2.png" style="width: 70%">
             <img src="../assets/images/case_study/contact_tracer/3.png" style="width: 100%">
-            <div class="tw-font-rubik">©GLEAC 2020. All Rights Reserved</div>
+
+
+              <a href="../../static/documents/case_study_emerging_job_roles.pdf" style="margin-bottom: 15px;margin-top: 20px;" class="ui primary button">Download PDF</a>
+
+              <div class="tw-font-rubik tw-text-center">©GLEAC 2020. All Rights Reserved</div>
           </div>
-
-
-
 
         </div>
       </div>
@@ -644,15 +643,31 @@
           </div>
 
 
-          <img src="../assets/images/case_study/prada/2.png" style="width:250px;margin-top: 20px;">
-          <img src="../assets/images/case_study/prada/3.png" style="width:250px;margin-top: 20px; display: block">
-          <img src="../assets/images/case_study/prada/4.png" style="width:250px;margin-top: 20px; display: block">
+          <div class="centered grid">
+            <div class="twn wide column">
+              <div class="ui three column stackable grid">
+                 <div class="column">
+                   <img src="../assets/images/case_study/prada/2.png" style="width: 100%;margin-top: 6px;">
+                 </div>
 
+                <div class="column">
+                  <img src="../assets/images/case_study/prada/3.png"  style="width: 100%">
+
+                </div>
+
+                <div class="column">
+                  <img src="../assets/images/case_study/prada/3.png"  style="width: 100%">
+                </div>
+
+              </div>
+            </div>
+
+          </div>
 
 
           <div class="tw-text-center">
 
-            <a href="../../static/documents/prada_case_study.pdf" style="margin-bottom: 15px" class="ui button">Download PDF</a>
+            <a href="../../static/documents/prada_case_study.pdf" style="margin-bottom: 15px;margin-top: 20px;" class="ui primary button">Download PDF</a>
 
             <div class="tw-font-rubik tw-text-center">©GLEAC 2020. All Rights Reserved</div>
 
