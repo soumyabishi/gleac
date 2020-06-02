@@ -16,7 +16,7 @@
                 <!--<input type="text" placeholder="Type in a job title and see the skills needed">-->
                 <!--<button class="ui primary large button">Search</button>-->
               <!--</div>-->
-              <v-select :options="job_list" class="job-dropdown" placeholder="Type a job title and see the skills needed" v-model="selected_job"  @input="fetch_skills" >
+              <v-select :options="job_list" class="job-dropdown" placeholder="Type a job title and see the skills needed..." v-model="selected_job"  @input="fetch_skills" >
                 <template v-slot:no-options="{ search, searching }">
                   <template v-if="searching">
                     Sorry, no jobs found
@@ -982,25 +982,25 @@ export default {
     border-top: 2px solid #eaeaea;
   }
 
-  .job-dropdown .vs__search::placeholder, .job-dropdown .vs__dropdown-toggle{
-    padding: 8px 7px;
-  }
 
   .job-dropdown .vs__search, .vs__selected{
-    font-size: 20px;
+    font-size: 18px;
     font-family: Montserrat, sans-serif;
-    margin-top: 0;
-    line-height: 1.5;
   }
 
   .job-dropdown .vs__dropdown-toggle:focus{
     border-color: #0065ad;
   }
 
-  .job-dropdown .vs__clear,
-  .job-dropdown .vs__open-indicator {
-
+  .job-dropdown .vs__search{
+    opacity: 0.5;
   }
+
+  .job-dropdown .vs__search:focus{
+    opacity: 1;
+  }
+
+
 
   .home {
     // Content wrapper
