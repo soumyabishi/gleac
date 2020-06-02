@@ -651,6 +651,9 @@
 
 
           <div class="tw-text-center">
+
+            <a href="../../static/documents/prada_case_study.pdf" style="margin-bottom: 15px" class="ui button">Download PDF</a>
+
             <div class="tw-font-rubik tw-text-center">©GLEAC 2020. All Rights Reserved</div>
 
           </div>
