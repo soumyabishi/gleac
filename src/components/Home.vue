@@ -645,6 +645,9 @@
 
 
           <img src="../assets/images/case_study/prada/2.png" style="width:250px;margin-top: 20px;">
+          <img src="../assets/images/case_study/prada/3.png" style="width:250px;margin-top: 20px; display: block">
+          <img src="../assets/images/case_study/prada/4.png" style="width:250px;margin-top: 20px; display: block">
+
 
 
           <div class="tw-text-center">
