@@ -165,7 +165,7 @@
                      <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-26px tw-text-description">05</h4>
                      <h4 class="tw-absolute tw-left-20px tw-font-rubik tw-font-medium tw-top-18px tw-left-64px tw-text-description">Try Step</h4>
                       <div class="card_content tw-px-14px">
-                        <p class="tw-font-rubik tw-text-12px tw-text-secondary">A salesperson sees a person enter a store and makes a judgement.</p>
+                        <p class="tw-font-rubik tw-text-12px tw-text-secondary">Salesperson sees a person enter a store and makes a judgement.</p>
                       </div>
                       <div class="tw-font-rubik tw-text-primary tw-absolute tw-left-14px tw-bottom-18px tw-text-12px tw-font-medium tw-cursor-pointer" @click="take_a_look_5_show = !take_a_look_5_show">Take a look</div>
                       <img src="../assets/images/right_arrow.svg" width="50" class="tw-absolute right_arrow tw-hidden md:tw-block">
@@ -395,7 +395,7 @@
                 <div class="thirteen wide column">
                   <div class="tw-font-medium tw-font-rubik tw-text-14px tw-mb-4px">Dr. Kathy Shalhoub <a href="https://www.linkedin.com/in/katniewiadomska/"><i class="linkedin large icon"></i></a></div>
                   <div class="tw-font-plex tw-text-12px">Partner</div>
-                  <p class="tw-font-plex tw-mt-13px tw-text-12px">Kathy oversees global curriculum architecture and lessons development team at GLEAC. She holds accreditations and degrees from UPMC, MIT and ICF. Her work over the last 10 years, besides being a mother of 3, spans from teaching entrepreneurship to life coaching to innovation consulting. She currently advises on leadership strategy at the American College of Cardiology. Her latest book,  Futureproof, is a guide for youth on how to successfully tackle the 21rst century without compromising on who they are.
+                  <p class="tw-font-plex tw-mt-13px tw-text-12px">Kathy oversees global curriculum architecture and lessons development team at GLEAC. She holds accreditations and degrees from UPMC, MIT and ICF. Her work over the last 10 years, besides being a mother of 3, spans from teaching entrepreneurship to life coaching to innovation consulting. She currently advises on leadership strategy at the American College of Cardiology. Her latest book,  Futureproof, is a guide for youth on how to successfully tackle the 21st century without compromising on who they are.
                   </p>
                 </div>
               </div>
