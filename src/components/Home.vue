@@ -909,7 +909,7 @@ export default {
 									this.show_whitepaper_download = true;
 									return;
 								} else {
-									let msg = res.data.msg;
+									let msg = data.msg;
 									if (msg.indexOf("0 - ") > -1) {
 										msg = msg.split("0 - ")[1];
 									}
