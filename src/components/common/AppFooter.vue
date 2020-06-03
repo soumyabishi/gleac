@@ -28,7 +28,7 @@
               <button class="ui primary button" :class="{'loading': subscribing}" @click="subscribeToNewsletter">Subscribe</button>
             </div>
 
-            <div class="text-white tw-text-12 tw-mt-14px" v-html="subscribeMessage"></div>
+            <div class="text-white tw-text-12 tw-mt-14px subscribe_messsage" v-html="subscribeMessage"></div>
 
             <div class="ui two column grid">
               <div class="column">
@@ -137,6 +137,11 @@
     section.sub-footer{
       padding: 25px 0;
       border-top: 1px solid #ffffff2b;
+    }
+
+    .subscribe_messsage a{
+      text-decoration: underline;
+      color: #fff;
     }
   }
 
