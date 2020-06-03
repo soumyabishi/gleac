@@ -706,6 +706,7 @@
 </template>
 
 <script>
+	import jsonp from 'jsonp';
   import VueSlickCarousel from 'vue-slick-carousel'
   import 'vue-slick-carousel/dist/vue-slick-carousel.css'
   // optional style for arrows & dots
@@ -877,8 +878,10 @@ export default {
 				} else {
 					this.whitepaper_message = "";
           this.white_paper_submitting = true;
-					const response = this.axios.get(`https://gleac.us16.list-manage.com/subscribe/post-json?u=5f51f150a24c51e9eefd7b405&id=9a79d535d4&subscribe=Subscribe&EMAIL=${email}&FNAME=${fname}&LNAME=${lname}`)
+/* 					const response = this.axios.get(`https://gleac.us16.list-manage.com/subscribe/post-json?u=5f51f150a24c51e9eefd7b405&id=9a79d535d4&subscribe=Subscribe&EMAIL=${email}&FNAME=${fname}&LNAME=${lname}`)
 						.then(res => {
+							console.log(res);
+							console.log("Parsed", res.data.splilt("(")[1].split(")")[0])
 							if (res.data.result === "success") {
 								this.show_whitepaper_download = true;
 								return;
@@ -895,7 +898,26 @@ export default {
 							console.log(err);
               this.white_paper_submitting = false;
 							this.whitepaper_message = "Something went wrong. Please try again later"
-						})
+						}) */
+						jsonp(`https://gleac.us16.list-manage.com/subscribe/post-json?u=5f51f150a24c51e9eefd7b405&id=9a79d535d4&subscribe=Subscribe&EMAIL=${email}&FNAME=${fname}&LNAME=${lname}&c=ng_jsonp_callback_0`, { name: "ng_jsonp_callback_0" }, (err, data) => {
+							if (err) {
+								console.log(err);
+								this.white_paper_submitting = false;
+								this.whitepaper_message = "Something went wrong. Please try again later"
+							} else {
+								if (data.result === "success") {
+									this.show_whitepaper_download = true;
+									return;
+								} else {
+									let msg = res.data.msg;
+									if (msg.indexOf("0 - ") > -1) {
+										msg = msg.split("0 - ")[1];
+									}
+									this.whitepaper_message = msg;
+								}
+								this.white_paper_submitting = false;
+							}
+						});
 				}
 			},
 			submit_contact_request() {
