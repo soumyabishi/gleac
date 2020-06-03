@@ -70,7 +70,7 @@
 </template>
 
 <script>
-
+	import jsonp from "jsonp"
   export default {
     name: 'AppFooter',
     data(){
@@ -85,7 +85,7 @@
         this.subscribing=true;
 				const reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 				if (this.subscribeEmail !== "" && reg.test(this.subscribeEmail.toLowerCase())) {
-					const response = this.axios.get(`https://gleac.us16.list-manage.com/subscribe/post-json?u=5f51f150a24c51e9eefd7b405&id=17f933f6a5&subscribe=Subscribe&EMAIL=${this.subscribeEmail}`);
+/* 					const response = this.axios.get(`https://gleac.us16.list-manage.com/subscribe/post-json?u=5f51f150a24c51e9eefd7b405&id=17f933f6a5&subscribe=Subscribe&EMAIL=${this.subscribeEmail}`);
 					response.then(res => {
 						let resJson = res.data;
 						let msg = resJson.msg;
@@ -99,7 +99,21 @@
 					response.catch(e => {
 						this.subscribeMessage = "Something went wrong. Please try again later";
             this.subscribing=false;
-          })
+					}) */
+					jsonp(`https://gleac.us16.list-manage.com/subscribe/post-json?u=5f51f150a24c51e9eefd7b405&id=17f933f6a5&subscribe=Subscribe&EMAIL=${this.subscribeEmail}&c=ng_jsonp_callback_1`, { name: "ng_jsonp_callback_1" }, (err, data) => {
+						if (err) {
+							this.subscribeMessage = "Something went wrong. Please try again later";
+              this.subscribing=false;
+						} else {
+							let msg = data.msg;
+							if (msg.indexOf("0 - ") > -1) {
+								msg = msg.split("0 - ")[1];
+							}
+							this.subscribeMessage = msg;
+							this.subscribing=false;
+							this.subscribeEmail ='';
+						}
+					});
 				} else {
 					this.subscribeMessage = "Please enter a valid email address"
           this.subscribing=false;
