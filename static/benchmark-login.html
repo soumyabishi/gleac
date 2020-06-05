@@ -116,8 +116,57 @@
           <button class="ui primary  big fluid button" type="login">Login</button>
         </form>
       </div>
+
+      <a class="payment_modal_open" style="cursor: pointer">Payment Modal</a>
+
     </div>
 
+  </div>
+
+</div>
+
+
+<div class="ui small modal payment_modal">
+  <div class="header">
+    Payment
+  </div>
+  <div class="content" style="padding: 35px;">
+    <p>Select plan:</p>
+    <form class="ui big form">
+
+      <div class="two fields">
+         <div class="field selectbox" style="margin-right: 10px;margin-left: 10px;">
+           <div class="ui radio checkbox">
+             <input type="radio" name="frequency" checked="checked">
+             <label>  <p>$25</p>
+               <div>Behavioural Test </div></label>
+           </div>
+         </div>
+
+        <div class="field selectbox active" style="margin-left: 10px;margin-right: 10px">
+          <div class="ui radio checkbox">
+            <input type="radio" name="frequency" checked="checked">
+            <label>  <p>$100</p>
+              <div>Behavioural Test and <br>Learning Pathway</div></label>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <p>Discount code: <img src="assets/images/info_icon.png" style="width: 18px;position: absolute;margin-top: 2px;display: inline-block;margin-left: 6px;"> </p>
+    <div class="ui action big fluid input">
+      <input type="text" placeholder="Enter the discount code here" style="font-family: Rubik, 'sans-serif' !important;">
+      <button class="ui primary button">Apply</button>
+    </div>
+    <div class="ui hidden divider"></div>
+  </div>
+  <div class="actions">
+    <a style="color: #484848">
+      Cancel
+    </a>
+    <div class="ui primary large  button">
+     Continue
+    </div>
   </div>
 </div>
 </body>
@@ -136,6 +185,11 @@
       autoplay:true,
       arrows:false
   });
+    $(".payment_modal_open").on("click", function(){
+      $('.ui.modal.payment_modal')
+        .modal('show')
+      ;
+    });
   });
 </script>
 
@@ -143,6 +197,58 @@
   @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+
+
+  .payment_modal .content p{
+    font-family: Montserrat Medium;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  .payment_modal .header{
+    font-family: Montserrat !important;
+    font-weight: 600 !important;
+    font-size: 18px;
+  }
+
+  .selectbox{
+    background: #F4F7FA;
+    border: 1px solid #DFE6EE !important;
+    border-radius: 4px;
+    padding: 24px 40px;
+    margin-left: 10px;
+    text-align: center;
+  }
+
+  .selectbox.active{
+    border-color: #0065AD !important;
+  }
+
+  .selectbox p{
+    font-size: 26px !important;
+    margin-bottom: 4px;
+  }
+
+  .selectbox .ui.radio.checkbox .box:before, .ui.radio.checkbox label:before, .selectbox .ui.checkbox input:checked~label:after {
+    width: 20px !important;
+    height: 20px !important;
+    top: 20px !important;
+    left: -49px !important;
+  }
+
+  .selectbox input{
+    top: 20px !important;
+    left: -49px !important;
+  }
+
+  .ui.radio.checkbox input:checked~label:after {
+    background-color: #0065AD !important;
+  }
+
+  .ui.radio.checkbox input:focus:checked~label:after {
+    background-color: #0065AD !important;
+  }
+
 
   .sample-report{
     position: absolute;
