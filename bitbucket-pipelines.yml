@@ -49,7 +49,7 @@ image:
               #     CLUSTER_NAME: 'gleac-website-live'
               #     SERVICE_NAME: 'gleac-website-live-service'
               #     TASK_DEFINITION: 'gleac-website-task-definition.json'
-  
+      
       develop: 
         - step:
             caches:
@@ -74,4 +74,4 @@ image:
   definitions:
     services:
       docker:
-        memory: 2048 
+        memory: 3072
