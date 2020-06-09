@@ -1,0 +1,77 @@
+# This is a sample build configuration for JavaScript.
+# Check our guides at https://confluence.atlassian.com/x/14UWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: 
+    name: atlassian/pipelines-awscli
+  
+  pipelines:
+    branches: 
+      master: 
+        - step:
+            caches:
+              - docker
+            services:
+              - docker
+            script:
+              - eval $(aws ecr get-login --region ${AWS_DEFAULT_REGION} --no-include-email)
+              - export BUILD_ID=$BITBUCKET_BRANCH_$BITBUCKET_COMMIT_$BITBUCKET_BUILD_NUMBER
+              - docker build -t ${AWS_REGISTRY_URL}:$BUILD_ID .
+              - docker tag ${AWS_REGISTRY_URL}:$BUILD_ID ${AWS_REGISTRY_URL}:live
+              - docker push ${AWS_REGISTRY_URL}:live
+              # - pipe: atlassian/aws-ecs-deploy:1.0.1
+              #   variables:
+              #     AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+              #     AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+              #     AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+              #     CLUSTER_NAME: 'gleac-website-live'
+              #     SERVICE_NAME: 'gleac-website-live-service'
+              #     TASK_DEFINITION: 'gleac-website-task-definition.json'
+  
+      stage: 
+        - step:
+            caches:
+              - docker
+            services:
+              - docker
+            script:
+              - eval $(aws ecr get-login --region ${AWS_DEFAULT_REGION} --no-include-email)
+              - export BUILD_ID=$BITBUCKET_BRANCH_$BITBUCKET_COMMIT_$BITBUCKET_BUILD_NUMBER
+              - docker build -t ${AWS_REGISTRY_URL}:$BUILD_ID .
+              - docker tag ${AWS_REGISTRY_URL}:$BUILD_ID ${AWS_REGISTRY_URL}:stage
+              - docker push ${AWS_REGISTRY_URL}:stage
+              # - pipe: atlassian/aws-ecs-deploy:1.0.1
+              #   variables:
+              #     AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+              #     AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+              #     AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+              #     CLUSTER_NAME: 'gleac-website-live'
+              #     SERVICE_NAME: 'gleac-website-live-service'
+              #     TASK_DEFINITION: 'gleac-website-task-definition.json'
+  
+      develop: 
+        - step:
+            caches:
+              - docker
+            services:
+              - docker
+            script:
+              - eval $(aws ecr get-login --region ${AWS_DEFAULT_REGION} --no-include-email)
+              - export BUILD_ID=$BITBUCKET_BRANCH_$BITBUCKET_COMMIT_$BITBUCKET_BUILD_NUMBER
+              - docker build -t ${AWS_REGISTRY_URL}:$BUILD_ID .
+              - docker tag ${AWS_REGISTRY_URL}:$BUILD_ID ${AWS_REGISTRY_URL}:test
+              - docker push ${AWS_REGISTRY_URL}:test
+              # - pipe: atlassian/aws-ecs-deploy:1.0.1
+              #   variables:
+              #     AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+              #     AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+              #     AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+              #     CLUSTER_NAME: 'gleac-website-live'
+              #     SERVICE_NAME: 'gleac-website-live-service'
+              #     TASK_DEFINITION: 'gleac-website-task-definition.json'
+  
+  definitions:
+    services:
+      docker:
+        memory: 2048 
