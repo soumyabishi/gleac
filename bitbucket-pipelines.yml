@@ -6,7 +6,7 @@
 image: 
     name: atlassian/pipelines-awscli
   
-  pipelines:
+pipelines:
     branches: 
       master: 
         - step:
@@ -71,7 +71,7 @@ image:
               #     SERVICE_NAME: 'gleac-website-live-service'
               #     TASK_DEFINITION: 'gleac-website-task-definition.json'
   
-  definitions:
-    services:
-      docker:
-        memory: 3072
+definitions:
+  services:
+    docker:
+      memory: 3072
