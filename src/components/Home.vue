@@ -493,6 +493,7 @@
 
       <!-- white paper modal start-->
       <div class="ui small modal whitepaper">
+        <i class="close icon"></i>
         <template v-if="!show_whitepaper_download">
           <div class="tw-font-rubik tw-font-medium tw-text-24px">Gleac Whitepaper</div>
           <div class="tw-font-rubik tw-text-16px tw-text-secondary tw-mt-10px tw-mb-24px">Please share your details to download the whitepaper</div>
@@ -519,7 +520,7 @@
 						<div class="tw-font-rubik tw-font-medium tw-text-24px">Thank you lovely human <i class="icon heart" style="color: #2185D0;"></i> </div>
 					</div>
 					<div class="six wide column">
-						<a class="ui primary large fluid button" href="../../static/documents/whitepaperbrochure.pdf"><span class="tw-relative tw-pr-34px">Download <img src="../assets/images/donwload_icon.svg" class="tw-absolute tw--top-1px tw-right-10px"/></span></a>
+						<a class="ui primary large fluid button" href="../../static/documents/whitepaperbrochure.pdf" target="_blank"><span class="tw-relative tw-pr-34px">Download <img src="../assets/images/donwload_icon.svg" class="tw-absolute tw--top-1px tw-right-10px"/></span></a>
 					</div>
         </div>
       </div>
@@ -550,8 +551,8 @@
           </div>
 
           <div class="tw-font-rubik tw-text-16px tw-leading-20px">
-            To create an output off our 10-15 min mater behavioral assessment SAAS to identify, map and
-            measure the behaviors needed and in what quantities for the job role Contact Tracer. <br> <br>
+            To create an assessment criteria within our 10-15 min Behavioral Benchmark that can identify, map and measure the behaviors needed and in what quantities for the job role Contact Tracer.
+            <br> <br>
             Pre-Covid this was a fairly non-emerging role. In the last 60 days, there are over 100k jobs for
             this role in the US alone.<br> <br>
             You can take the test <a class="tw-underline hover:tw-underline tw-font-medium" href="static/benchmark-login.html">here</a> and check your fit for the role.  </div>
@@ -574,7 +575,7 @@
             <img src="../assets/images/case_study/contact_tracer/3.png" style="width: 100%">
 
 
-              <a href="../../static/documents/case_study_emerging_job_roles.pdf" style="margin-bottom: 15px;margin-top: 20px;" class="ui primary button">Download PDF</a>
+              <a href="../../static/documents/case_study_emerging_job_roles.pdf" style="margin-bottom: 15px;margin-top: 20px;" class="ui primary button" target="_blank">Download PDF</a>
 
               <div class="tw-font-rubik tw-text-center">©GLEAC 2020. All Rights Reserved</div>
           </div>
